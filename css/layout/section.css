@@ -1,0 +1,81 @@
+/*--------------------------------------
+ * STYLES DE SECTION GÉNÉRIQUES
+--------------------------------------*/
+
+.section {
+    position: relative;
+    padding: var(--space-xl) 0;
+}
+
+.section-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.section-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Variations de section */
+.section-alt {
+    background-color: var(--color-bg-alt);
+}
+
+.section-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.section-dark {
+    background-color: var(--color-text);
+    color: white;
+}
+
+.section-gradient {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+}
+
+/* Espacement des sections */
+.section-spacing-sm {
+    padding: var(--space-lg) 0;
+}
+
+.section-spacing-lg {
+    padding: calc(var(--space-xl) * 1.5) 0;
+}
+
+/* Section avec overlay */
+.section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Section avec image de fond */
+.section-bg-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section {
+        padding: var(--space-lg) 0;
+    }
+    
+    .section-spacing-lg {
+        padding: var(--space-xl) 0;
+    }
+}

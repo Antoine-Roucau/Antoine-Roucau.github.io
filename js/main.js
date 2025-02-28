@@ -4,17 +4,18 @@
  */
 
 // Importation des modules
+import './utils/polyfills.js';
 import { initThemeToggle } from './components/themeToggle.js';
-import { init as initLoader } from './components/loader.js';
-import { init as initNavigation } from './components/navigation.js';
-import { init as initBackToTop } from './components/backToTop.js';
-import { init as initSmoothScroll } from './components/smoothScroll.js';
-import { init as initProjectFilters } from './components/projectFilters.js';
-import { init as initSkillsTabs } from './components/skillsTabs.js';
-import { init as initTypeWriter } from './components/typeWriter.js';
-import { init as initGallery } from './components/gallery.js';
-import { init as initContactForm } from './components/contactForm.js';
-import { init as initFormValidation } from './components/formValidation.js';
+import * as Loader from './components/loader.js';
+import { initNavigation } from './components/navigation.js';
+import { initBackToTop } from './components/backToTop.js';
+import { initSmoothScroll } from './components/smoothScroll.js';
+import { initProjectFilters } from './components/projectFilters.js';
+import { initSkillsTabs } from './components/skillsTabs.js';
+import { initTypeWriter } from './components/typeWriter.js';
+import { initGallery } from './components/gallery.js';
+import { initContactForm } from './components/contactForm.js';
+import { initFormValidation } from './components/formValidation.js';
 
 // Variables d'état
 let portfolioInitialized = false;
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialiser le loader en premier
     try {
-        initLoader();
+        Loader.init();
     } catch (error) {
         console.error('Erreur lors de l\'initialisation du loader:', error);
         setupSimpleLoader();
@@ -81,6 +82,34 @@ function setupSimpleLoader() {
     }
 }
 
+// Ajouter cette fonction pour le lazy loading des images
+function initLazyLoading() {
+    if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(image => imageObserver.observe(image));
+    } else {
+        // Fallback pour les navigateurs ne supportant pas IntersectionObserver
+        const lazyImages = document.querySelectorAll('img[data-src]');
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    }
+}
+
+
 // Fonction d'initialisation principale
 function initPortfolio() {
     // Éviter l'initialisation multiple
@@ -95,6 +124,7 @@ function initPortfolio() {
     
     // Initialiser les modules communs
     initCommonModules();
+    initLazyLoading();
     
     // Modules spécifiques selon le type de page
     switch(pageType) {
@@ -153,6 +183,8 @@ function initProjectModules() {
         console.error('Erreur lors de l\'initialisation des modules de page projet:', error);
     }
 }
+
+
 
 // Mise à jour de l'année de copyright
 function updateCopyrightYear() {

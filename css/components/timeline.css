@@ -1,0 +1,111 @@
+/*--------------------------------------
+ * STYLES DE TIMELINE
+--------------------------------------*/
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: var(--space-lg);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 43px;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    z-index: 2;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    width: 40px;
+    text-align: right;
+}
+
+.timeline-content {
+    background-color: var(--color-bg-alt);
+    padding: var(--space-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: var(--color-heading);
+}
+
+.timeline-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-description ul {
+    list-style-type: disc;
+    padding-left: var(--space-md);
+}
+
+.timeline-description li {
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 13px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        text-align: left;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+}

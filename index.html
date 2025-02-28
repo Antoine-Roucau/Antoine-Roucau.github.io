@@ -324,39 +324,193 @@
 
     <!-- Section Compétences -->
     <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compétences</h2>
-                <div class="section-subtitle">Mes outils et technologies</div>
-            </div>
-            
-            <div class="skills-tabs">
-                <div class="tabs-nav">
-                    <button class="tab-btn active" data-tab="development">Développement</button>
-                    <button class="tab-btn" data-tab="design">Design & UI/UX</button>
-                    <button class="tab-btn" data-tab="creative">Création & Artisanat</button>
-                    <button class="tab-btn" data-tab="soft">Soft Skills</button>
+        <!-- Tab Développement -->
+        <div class="tab-pane active" id="development">
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Langages de programmation</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress expert"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="tabs-content">
-                    <!-- Tab Développement -->
-                    <div class="tab-pane active" id="development">
-                        <!-- Contenu de l'onglet Développement -->
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Frameworks & Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Unity</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Tab Design & UI/UX -->
-                    <div class="tab-pane" id="design">
-                        <!-- Contenu de l'onglet Design -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Design & UI/UX -->
+        <div class="tab-pane" id="design">
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Outils de design</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Blender</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Photoshop</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Substance Painter</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Tab Création & Artisanat -->
-                    <div class="tab-pane" id="creative">
-                        <!-- Contenu de l'onglet Création -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Création & Artisanat -->
+        <div class="tab-pane" id="creative">
+            <div class="creative-skills">
+                <div class="creative-skill">
+                    <div class="creative-skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     </div>
-                    
-                    <!-- Tab Soft Skills -->
-                    <div class="tab-pane" id="soft">
-                        <!-- Contenu de l'onglet Soft Skills -->
+                    <h3 class="creative-skill-name">Orfèvrerie</h3>
+                    <p class="creative-skill-description">Création de bijoux et d'objets en métal</p>
+                </div>
+                <div class="creative-skill">
+                    <div class="creative-skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h3 class="creative-skill-name">Modélisation 3D</h3>
+                    <p class="creative-skill-description">Création de modèles et environnements 3D</p>
+                </div>
+                <div class="creative-skill">
+                    <div class="creative-skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
+                    </div>
+                    <h3 class="creative-skill-name">Conception de jeux</h3>
+                    <p class="creative-skill-description">Design de mécaniques et de niveaux de jeu</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Soft Skills -->
+        <div class="tab-pane" id="soft">
+            <div class="skills-container">
+                <div class="skill-group">
+                    <h3 class="skill-group-title">Compétences transversales</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Résolution de problèmes</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress expert"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Travail en équipe</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress advanced"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Créativité</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress expert"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Gestion de projet</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress intermediate"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -365,12 +519,173 @@
 
     <!-- Section Expérience -->
     <section id="experience" class="experience">
-        <!-- Contenu de la section Expérience -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Expérience</h2>
+                <div class="section-subtitle">Mon parcours académique et professionnel</div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Projet de développement Unity</h3>
+                        <div class="timeline-subtitle">ESILV - Projet académique</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Développement d'un jeu 3D utilisant Unity et C#</li>
+                                <li>Implémentation de mécaniques de gameplay innovantes</li>
+                                <li>Collaboration en équipe de 4 personnes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Début à l'ESILV</h3>
+                        <div class="timeline-subtitle">École Supérieure d'Ingénieurs Léonard de Vinci</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Spécialisation en développement logiciel et systèmes interactifs</li>
+                                <li>Projets académiques sur diverses technologies</li>
+                                <li>Participation aux hackathons et événements techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2021</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Premier projet open-source</h3>
+                        <div class="timeline-subtitle">Contribution GitHub</div>
+                        <div class="timeline-description">
+                            <ul>
+                                <li>Développement d'outils Python pour l'automatisation de tâches</li>
+                                <li>Collaboration avec la communauté open-source</li>
+                                <li>Apprentissage des bonnes pratiques de développement collaboratif</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-section">
+                <h3 class="education-title">Formation</h3>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-year">2022 - Présent</div>
+                        <div class="education-details">
+                            <h4>Ingénierie Informatique</h4>
+                            <div class="education-place">ESILV, Paris La Défense</div>
+                            <div class="education-description">
+                                Spécialisation en développement logiciel et systèmes interactifs.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-year">2020 - 2022</div>
+                        <div class="education-details">
+                            <h4>Classe Préparatoire aux Grandes Écoles</h4>
+                            <div class="education-place">Lycée Joffre, Montpellier</div>
+                            <div class="education-description">
+                                Formation intensive en mathématiques, physique et informatique.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Section Contact -->
     <section id="contact" class="contact">
-        <!-- Contenu de la section Contact -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <div class="section-subtitle">N'hésitez pas à me contacter pour discuter de vos projets</div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Informations de contact</h3>
+                    <p class="contact-description">
+                        Je suis toujours ouvert aux nouvelles opportunités de collaboration, aux discussions sur le développement de jeux vidéo ou à l'échange d'idées créatives.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:antoine.roucau@gmail.com" class="email-link">antoine.roucau@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Localisation</h4>
+                                <p>Montpellier, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Réseaux sociaux</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h3 class="form-title">Envoyez-moi un message</h3>
+                    <form id="contact-form" class="contact-form" action="https://formspree.io/f/xqkjzdgz" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
