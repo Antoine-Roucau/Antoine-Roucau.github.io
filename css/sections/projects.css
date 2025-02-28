@@ -1,0 +1,437 @@
+/*--------------------------------------
+ * STYLES DE LA SECTION PROJETS
+--------------------------------------*/
+
+/* Filtres */
+.filters-container {
+    margin-bottom: var(--space-lg);
+}
+
+.filter-group {
+    margin-bottom: var(--space-md);
+}
+
+.filter-title {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-sm);
+    color: var(--color-text);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-sm);
+}
+
+.filter-btn {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-bg-alt);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    color: var(--color-text-light);
+}
+
+.filter-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-heading);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Message de résultat de filtrage */
+.filter-results {
+    display: none;
+    padding: var(--space-xs) var(--space-sm);
+    margin-bottom: var(--space-md);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+/* Grille de projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.project-card {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal), opacity var(--transition-normal);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(0, 0, 0, 0.7) 40%,
+                rgba(0, 0, 0, 0.2) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-md);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-category {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.project-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: white;
+}
+
+.project-excerpt {
+    font-size: var(--font-size-sm);
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--space-sm);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.project-link {
+    padding: var(--space-xs) var(--space-sm);
+    background-color: var(--color-primary);
+    color: white;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border-radius: var(--border-radius-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.project-link:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.project-github {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #24292e;
+    transition: background-color 0.3s;
+}
+
+.project-github:hover {
+    background-color: #2c343a;
+}
+
+.project-github svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Page de détail du projet */
+.project-detail {
+    padding-top: calc(var(--space-xl) + 80px);
+    padding-bottom: var(--space-xl);
+}
+
+.project-header {
+    margin-bottom: var(--space-lg);
+}
+
+.project-header .project-title {
+    font-size: var(--font-size-4xl);
+    color: var(--color-heading);
+    margin-bottom: var(--space-xs);
+}
+
+.project-header .project-category {
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    text-transform: none;
+    letter-spacing: normal;
+    margin-bottom: var(--space-sm);
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background-color: #24292e;
+    color: white;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+    transition: background-color var(--transition-fast);
+}
+
+.github-link:hover {
+    background-color: #2c343a;
+}
+
+.github-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Galerie du projet */
+.project-showcase {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.project-gallery {
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-main {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+}
+
+.gallery-thumbnail {
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    opacity: 0.7;
+    transition: opacity var(--transition-fast);
+}
+
+.gallery-thumbnail:hover,
+.gallery-thumbnail.active {
+    opacity: 1;
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* Spécifications du projet */
+.project-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+}
+
+.spec-item {
+    padding: var(--space-sm);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+}
+
+.spec-item h3 {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xs);
+}
+
+.spec-item p {
+    font-weight: 500;
+    color: var(--color-heading);
+}
+
+/* Contenu du projet */
+.project-content {
+    margin-bottom: var(--space-xl);
+}
+
+.project-section {
+    margin-bottom: var(--space-lg);
+}
+
+.project-section h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+    position: relative;
+    display: inline-block;
+}
+
+.project-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--color-primary-light);
+}
+
+/* Listes de fonctionnalités et défis */
+.feature-list,
+.challenges-list {
+    padding-left: var(--space-md);
+}
+
+.challenges-list {
+    counter-reset: challenges;
+}
+
+.challenges-list li {
+    position: relative;
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-lg);
+}
+
+.challenges-list li::before {
+    counter-increment: challenges;
+    content: counter(challenges);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.challenges-list h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-xs);
+}
+
+/* Code showcase */
+.code-showcase {
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-md);
+    overflow: hidden;
+}
+
+.code-showcase h3 {
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-lg);
+}
+
+.code-showcase pre {
+    margin: 0;
+    overflow-x: auto;
+}
+
+.language-python {
+    color: var(--color-text);
+}
+
+/* Projets connexes */
+.related-projects h2 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--space-md);
+}
+
+.related-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .project-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-specs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filters-container {
+        margin-bottom: var(--space-md);
+    }
+    
+    .filter-buttons {
+        overflow-x: auto;
+        padding-bottom: var(--space-xs);
+        margin-bottom: 0;
+        flex-wrap: nowrap;
+    }
+    
+    .filter-btn {
+        white-space: nowrap;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-header .project-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .project-specs {
+        grid-template-columns: 1fr;
+    }
+    
+    .related-projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

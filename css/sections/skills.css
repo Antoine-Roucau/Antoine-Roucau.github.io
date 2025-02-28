@@ -1,0 +1,214 @@
+/*--------------------------------------
+ * STYLES DE LA SECTION COMPÉTENCES
+--------------------------------------*/
+
+/* Navigation par onglets */
+.skills-tabs {
+    margin-top: var(--space-lg);
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    border: 2px solid var(--color-border);
+}
+
+.tab-btn:hover {
+    background-color: var(--color-bg-alt);
+}
+
+.tab-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* Contenu des onglets */
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Conteneur des compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+}
+
+.skill-group {
+    margin-bottom: var(--space-lg);
+}
+
+.skill-group-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    color: var(--color-heading);
+    border-left: 3px solid var(--color-primary);
+    padding-left: var(--space-sm);
+}
+
+/* Liste de compétences */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.skill-item {
+    width: 100%;
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-xs);
+}
+
+.skill-name {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.skill-level {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+.skill-bar {
+    height: 8px;
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    transform-origin: left;
+    animation: progress 1.5s ease-out forwards;
+}
+
+/* Couleurs par niveau de compétence */
+.skill-progress.beginner {
+    background-color: var(--color-beginner);
+    width: 40%;
+}
+
+.skill-progress.intermediate {
+    background-color: var(--color-intermediate);
+    width: 70%;
+}
+
+.skill-progress.advanced {
+    background-color: var(--color-advanced);
+    width: 85%;
+}
+
+.skill-progress.expert {
+    background-color: var(--color-expert);
+    width: 95%;
+}
+
+/* Styles pour les compétences créatives */
+.creative-skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.creative-skill {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.creative-skill:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.creative-skill-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    border-radius: 50%;
+}
+
+.creative-skill-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--color-primary);
+}
+
+.creative-skill-name {
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+}
+
+.creative-skill-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .creative-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .tabs-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--space-xs);
+        justify-content: flex-start;
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+    }
+    
+    .creative-skills {
+        grid-template-columns: 1fr;
+    }
+}

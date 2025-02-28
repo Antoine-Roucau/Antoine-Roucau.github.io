@@ -1,0 +1,97 @@
+/*--------------------------------------
+ * VARIABLES ET CONFIGURATION
+--------------------------------------*/
+:root {
+    /* Couleurs principales */
+    --color-primary: #6366f1;       /* Indigo pour la couleur principale */
+    --color-primary-light: #a5b4fc;
+    --color-primary-dark: #4338ca;
+    --color-secondary: #f97316;     /* Orange pour les accents */
+    --color-secondary-light: #fdba74;
+    --color-secondary-dark: #c2410c;
+    
+    /* Couleurs de fond et de texte (mode clair) */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-text: #0f172a;
+    --color-text-light: #64748b;
+    --color-heading: #030712;
+    --color-border: #e2e8f0;
+    
+    /* Couleurs RGB pour les transparences */
+    --color-primary-rgb: 99, 102, 241;
+    --color-secondary-rgb: 249, 115, 22;
+    --color-bg-rgb: 255, 255, 255;
+    --color-text-rgb: 15, 23, 42;
+    
+    /* Couleurs pour les niveaux de compétence */
+    --color-beginner: #fbbf24;      /* Jaune pour débutant */
+    --color-intermediate: #34d399;  /* Vert pour intermédiaire */
+    --color-advanced: #3b82f6;      /* Bleu pour avancé */
+    --color-expert: #8b5cf6;        /* Violet pour expert */
+    
+    /* Espacement */
+    --space-xs: 0.5rem;   /* 8px */
+    --space-sm: 1rem;     /* 16px */
+    --space-md: 2rem;     /* 32px */
+    --space-lg: 3rem;     /* 48px */
+    --space-xl: 5rem;     /* 80px */
+    
+    /* Typographie */
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 2rem;      /* 32px */
+    --font-size-4xl: 2.5rem;    /* 40px */
+    --font-size-5xl: 3rem;      /* 48px */
+    --font-size-6xl: 4rem;      /* 64px */
+    
+    /* Transitions */
+    --transition-fast: 0.2s;
+    --transition-normal: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* Z-Index */
+    --z-menu: 100;
+    --z-header: 50;
+    --z-overlay: 75;
+    --z-modal: 150;
+    --z-loader: 200;
+    
+    /* Borders et shadows */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    --border-radius-full: 9999px;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    
+    /* Container */
+    --container-width: 1240px;
+    --container-padding: 1.5rem;
+}
+
+/* Mode Sombre */
+[data-theme="dark"] {
+    --color-primary: #818cf8;
+    --color-primary-light: #a5b4fc;
+    --color-primary-dark: #6366f1;
+    --color-secondary: #fb923c;
+    --color-secondary-light: #fdba74;
+    --color-secondary-dark: #f97316;
+    
+    --color-bg: #0f172a;
+    --color-bg-alt: #1e293b;
+    --color-text: #e2e8f0;
+    --color-text-light: #94a3b8;
+    --color-heading: #f8fafc;
+    --color-border: #334155;
+    
+    --color-bg-rgb: 15, 23, 42;
+    --color-text-rgb: 226, 232, 240;
+}

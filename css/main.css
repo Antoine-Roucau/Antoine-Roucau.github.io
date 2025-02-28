@@ -1,0 +1,74 @@
+/*--------------------------------------
+ * FICHIER CSS PRINCIPAL
+ * Importe tous les modules CSS dans l'ordre approprié
+--------------------------------------*/
+
+/*--------------------------------------
+ * 1. BASE
+ * Fondations et variables
+--------------------------------------*/
+@import 'base/variables.css';    /* Variables CSS globales */
+@import 'base/reset.css';        /* Reset des styles navigateur */
+@import 'base/typography.css';   /* Styles typographiques */
+@import 'base/animations.css';   /* Animations globales */
+
+/*--------------------------------------
+ * 2. LAYOUT
+ * Structure et mise en page
+--------------------------------------*/
+@import 'layout/container.css';  /* Conteneurs et sections */
+@import 'layout/grid.css';       /* Système de grille */
+@import 'layout/section.css';    /* Styles de section génériques */
+
+/*--------------------------------------
+ * 3. COMPONENTS
+ * Éléments d'interface réutilisables
+--------------------------------------*/
+@import 'components/header.css';      /* En-tête */
+@import 'components/footer.css';      /* Pied de page */
+@import 'components/buttons.css';     /* Boutons */
+@import 'components/cards.css';       /* Cartes */
+@import 'components/forms.css';       /* Formulaires */
+@import 'components/loader.css';      /* Animations de chargement */
+@import 'components/timeline.css';    /* Timeline */
+@import 'components/gallery.css';     /* Galeries */
+@import 'components/navigation.css';  /* Navigation */
+
+/*--------------------------------------
+ * 4. SECTIONS
+ * Styles spécifiques aux sections de page
+--------------------------------------*/
+@import 'sections/hero.css';          /* Section héro */
+@import 'sections/about.css';         /* Section à propos */
+@import 'sections/projects.css';      /* Section projets */
+@import 'sections/skills.css';        /* Section compétences */
+@import 'sections/experience.css';    /* Section expérience */
+@import 'sections/contact.css';       /* Section contact */
+
+/*--------------------------------------
+ * 5. PAGES
+ * Styles spécifiques à certaines pages
+--------------------------------------*/
+@import 'pages/legal.css';            /* Pages légales */
+@import 'pages/project.css';          /* Pages de détail de projet */
+
+/*--------------------------------------
+ * 6. THEMES
+ * Variations de thème clair/sombre
+--------------------------------------*/
+@import 'themes/light.css';           /* Thème clair (défaut) */
+@import 'themes/dark.css';            /* Thème sombre */
+
+/*--------------------------------------
+ * 7. UTILITIES
+ * Classes utilitaires et helpers
+--------------------------------------*/
+@import 'utilities/helpers.css';      /* Classes utilitaires */
+@import 'utilities/spacing.css';      /* Espacement et marges */
+@import 'utilities/colors.css';       /* Couleurs */
+@import 'utilities/responsive.css';   /* Media queries */
+@import 'utilities/accessibility.css'; /* Accessibilité */
+
+/*--------------------------------------
+ * FIN DU FICHIER PRINCIPAL
+--------------------------------------*/

@@ -1,0 +1,152 @@
+/*--------------------------------------
+ * STYLES DES BOUTONS
+--------------------------------------*/
+
+/* Bouton Primaire */
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+}
+
+.primary-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.primary-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Bouton Secondaire */
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-secondary);
+    color: white;
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+}
+
+.secondary-btn:hover {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(var(--color-secondary-rgb), 0.3);
+}
+
+.secondary-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Bouton Contour */
+.outline-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sm) var(--space-md);
+    border: 2px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-text);
+    font-weight: 500;
+    border-radius: var(--border-radius-md);
+    transition: border-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    text-align: center;
+}
+
+.outline-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
+.outline-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Bouton Filtre */
+.filter-btn {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-bg-alt);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    color: var(--color-text-light);
+}
+
+.filter-btn:hover {
+    background-color: var(--color-border);
+    color: var(--color-heading);
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Bouton Onglet */
+.tab-btn {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-full);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+    border: 2px solid var(--color-border);
+}
+
+.tab-btn:hover {
+    background-color: var(--color-bg-alt);
+}
+
+.tab-btn.active {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+/* Bouton retour en haut de page */
+#back-to-top {
+    position: fixed;
+    bottom: var(--space-md);
+    right: var(--space-md);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: var(--z-overlay);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-normal), transform var(--transition-normal), background-color var(--transition-fast);
+}
+
+#back-to-top svg {
+    width: 20px;
+    height: 20px;
+}
+
+#back-to-top:hover {
+    background-color: var(--color-primary-dark);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

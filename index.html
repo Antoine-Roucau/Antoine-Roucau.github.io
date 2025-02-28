@@ -1,53 +1,433 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité - Oups Mail</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antoine ROUCAU - Étudiant en Ingénierie Informatique, Développeur de jeux vidéo, Créateur d'expériences interactives">
+    <meta name="keywords" content="Antoine ROUCAU, développement jeux vidéo, ingénierie informatique, unity, c#, python, modélisation 3D, blender, orfèvrerie">
+    <title>Antoine ROUCAU | Game Developer & Creative Maker</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Politique de Confidentialité</h1>
+<body data-page-type="home">
+    <!-- Overlay de Chargement -->
+    <div class="loader-overlay">
+        <div class="loader">
+            <div class="loader-text">Antoine ROUCAU</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Antoine.</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
-    <section>
-      <h2>Collecte d'informations</h2>
-      <p>L'extension "Oups Mail" ne collecte aucune information personnelle identifiable des utilisateurs. Aucune donnée n'est enregistrée, stockée ou transmise à des tiers.</p>
+
+    <!-- Section Héro -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hello">Bonjour, je suis</div>
+                    <h1 class="glitch" data-text="Antoine ROUCAU">Antoine ROUCAU</h1>
+                    <h2 class="hero-subtitle">Je crée des <span class="highlight">expériences interactives</span> où la technique rencontre l'émotion</h2>
+                    <div class="hero-description">
+                        <p>Étudiant en ingénierie informatique à l'ESILV, développeur de jeux vidéo, et créateur passionné dans divers domaines comme la modélisation 3D et l'orfèvrerie.</p>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="primary-btn">Voir mes projets</a>
+                        <a href="#contact" class="outline-btn">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="geometric-shape"></div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="badge">
+            <span class="badge-text">Conçu et développé à Montpellier, France</span>
+        </div>
     </section>
-    <section>
-      <h2>Utilisation des Permissions</h2>
-      <ol>
-        <li>
-          <h3>activeTab</h3>
-          <p><strong>Objectif :</strong> Permet à l'extension d'accéder à l'onglet actif dans le navigateur pour interagir avec le contenu de manière contextuelle et sécurisée.</p>
-          <p><strong>Utilisation :</strong> Cette permission est utilisée pour détecter quand l'utilisateur est sur une page de Gmail et activer les fonctionnalités spécifiques de l'extension.</p>
-        </li>
-        <li>
-          <h3>storage</h3>
-          <p><strong>Objectif :</strong> Autorise l'extension à stocker des données localement sur l'appareil de l'utilisateur, assurant la persistance des informations nécessaires à son fonctionnement.</p>
-          <p><strong>Utilisation :</strong> Utilisé pour stocker des configurations utilisateur locales afin de personnaliser l'expérience d'utilisation de l'extension.</p>
-        </li>
-        <li>
-          <h3>scripting</h3>
-          <p><strong>Objectif :</strong> Permet à l'extension d'exécuter des scripts sur les pages web, nécessaire pour interagir avec les fonctionnalités spécifiques de Gmail et intercepter l'envoi d'e-mails.</p>
-          <p><strong>Utilisation :</strong> Utilisé pour injecter des scripts dans les pages de Gmail afin de détecter et intercepter l'envoi d'e-mails, tout en respectant la sécurité et la vie privée de l'utilisateur.</p>
-        </li>
-        <li>
-          <h3>https://mail.google.com/</h3>
-          <p><strong>Objectif :</strong> Accorde à l'extension l'accès au domaine Gmail pour lire et modifier le contenu des e-mails et des interactions utilisateur spécifiques à cet environnement.</p>
-          <p><strong>Utilisation :</strong> Utilisé pour accéder aux fonctionnalités spécifiques de Gmail telles que la lecture des e-mails et l'interception des actions d'envoi d'e-mails par l'utilisateur.</p>
-        </li>
-      </ol>
+
+    <!-- Section À propos -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">À propos</h2>
+                <div class="section-subtitle">Qui je suis, ce que je fais, ce qui me passionne</div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="assets/images/profile/profile.jpg" alt="Antoine ROUCAU" class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-heading">Créativité technique & innovation</h3>
+                    <p>Je suis un étudiant de 21 ans en troisième année à l'<span class="highlight">ESILV</span> (École Supérieure d'Ingénieurs Léonard de Vinci), passionné par le développement informatique et la création d'expériences interactives.</p>
+                    
+                    <p>Ma passion pour les <span class="highlight">jeux vidéo</span> va au-delà du simple divertissement — je les considère comme une forme d'art technique qui combine narration, design d'interaction et innovation technologique.</p>
+                    
+                    <p>En tant que créateur, j'explore divers domaines allant du <span class="highlight">développement logiciel</span> à la <span class="highlight">modélisation 3D</span>, en passant par l'<span class="highlight">orfèvrerie</span>, cherchant toujours à fusionner technique et créativité.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">2022</div>
+                            <div class="stat-label">Début à l'ESILV</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Projets Unity</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Projets créatifs</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="assets/documents/cv.pdf" class="secondary-btn" download>Télécharger mon CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section>
-      <h2>Protection des Données</h2>
-      <p>Toutes les interactions de l'utilisateur avec l'extension "Oups Mail" sont traitées localement sur l'appareil de l'utilisateur. Aucune donnée n'est transmise à des serveurs distants ou à des tiers.</p>
+
+    <!-- Section Projets -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projets</h2>
+                <div class="section-subtitle">Exploration créative à travers différents médiums</div>
+            </div>
+            
+            <div class="portfolio-mixer">
+                <!-- Filtres -->
+                <div class="filters-container">
+                    <!-- Type de projet -->
+                    <div class="filter-group" data-filter-type="type">
+                        <h3 class="filter-title">Type de projet</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Tous</button>
+                            <button class="filter-btn" data-filter="development">Développement</button>
+                            <button class="filter-btn" data-filter="game">Jeux Vidéo</button>
+                            <button class="filter-btn" data-filter="3d">Modélisation 3D</button>
+                            <button class="filter-btn" data-filter="jewelry">Orfèvrerie</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Catégorie -->
+                    <div class="filter-group" data-filter-type="category">
+                        <h3 class="filter-title">Catégorie</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">Toutes</button>
+                            <button class="filter-btn" data-filter="python">Python</button>
+                            <button class="filter-btn" data-filter="csharp">C#</button>
+                            <button class="filter-btn" data-filter="unity">Unity</button>
+                            <button class="filter-btn" data-filter="blender">Blender</button>
+                            <button class="filter-btn" data-filter="cybersec">Cybersécurité</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Grille de projets -->
+                <div class="projects-grid">
+                    <!-- Projet 1: OrthoNome (Développement) -->
+                    <div class="project-card" data-type="development" data-categories="python tool">
+                        <div class="project-image">
+                            <img src="assets/images/projects/orthonome.jpg" alt="OrthoNome">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">OrthoNome</h3>
+                                <p class="project-excerpt">Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/development/orthonome.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/OrthoNome" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 2: Gomoku_IA (Développement) -->
+                    <div class="project-card" data-type="development" data-categories="python ai">
+                        <div class="project-image">
+                            <img src="assets/images/projects/gomoku.jpg" alt="Gomoku IA">
+                            <div class="project-overlay">
+                                <div class="project-category">Intelligence Artificielle | Python</div>
+                                <h3 class="project-title">Gomoku IA</h3>
+                                <p class="project-excerpt">Implémentation du jeu Gomoku (Puissance 5) avec une IA adverse utilisant l'algorithme Minimax et l'élagage alpha-bêta.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/development/gomoku.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Gomoku_IA" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 3: Bitmap_Image (Développement) -->
+                    <div class="project-card" data-type="development" data-categories="csharp">
+                        <div class="project-image">
+                            <img src="assets/images/projects/bitmap.jpg" alt="Bitmap Image Processing">
+                            <div class="project-overlay">
+                                <div class="project-category">Traitement d'Image | C#</div>
+                                <h3 class="project-title">Bitmap Image Processing</h3>
+                                <p class="project-excerpt">Bibliothèque C# pour le traitement et la manipulation d'images BMP avec intégration de l'algorithme de compression de Huffman.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/development/bitmap.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Bitmap_Image" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 4: Flux_Analysis (Développement) -->
+                    <div class="project-card" data-type="development" data-categories="python cybersec">
+                        <div class="project-image">
+                            <img src="assets/images/projects/flux-analysis.jpg" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Cybersécurité | Python</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <p class="project-excerpt">Outil complet de surveillance et d'analyse des vulnérabilités de cybersécurité qui suit les bulletins de sécurité de l'ANSSI et fournit des visualisations analytiques.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/development/flux-analysis.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Flux_Analysis" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet 5: VeloMax (Développement) -->
+                    <div class="project-card" data-type="development" data-categories="csharp database">
+                        <div class="project-image">
+                            <img src="assets/images/projects/velomax.jpg" alt="VeloMax">
+                            <div class="project-overlay">
+                                <div class="project-category">Base de données | C#</div>
+                                <h3 class="project-title">VeloMax</h3>
+                                <p class="project-excerpt">Système complet de gestion pour les magasins de vélos, construit avec C# et MySQL.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/development/velomax.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/SQL_Csharp" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemple de projet Unity (Jeu) -->
+                    <div class="project-card" data-type="game" data-categories="unity csharp">
+                        <div class="project-image">
+                            <img src="assets/images/projects/unity-game.jpg" alt="FPS Prototype">
+                            <div class="project-overlay">
+                                <div class="project-category">Unity | C#</div>
+                                <h3 class="project-title">FPS Prototype</h3>
+                                <p class="project-excerpt">Prototype de jeu FPS avec système de mouvement fluide, mécaniques de tir et intelligence artificielle pour les ennemis.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/game/fps-prototype.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/fps-prototype" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemple de projet 3D (Modélisation) -->
+                    <div class="project-card" data-type="3d" data-categories="blender character-design">
+                        <div class="project-image">
+                            <img src="assets/images/projects/sci-fi-character.jpg" alt="Personnage Sci-Fi">
+                            <div class="project-overlay">
+                                <div class="project-category">Blender | Character Design</div>
+                                <h3 class="project-title">Personnage Sci-Fi</h3>
+                                <p class="project-excerpt">Modèle 3D d'un personnage futuriste créé avec Blender et texturé avec Substance Painter.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/3d/sci-fi-character.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemple de projet d'orfèvrerie -->
+                    <div class="project-card" data-type="jewelry" data-categories="silversmithing design">
+                        <div class="project-image">
+                            <img src="assets/images/projects/silver-pendant.jpg" alt="Pendentif en Argent">
+                            <div class="project-overlay">
+                                <div class="project-category">Orfèvrerie | Argent</div>
+                                <h3 class="project-title">Pendentif en Argent</h3>
+                                <p class="project-excerpt">Pendentif en argent inspiré de motifs naturels avec inclusion d'opale.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/jewelry/silver-pendant.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message de résultat de filtrage -->
+                <div class="filter-results"></div>
+            </div>
+        </div>
     </section>
-    <section>
-      <h2>Contact</h2>
-      <p>Pour toute question concernant cette politique de confidentialité ou l'utilisation de l'extension "Oups Mail", veuillez nous contacter à l'adresse suivante : antoine.roucau@gmail.com.</p>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences</h2>
+                <div class="section-subtitle">Mes outils et technologies</div>
+            </div>
+            
+            <div class="skills-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="development">Développement</button>
+                    <button class="tab-btn" data-tab="design">Design & UI/UX</button>
+                    <button class="tab-btn" data-tab="creative">Création & Artisanat</button>
+                    <button class="tab-btn" data-tab="soft">Soft Skills</button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Tab Développement -->
+                    <div class="tab-pane active" id="development">
+                        <!-- Contenu de l'onglet Développement -->
+                    </div>
+                    
+                    <!-- Tab Design & UI/UX -->
+                    <div class="tab-pane" id="design">
+                        <!-- Contenu de l'onglet Design -->
+                    </div>
+                    
+                    <!-- Tab Création & Artisanat -->
+                    <div class="tab-pane" id="creative">
+                        <!-- Contenu de l'onglet Création -->
+                    </div>
+                    
+                    <!-- Tab Soft Skills -->
+                    <div class="tab-pane" id="soft">
+                        <!-- Contenu de l'onglet Soft Skills -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
+
+    <!-- Section Expérience -->
+    <section id="experience" class="experience">
+        <!-- Contenu de la section Expérience -->
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <!-- Contenu de la section Contact -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">Antoine.</a>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">À propos</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#experience">Expérience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine ROUCAU. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Montpellier, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="pages/legal/privacy-policy.html">Politique de confidentialité</a>
+                <a href="pages/legal/legal-notice.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js" type="module" defer></script>
 </body>
 </html>

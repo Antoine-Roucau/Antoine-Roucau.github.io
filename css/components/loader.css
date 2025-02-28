@@ -1,0 +1,48 @@
+/*--------------------------------------
+ * LOADING OVERLAY
+--------------------------------------*/
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Valeur très élevée pour s'assurer qu'il est au-dessus de tout */
+    opacity: 1;
+}
+
+.loader {
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+}
+
+.loader-text {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #6c5ce7; /* Fallback si les variables CSS ne sont pas chargées */
+    color: var(--color-primary, #6c5ce7);
+    letter-spacing: 1px;
+}
+
+.loader-progress {
+    width: 100%;
+    height: 4px;
+    background-color: #eee; /* Fallback */
+    background-color: var(--color-bg-alt, #eee);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.loader-progress {
+    width: 0%;
+    background-color: #6c5ce7; /* Fallback */
+    background-color: var(--color-primary, #6c5ce7);
+    transition: width 0.2s ease-out;
+}

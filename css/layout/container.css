@@ -1,0 +1,90 @@
+/*--------------------------------------
+ * CONTENEURS
+--------------------------------------*/
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.container-small {
+    max-width: 800px;
+}
+
+.container-large {
+    max-width: 1440px;
+}
+
+.container-fluid {
+    max-width: 100%;
+}
+
+/* Espacement des sections */
+section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+    position: relative;
+}
+
+section.section-sm {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+}
+
+section.section-lg {
+    padding-top: calc(var(--space-xl) * 1.5);
+    padding-bottom: calc(var(--space-xl) * 1.5);
+}
+
+/* Entêtes de section */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Conteneur pour les pages de détail de projet */
+.project-detail .container {
+    max-width: 1000px;
+}
+
+/* Conteneur pour les pages légales */
+.legal-page .container {
+    max-width: 800px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    section {
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-lg);
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .container {
+        padding-left: calc(var(--container-padding) * 0.75);
+        padding-right: calc(var(--container-padding) * 0.75);
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding-top: var(--space-md);
+        padding-bottom: var(--space-md);
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-md);
+    }
+    
+    .container {
+        padding-left: calc(var(--container-padding) * 0.5);
+        padding-right: calc(var(--container-padding) * 0.5);
+    }
+}

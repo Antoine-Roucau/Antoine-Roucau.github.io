@@ -1,0 +1,42 @@
+/*--------------------------------------
+ * THÈME SOMBRE
+--------------------------------------*/
+
+[data-theme="dark"] {
+    /* Couleurs principales */
+    --color-primary: #818cf8;
+    --color-primary-light: #a5b4fc;
+    --color-primary-dark: #6366f1;
+    --color-secondary: #fb923c;
+    --color-secondary-light: #fdba74;
+    --color-secondary-dark: #f97316;
+    
+    /* Couleurs de fond et de texte */
+    --color-bg: #0f172a;
+    --color-bg-alt: #1e293b;
+    --color-text: #e2e8f0;
+    --color-text-light: #94a3b8;
+    --color-heading: #f8fafc;
+    --color-border: #334155;
+    
+    /* Couleurs RGB pour les transparences */
+    --color-bg-rgb: 15, 23, 42;
+    --color-text-rgb: 226, 232, 240;
+}
+
+/* Styles spécifiques au mode sombre */
+[data-theme="dark"] .code-showcase {
+    background-color: #1a2234;
+}
+
+[data-theme="dark"] .language-python {
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .project-github {
+    background-color: #2c343a;
+}
+
+[data-theme="dark"] .project-github:hover {
+    background-color: #404b55;
+}

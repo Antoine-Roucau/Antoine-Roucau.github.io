@@ -1,0 +1,202 @@
+/*--------------------------------------
+ * STYLES DE LA SECTION EXPÉRIENCE
+--------------------------------------*/
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: var(--space-md);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 43px;
+    width: 16px;
+    height: 16px;
+    border-radius: var(--border-radius-full);
+    background-color: var(--color-primary);
+    top: 25px;
+    z-index: 1;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    width: 40px;
+    text-align: right;
+}
+
+.timeline-content {
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.timeline-title {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: var(--color-heading);
+}
+
+.timeline-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.timeline-description ul {
+    list-style: disc;
+    padding-left: var(--space-md);
+    margin-bottom: 0;
+}
+
+.timeline-description li {
+    margin-bottom: var(--space-xs);
+    color: var(--color-text-light);
+}
+
+.timeline-description li:last-child {
+    margin-bottom: 0;
+}
+
+/* Section éducation */
+.education-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+    color: var(--color-heading);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.education-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 30%;
+    width: 40%;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.education-item {
+    background-color: var(--color-bg-alt);
+    border-radius: var(--border-radius-md);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.education-year {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.education-details h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--space-xs);
+    color: var(--color-heading);
+}
+
+.education-place {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-xs);
+    color: var(--color-text);
+}
+
+.education-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+}
+
+/* Certifications */
+.certification-list {
+    margin-top: var(--space-sm);
+}
+
+.certification {
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--font-size-sm);
+}
+
+.certification:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-dot {
+        left: 13px;
+    }
+    
+    .timeline-date {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        text-align: left;
+        margin-bottom: var(--space-xs);
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+    
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+}

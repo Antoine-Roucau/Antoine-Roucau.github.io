@@ -1,0 +1,27 @@
+/*--------------------------------------
+ * THÈME CLAIR (PAR DÉFAUT)
+--------------------------------------*/
+
+:root {
+    /* Couleurs principales */
+    --color-primary: #6366f1;
+    --color-primary-light: #a5b4fc;
+    --color-primary-dark: #4338ca;
+    --color-secondary: #f97316;
+    --color-secondary-light: #fdba74;
+    --color-secondary-dark: #c2410c;
+    
+    /* Couleurs de fond et de texte */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-text: #0f172a;
+    --color-text-light: #64748b;
+    --color-heading: #030712;
+    --color-border: #e2e8f0;
+    
+    /* Couleurs RGB pour les transparences */
+    --color-primary-rgb: 99, 102, 241;
+    --color-secondary-rgb: 249, 115, 22;
+    --color-bg-rgb: 255, 255, 255;
+    --color-text-rgb: 15, 23, 42;
+}

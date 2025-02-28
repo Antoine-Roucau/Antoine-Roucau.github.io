@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OrthoNome - Programme pour corriger les fautes d'orthographe en français et en anglais. Projet développé par Antoine ROUCAU.">
+    <title>OrthoNome | Antoine ROUCAU</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Antoine.</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>OrthoNome</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">OrthoNome</h1>
+                <div class="project-category">Python | Outil</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/OrthoNome" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets/images/projects/orthonome-main.jpg" alt="Interface d'OrthoNome">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail active">
+                            <img src="../../../assets/images/projects/orthonome-thumb-1.jpg" alt="Interface">
+                        </div>
+                        <div class="gallery-thumbnail">
+                            <img src="../../../assets/images/projects/orthonome-thumb-2.jpg" alt="Correction">
+                        </div>
+                        <div class="gallery-thumbnail">
+                            <img src="../../../assets/images/projects/orthonome-thumb-3.jpg" alt="Configuration">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Langage</h3>
+                        <p>Python</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Bibliothèques</h3>
+                        <p>Tkinter, Pyperclip, LanguageTool</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Fonctionnel</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>OrthoNome est un programme Python qui permet de corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier. L'idée est venue d'un besoin personnel de corriger rapidement des textes sans avoir à ouvrir constamment des outils en ligne.</p>
+                    <p>Le programme fonctionne en arrière-plan et intercepte le contenu du presse-papier lorsque l'utilisateur appuie sur une combinaison de touches spécifique. Le texte est ensuite corrigé à l'aide de LanguageTool, une bibliothèque de correction grammaticale et orthographique open-source.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Correction orthographique en français et en anglais</li>
+                        <li>Fonctionnement via raccourcis clavier</li>
+                        <li>Interface graphique simple pour les réglages</li>
+                        <li>Détection automatique de la langue</li>
+                        <li>Conservation de la mise en forme du texte</li>
+                        <li>Suggestions multiples pour chaque correction</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <p>Le principal défi de ce projet était de créer un outil qui fonctionne de manière transparente sans interrompre le flux de travail de l'utilisateur. Cela impliquait :</p>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Gestion du presse-papier système</h3>
+                            <p>Il a fallu trouver un moyen fiable d'accéder au presse-papier et de le modifier sans perturber les autres applications.</p>
+                        </li>
+                        <li>
+                            <h3>Capture des raccourcis clavier globaux</h3>
+                            <p>Implémenter des raccourcis qui fonctionnent même lorsque l'application n'est pas au premier plan a nécessité l'utilisation de bibliothèques spécifiques au système d'exploitation.</p>
+                        </li>
+                        <li>
+                            <h3>Performance de la correction</h3>
+                            <p>L'analyse linguistique peut être gourmande en ressources. J'ai dû optimiser le processus pour garantir une correction rapide, même sur des textes longs.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Code et implémentation</h2>
+                    <div class="code-showcase">
+                        <h3>Extrait de code principal</h3>
+                        <pre><code class="language-python">
+def correct_text(text, language='auto'):
+    """
+    Corrige le texte fourni en utilisant LanguageTool.
+    
+    Args:
+        text (str): Le texte à corriger
+        language (str): Code de langue ('fr', 'en', ou 'auto')
+        
+    Returns:
+        str: Texte corrigé
+    """
+    # Détection automatique de la langue si nécessaire
+    if language == 'auto':
+        # Logique de détection de langue
+        detected_lang = detect_language(text)
+        language = detected_lang
+    
+    # Initialisation de LanguageTool avec la langue appropriée
+    tool = language_check.LanguageTool(language)
+    
+    # Détection des erreurs
+    matches = tool.check(text)
+    
+    # Application des corrections
+    corrected_text = language_check.correct(text, matches)
+    
+    return corrected_text
+                        </code></pre>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet m'a permis d'approfondir mes connaissances en développement Python, en particulier :</p>
+                    <ul>
+                        <li>L'interaction avec les systèmes d'exploitation</li>
+                        <li>La création d'interfaces graphiques avec Tkinter</li>
+                        <li>Le traitement du langage naturel avec LanguageTool</li>
+                        <li>La gestion des processus en arrière-plan</li>
+                    </ul>
+                    <p>OrthoNome est devenu un outil que j'utilise quotidiennement, et j'ai reçu des retours positifs d'autres utilisateurs qui apprécient sa simplicité et son efficacité.</p>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="python ai">
+                        <div class="project-image">
+                            <img src="../../../assets/images/projects/gomoku.jpg" alt="Gomoku IA">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | IA</div>
+                                <h3 class="project-title">Gomoku IA</h3>
+                                <div class="project-links">
+                                    <a href="gomoku.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python cybersec">
+                        <div class="project-image">
+                            <img src="../../../assets/images/projects/flux-analysis.jpg" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | Cybersécurité</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <div class="project-links">
+                                    <a href="flux-analysis.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Antoine.</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expérience</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine ROUCAU. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Montpellier, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+                <a href="../../legal/legal-notice.html">Mentions légales</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
