@@ -4,7 +4,7 @@
  */
 
 // Éléments DOM
-let loaderOverlay, loaderProgress;
+let loaderOverlay, loaderProgressBar;
 
 /**
  * Initialise le loader
@@ -14,10 +14,15 @@ export function init() {
     
     // Récupérer les éléments
     loaderOverlay = document.querySelector('.loader-overlay');
-    loaderProgress = document.querySelector('.loader-progress');
+    loaderProgressBar = document.querySelector('.loader-progress-bar');
     
     if (!loaderOverlay) {
         console.error("Élément loader-overlay non trouvé");
+        return;
+    }
+    
+    if (!loaderProgressBar) {
+        console.error("Élément loader-progress-bar non trouvé");
         return;
     }
     
@@ -27,10 +32,10 @@ export function init() {
     // Simuler la progression
     simulateProgress();
     
-    // Filet de sécurité
+    // Filet de sécurité (après 5 secondes)
     window.addEventListener('load', function() {
         setTimeout(function() {
-            if (loaderOverlay && loaderOverlay.style.display !== 'none') {
+            if (loaderOverlay && loaderOverlay.style.opacity !== '0') {
                 console.warn('Forçage de la fin du chargement (timeout de sécurité)');
                 hideLoader();
             }
@@ -42,7 +47,7 @@ export function init() {
  * Simule une progression de chargement
  */
 function simulateProgress() {
-    if (!loaderProgress) return;
+    if (!loaderProgressBar) return;
     
     let width = 0;
     const interval = setInterval(function() {
@@ -52,7 +57,7 @@ function simulateProgress() {
             return;
         }
         width += 2;
-        loaderProgress.style.width = width + '%';
+        loaderProgressBar.style.width = width + '%';
     }, 40);
 }
 
@@ -64,11 +69,16 @@ export function hideLoader() {
     
     console.log('Masquage du loader');
     
-    // Masquer directement
-    loaderOverlay.style.display = 'none';
-    document.body.style.overflow = '';
+    // Animation de fondu avant de masquer
+    loaderOverlay.style.opacity = '0';
     
-    // Déclencher l'événement
-    document.dispatchEvent(new CustomEvent('loaderComplete'));
-    console.log('Loader masqué, événement loaderComplete déclenché');
+    // Attendre la fin de l'animation avant de masquer
+    setTimeout(() => {
+        loaderOverlay.style.display = 'none';
+        document.body.style.overflow = '';
+        
+        // Déclencher l'événement
+        document.dispatchEvent(new CustomEvent('loaderComplete'));
+        console.log('Loader masqué, événement loaderComplete déclenché');
+    }, 500);
 }

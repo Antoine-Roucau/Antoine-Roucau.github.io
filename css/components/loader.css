@@ -11,8 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* Valeur très élevée pour s'assurer qu'il est au-dessus de tout */
+    z-index: 9999;
     opacity: 1;
+    transition: opacity 0.5s ease-out;
 }
 
 .loader {
@@ -25,12 +26,12 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #6c5ce7; /* Fallback si les variables CSS ne sont pas chargées */
+    color: #6c5ce7; /* Fallback */
     color: var(--color-primary, #6c5ce7);
     letter-spacing: 1px;
 }
 
-.loader-progress {
+.loader-progress-container {
     width: 100%;
     height: 4px;
     background-color: #eee; /* Fallback */
@@ -40,8 +41,9 @@
     margin: 0 auto;
 }
 
-.loader-progress {
+.loader-progress-bar {
     width: 0%;
+    height: 100%;
     background-color: #6c5ce7; /* Fallback */
     background-color: var(--color-primary, #6c5ce7);
     transition: width 0.2s ease-out;

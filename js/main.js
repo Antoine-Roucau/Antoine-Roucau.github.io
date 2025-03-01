@@ -17,6 +17,8 @@ import { initGallery } from './components/gallery.js';
 import { initContactForm } from './components/contactForm.js';
 import { initFormValidation } from './components/formValidation.js';
 
+import * as Loader from './components/loader.js';
+
 // Variables d'état
 let portfolioInitialized = false;
 let loaderComplete = false;
@@ -46,8 +48,8 @@ function setupSimpleLoader() {
     document.body.style.overflow = 'hidden';
     
     // Simuler la progression
-    const loaderProgress = document.querySelector('.loader-progress');
-    if (loaderProgress) {
+    const loaderProgressBar = document.querySelector('.loader-progress-bar');
+    if (loaderProgressBar) {
         let width = 0;
         const interval = setInterval(function() {
             if (width >= 100) {
@@ -56,7 +58,7 @@ function setupSimpleLoader() {
                 return;
             }
             width += 2;
-            loaderProgress.style.width = width + '%';
+            loaderProgressBar.style.width = width + '%';
         }, 40);
     } else {
         // Sans élément de progression, attendre simplement un délai
@@ -69,15 +71,19 @@ function setupSimpleLoader() {
     });
     
     function hideSimpleLoader() {
-        if (loaderOverlay && loaderOverlay.style.display !== 'none') {
-            loaderOverlay.style.display = 'none';
-            document.body.style.overflow = '';
-            loaderComplete = true;
+        if (loaderOverlay && loaderOverlay.style.opacity !== '0') {
+            loaderOverlay.style.opacity = '0';
             
-            document.dispatchEvent(new CustomEvent('loaderComplete'));
-            console.log('Loader masqué (méthode de secours)');
-            
-            initPortfolio();
+            setTimeout(() => {
+                loaderOverlay.style.display = 'none';
+                document.body.style.overflow = '';
+                
+                // Déclencher l'événement loaderComplete
+                document.dispatchEvent(new CustomEvent('loaderComplete'));
+                console.log('Loader masqué (méthode de secours)');
+                
+                initPortfolio();
+            }, 500);
         }
     }
 }
