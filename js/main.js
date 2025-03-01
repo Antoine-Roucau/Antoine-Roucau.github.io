@@ -17,8 +17,6 @@ import { initGallery } from './components/gallery.js';
 import { initContactForm } from './components/contactForm.js';
 import { initFormValidation } from './components/formValidation.js';
 
-import * as Loader from './components/loader.js';
-
 // Variables d'état
 let portfolioInitialized = false;
 let loaderComplete = false;
