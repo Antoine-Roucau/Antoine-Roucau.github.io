@@ -1,216 +1,145 @@
-/**
- * Script principal du portfolio d'Antoine ROUCAU
- * Ce fichier utilise des modules ES pour organiser le code
- */
+// main.js
+var APP = APP || {};
 
-// Importation des modules
-import './utils/polyfills.js';
-import { initThemeToggle } from './components/themeToggle.js';
-import * as Loader from './components/loader.js';
-import { initNavigation } from './components/navigation.js';
-import { initBackToTop } from './components/backToTop.js';
-import { initSmoothScroll } from './components/smoothScroll.js';
-import { initProjectFilters } from './components/projectFilters.js';
-import { initSkillsTabs } from './components/skillsTabs.js';
-import { initTypeWriter } from './components/typeWriter.js';
-import { initGallery } from './components/gallery.js';
-import { initContactForm } from './components/contactForm.js';
-import { initFormValidation } from './components/formValidation.js';
-
-// Variables d'état
-let portfolioInitialized = false;
-let loaderComplete = false;
-
-// Initialisation au chargement du DOM
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM chargé, initialisation du loader...');
+// Fonction pour charger dynamiquement les scripts
+APP.loadScripts = (function() {
+  // Liste des scripts à charger dans l'ordre
+  var scripts = [
+    // Utilitaires d'abord
+    'js/utils/polyfills.js',
+    'js/utils/helpers.js',
+    'js/utils/animations.js',
     
-    // Initialiser le loader en premier
-    try {
-        Loader.init();
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation du loader:', error);
-        setupSimpleLoader();
+    // Ensuite les composants (dans l'ordre des dépendances)
+    'js/components/loader.js',
+    'js/components/themeToggle.js',
+    'js/components/navigation.js',
+    'js/components/backToTop.js',
+    'js/components/smoothScroll.js',
+    'js/components/projectFilters.js',
+    'js/components/skillsTabs.js',
+    'js/components/typeWriter.js',
+    'js/components/gallery.js',
+    'js/components/contactForm.js',
+    'js/components/formValidation.js'
+  ];
+  
+  var scriptsLoaded = 0;
+  
+  function loadScript(url, callback) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    
+    // Événement de chargement terminé
+    script.onload = function() {
+      callback(null, url);
+    };
+    
+    // Gestion des erreurs
+    script.onerror = function() {
+      callback(new Error('Erreur de chargement du script: ' + url));
+    };
+    
+    document.body.appendChild(script);
+  }
+  
+  function loadNextScript(index, callback) {
+    if (index >= scripts.length) {
+      // Tous les scripts sont chargés
+      callback();
+      return;
     }
     
-    // Appliquer le thème immédiatement
-    initThemeToggle();
-});
-
-// Solution de secours pour le loader
-function setupSimpleLoader() {
-    const loaderOverlay = document.querySelector('.loader-overlay');
-    if (!loaderOverlay) return;
-    
-    // Empêcher le défilement pendant le chargement
-    document.body.style.overflow = 'hidden';
-    
-    // Simuler la progression
-    const loaderProgressBar = document.querySelector('.loader-progress-bar');
-    if (loaderProgressBar) {
-        let width = 0;
-        const interval = setInterval(function() {
-            if (width >= 100) {
-                clearInterval(interval);
-                setTimeout(hideSimpleLoader, 500);
-                return;
-            }
-            width += 2;
-            loaderProgressBar.style.width = width + '%';
-        }, 40);
-    } else {
-        // Sans élément de progression, attendre simplement un délai
-        setTimeout(hideSimpleLoader, 2000);
-    }
-    
-    // Filet de sécurité
-    window.addEventListener('load', function() {
-        setTimeout(hideSimpleLoader, 4000);
+    loadScript(scripts[index], function(error) {
+      if (error) {
+        console.error(error);
+      }
+      
+      // Charger le script suivant
+      loadNextScript(index + 1, callback);
     });
+  }
+  
+  return {
+    loadAll: function(callback) {
+      loadNextScript(0, callback);
+    }
+  };
+})();
+
+// Initialiser l'application une fois tous les scripts chargés
+APP.init = function() {
+    // Initialiser les utilitaires d'abord
+    if (APP.utils) {
+      // Initialiser les polyfills
+      if (APP.utils.polyfills && typeof APP.utils.polyfills.init === 'function') {
+        APP.utils.polyfills.init();
+      }
+    }
+  
+    // S'assurer que le loader est initialisé immédiatement
+    if (APP.components && APP.components.Loader) {
+      APP.components.Loader.init();
+    }
     
-    function hideSimpleLoader() {
-        if (loaderOverlay && loaderOverlay.style.opacity !== '0') {
-            loaderOverlay.style.opacity = '0';
-            
-            setTimeout(() => {
-                loaderOverlay.style.display = 'none';
-                document.body.style.overflow = '';
-                
-                // Déclencher l'événement loaderComplete
-                document.dispatchEvent(new CustomEvent('loaderComplete'));
-                console.log('Loader masqué (méthode de secours)');
-                
-                initPortfolio();
-            }, 500);
+    // Initialiser les autres composants quand le loader est terminé
+    document.addEventListener('loaderComplete', function() {
+      if (APP.components) {
+        // Initialiser les composants communs
+        if (APP.components.ThemeToggle) APP.components.ThemeToggle.init();
+        if (APP.components.Navigation) APP.components.Navigation.init();
+        if (APP.components.BackToTop) APP.components.BackToTop.init();
+        if (APP.components.SmoothScroll) APP.components.SmoothScroll.init();
+        if (APP.components.ContactForm) APP.components.ContactForm.init();
+        if (APP.components.FormValidation) APP.components.FormValidation.init();
+        
+        // Initialiser les animations au défilement si nécessaire
+        if (APP.utils && APP.utils.animations && 
+            typeof APP.utils.animations.initScrollAnimations === 'function') {
+          APP.utils.animations.initScrollAnimations();
         }
-    }
-}
-
-// Ajouter cette fonction pour le lazy loading des images
-function initLazyLoading() {
-    if ('IntersectionObserver' in window) {
-        const lazyImages = document.querySelectorAll('img[data-src]');
         
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
+        // Déterminer le type de page
+        var pageType = document.body.getAttribute('data-page-type') || 'home';
         
-        lazyImages.forEach(image => imageObserver.observe(image));
-    } else {
-        // Fallback pour les navigateurs ne supportant pas IntersectionObserver
-        const lazyImages = document.querySelectorAll('img[data-src]');
-        lazyImages.forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-        });
-    }
-}
-
-
-// Fonction d'initialisation principale
-function initPortfolio() {
-    // Éviter l'initialisation multiple
-    if (portfolioInitialized) return;
-    portfolioInitialized = true;
-    
-    console.log('Initialisation du portfolio...');
-    
-    // Déterminer le type de page actuel
-    const pageType = document.body.getAttribute('data-page-type') || 'home';
-    console.log(`Type de page détecté: ${pageType}`);
-    
-    // Initialiser les modules communs
-    initCommonModules();
-    initLazyLoading();
-    
-    // Modules spécifiques selon le type de page
-    switch(pageType) {
-        case 'home':
-            initHomeModules();
+        // Initialiser les composants spécifiques à la page
+        switch(pageType) {
+          case 'home':
+            if (APP.components.ProjectFilters) APP.components.ProjectFilters.init();
+            if (APP.components.SkillsTabs) APP.components.SkillsTabs.init();
+            if (APP.components.TypeWriter) APP.components.TypeWriter.init();
             break;
-        case 'project':
-            initProjectModules();
+          case 'project':
+            if (APP.components.Gallery) APP.components.Gallery.init();
             break;
-        default:
-            console.log('Type de page standard');
-    }
-    
-    // Mise à jour de l'année dans le footer
-    updateCopyrightYear();
-}
-
-// Initialisation des modules communs
-function initCommonModules() {
-    console.log('Initialisation des modules communs...');
-    
-    try {
-        initNavigation();
-        initBackToTop();
-        initSmoothScroll();
-        initContactForm();
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation des modules communs:', error);
-    }
-}
-
-// Initialisation des modules pour la page d'accueil
-function initHomeModules() {
-    console.log('Initialisation des modules de la page d\'accueil...');
-    
-    try {
-        initProjectFilters();
-        initSkillsTabs();
-        initTypeWriter({
-            element: document.querySelector('.glitch'),
-            speed: 100,
-            delay: 1000
-        });
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation des modules de la page d\'accueil:', error);
-    }
-}
-
-// Initialisation des modules pour les pages de projet
-function initProjectModules() {
-    console.log('Initialisation des modules de page projet...');
-    
-    try {
-        initGallery();
-    } catch (error) {
-        console.error('Erreur lors de l\'initialisation des modules de page projet:', error);
-    }
-}
-
-
-
-// Mise à jour de l'année de copyright
-function updateCopyrightYear() {
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
+        }
+      }
+      
+      // Mise à jour de l'année dans le footer
+      var yearElement = document.getElementById('current-year');
+      if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
-    }
-}
+      }
+      
+      console.log('Tous les composants sont initialisés');
+    });
+  };
 
-// Écouter l'événement loaderComplete pour initialiser le site
-document.addEventListener('loaderComplete', function() {
-    console.log('Loader terminé, initialisation du portfolio');
-    loaderComplete = true;
-    initPortfolio();
-});
-
-// Mécanisme de sécurité pour garantir l'initialisation
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        if (!portfolioInitialized) {
-            console.warn('Initialisation de secours du portfolio');
-            initPortfolio();
-        }
-    }, 5000);
+// Démarrer le chargement des scripts au chargement du DOM
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialiser l'espace de noms des composants
+  APP.components = {};
+  APP.utils = {};
+  
+  // Commencer le chargement des scripts
+  APP.loadScripts.loadAll(function() {
+    console.log('Tous les scripts ont été chargés');
+    APP.init();
+  });
+  
+  // Déjà initialiser le thème pour éviter un flash
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 });

@@ -745,6 +745,60 @@
     </button>
 
     <!-- Scripts -->
-    <script src="js/main.js" type="module" defer></script>
+    <script>
+        // Créer l'espace de noms global
+        var APP = APP || {};
+        APP.components = APP.components || {};
+        
+        // Version minimale du loader en attendant que les autres scripts chargent
+        APP.components.Loader = APP.components.Loader || (function() {
+          var initialized = false;
+          
+          function init() {
+            if (initialized) return;
+            initialized = true;
+            
+            var loaderOverlay = document.querySelector('.loader-overlay');
+            var loaderProgressBar = document.querySelector('.loader-progress-bar');
+            
+            if (!loaderOverlay || !loaderProgressBar) {
+              console.error("Éléments du loader non trouvés");
+              return;
+            }
+            
+            // Assurer la visibilité
+            loaderOverlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Animation simple
+            var width = 0;
+            var interval = setInterval(function() {
+              if (width >= 100) {
+                clearInterval(interval);
+                setTimeout(function() {
+                  loaderOverlay.style.opacity = '0';
+                  setTimeout(function() {
+                    loaderOverlay.style.display = 'none';
+                    document.body.style.overflow = '';
+                    document.dispatchEvent(new Event('loaderComplete'));
+                  }, 500);
+                }, 300);
+                return;
+              }
+              width += 2;
+              loaderProgressBar.style.width = width + '%';
+            }, 30);
+          }
+          
+          return { init: init };
+        })();
+        
+        // Initialiser dès que possible
+        document.addEventListener('DOMContentLoaded', function() {
+          APP.components.Loader.init();
+        });
+      </script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
