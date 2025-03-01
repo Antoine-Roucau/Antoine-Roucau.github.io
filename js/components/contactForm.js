@@ -50,20 +50,8 @@ APP.components.ContactForm = (function() {
         formValues[key] = value;
       });
       
-      // En production, remplacer par un vrai appel API
-      // sendContactForm(formValues)
-      //   .then(function() {
-      //     displaySuccessMessage(form);
-      //     storeContactInfo(formValues);
-      //   })
-      //   .catch(function(error) {
-      //     displayErrorMessage(form, error.message || 'Une erreur est survenue lors de l\'envoi du message.');
-      //     submitBtn.disabled = false;
-      //     submitBtn.innerHTML = originalBtnContent;
-      //   });
-      
-      // Simuler un envoi réussi
-      simulateFormSubmission(formValues)
+      // Envoyer le formulaire via Formspree
+      sendContactForm(formValues, form.action)
         .then(function() {
           // Afficher le message de succès
           displaySuccessMessage(form);
@@ -96,32 +84,19 @@ APP.components.ContactForm = (function() {
   }
   
   /**
-   * Simule l'envoi du formulaire (pour démonstration)
+   * Envoie le formulaire de contact à Formspree
    * @param {Object} formData - Données du formulaire
-   * @returns {Promise} - Promise résolue après le délai
-   */
-  function simulateFormSubmission(formData) {
-    return new Promise(function(resolve) {
-      // Simuler un délai d'envoi
-      setTimeout(function() {
-        console.log('Données du formulaire (simulation):', formData);
-        resolve({ success: true });
-      }, 2000);
-    });
-  }
-  
-  /**
-   * Envoie le formulaire de contact à un service externe
-   * @param {Object} formData - Données du formulaire
+   * @param {string} formAction - URL du formulaire Formspree
    * @returns {Promise} - Promise avec la réponse
    */
-  function sendContactForm(formData) {
+  function sendContactForm(formData, formAction) {
     return new Promise(function(resolve, reject) {
-      // Exemple avec Formspree (à adapter selon votre service)
-      fetch('https://formspree.io/f/votre-id-formspree', {
+      // Envoi à Formspree
+      fetch(formAction, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(formData)
       })
@@ -129,10 +104,11 @@ APP.components.ContactForm = (function() {
         return response.json(); 
       })
       .then(function(result) {
-        if (!response.ok) {
+        if (result.ok) {
+          resolve(result);
+        } else {
           throw new Error(result.error || 'Erreur lors de l\'envoi du formulaire');
         }
-        resolve(result);
       })
       .catch(function(error) {
         console.error('Erreur d\'envoi:', error);

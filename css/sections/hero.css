@@ -212,3 +212,74 @@ h1 {
         gap: var(--space-sm);
     }
 }
+
+/* Styles pour les contacts rapides en forme d'icônes */
+.hero-quick-contacts {
+    margin-top: var(--space-md);
+    padding-top: var(--space-xs);
+}
+
+.quick-contact-title {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xs);
+}
+
+.quick-contact-icons {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.quick-contact-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-radius-full);
+    background-color: rgba(var(--color-bg-rgb), 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.quick-contact-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+}
+
+.quick-contact-icon:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-primary);
+}
+
+.quick-contact-icon:hover svg {
+    color: white;
+}
+
+/* Styles responsifs */
+@media (max-width: 992px) {
+    .hero-quick-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-contact-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .quick-contact-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .quick-contact-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+}

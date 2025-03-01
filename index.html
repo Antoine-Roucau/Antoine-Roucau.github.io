@@ -37,7 +37,7 @@
                     <li><a href="#about" class="nav-link">À propos</a></li>
                     <li><a href="#projects" class="nav-link">Projets</a></li>
                     <li><a href="#skills" class="nav-link">Compétences</a></li>
-                    <li><a href="#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="#experience" class="nav-link">Expériences & Formation</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -67,6 +67,30 @@
                     <div class="hero-cta">
                         <a href="#projects" class="primary-btn">Voir mes projets</a>
                         <a href="#contact" class="outline-btn">Me contacter</a>
+                    </div>
+                    
+                    <!-- Contacts rapides -->
+                    <div class="hero-quick-contacts">
+                        <div class="quick-contact-icons">
+                            <a href="mailto:abg.antoine.roucau@gmail.com" class="quick-contact-icon" title="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Antoine-Roucau" target="_blank" class="quick-contact-icon" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="quick-contact-icon" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -316,154 +340,169 @@
 
     <!-- Section Compétences -->
     <section id="skills" class="skills">
-        <!-- Tab Développement -->
-        <div class="tab-pane active" id="development">
-            <div class="skills-container">
-                <div class="skill-group">
-                    <h3 class="skill-group-title">Langages de programmation</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-level">Advanced</span>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences</h2>
+                <div class="section-subtitle">Mes connaissances techniques et créatives</div>
+            </div>
+            
+            <!-- Navigation des onglets -->
+            <div class="skills-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="development">Développement</button>
+                    <button class="tab-btn" data-tab="design">Design & UI/UX</button>
+                    <button class="tab-btn" data-tab="creative">Création & Artisanat</button>
+                    <button class="tab-btn" data-tab="soft">Soft Skills</button>
+                </div>
+            </div>
+
+            <!-- Tab Développement -->
+            <div class="tab-pane active" id="development">
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Langages de programmation</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C#</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">C#</span>
-                                <span class="skill-level">Advanced</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML/CSS</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">Beginner</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress beginner"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skill-group">
-                    <h3 class="skill-group-title">Frameworks & Technologies</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Unity</span>
-                                <span class="skill-level">Advanced</span>
+                    
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Frameworks & Technologies</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Unity</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Git</span>
-                                <span class="skill-level">Intermediate</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Pandas</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Pandas</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-level">Beginner</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress beginner"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Arduino IDE</span>
-                                <span class="skill-level">Beginner</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress beginner"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Arduino IDE</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tab Design & UI/UX -->
-        <div class="tab-pane" id="design">
-            <div class="skills-container">
-                <div class="skill-group">
-                    <h3 class="skill-group-title">Outils de design</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Blender</span>
-                                <span class="skill-level">Intermediate</span>
+            <!-- Tab Design & UI/UX -->
+            <div class="tab-pane" id="design">
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Outils de design</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Blender</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Fusion 360</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Fusion 360</span>
-                                <span class="skill-level">Intermediate</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Krita</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Krita</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Cap Cut</span>
-                                <span class="skill-level">Beginner</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress beginner"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cap Cut</span>
+                                    <span class="skill-level">Beginner</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress beginner"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tab Création & Artisanat -->
-        <div class="tab-pane" id="creative">
-            <div class="creative-skills">
+            <!-- Tab Création & Artisanat -->
+            <div class="tab-pane" id="creative">
                 <div class="skills-container">
                     <div class="skill-group">
                         <h3 class="skill-group-title">Projets Créatifs</h3>
@@ -499,66 +538,66 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Tab Soft Skills -->
-        <div class="tab-pane" id="soft">
-            <div class="skills-container">
-                <div class="skill-group">
-                    <h3 class="skill-group-title">Compétences transversales</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Créativité</span>
-                                <span class="skill-level">Expert</span>
+            <!-- Tab Soft Skills -->
+            <div class="tab-pane" id="soft">
+                <div class="skills-container">
+                    <div class="skill-group">
+                        <h3 class="skill-group-title">Compétences transversales</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Créativité</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress expert"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress expert"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Aisance relationnelle</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress expert"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Aisance relationnelle</span>
-                                <span class="skill-level">Expert</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Anglais (B2 TOEFL)</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress expert"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Résolution de problèmes</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Anglais (B2 TOEFL)</span>
-                                <span class="skill-level">Advanced</span>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Travail en équipe</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress advanced"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Résolution de problèmes</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Travail en équipe</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress advanced"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Gestion de projet</span>
-                                <span class="skill-level">Intermediate</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress intermediate"></div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Gestion de projet</span>
+                                    <span class="skill-level">Intermediate</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress intermediate"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -571,7 +610,7 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Expérience</h2>
+                <h2 class="section-title">Expériences & Formation</h2>
                 <div class="section-subtitle">Mon parcours académique et professionnel</div>
             </div>
             
@@ -806,7 +845,7 @@
                     <a href="#about">À propos</a>
                     <a href="#projects">Projets</a>
                     <a href="#skills">Compétences</a>
-                    <a href="#experience">Expérience</a>
+                    <a href="#experience">Expériences & Formation</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
@@ -833,7 +872,7 @@
                     &copy; <span id="current-year">2025</span> Antoine ROUCAU. Tous droits réservés.
                 </div>
                 <div class="footer-signature">
-                    Conçu et développé à Montpellier, France
+                    Paris, France Mars 2025
                 </div>
             </div>
             
