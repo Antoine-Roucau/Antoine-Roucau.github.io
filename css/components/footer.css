@@ -99,17 +99,54 @@
     color: var(--color-primary);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .footer-content,
-    .footer-bottom {
+    .footer {
+        padding: var(--space-lg) 0 var(--space-md);
+        margin-top: var(--space-lg);
+    }
+    
+    .footer-content {
         flex-direction: column;
         text-align: center;
         gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: var(--space-sm);
     }
     
     .social-profiles {
         flex-wrap: wrap;
         justify-content: center;
+        gap: var(--space-sm);
+        margin-bottom: var(--space-md);
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    /* Fix pour s'assurer que le footer est toujours visible */
+    .footer {
+        position: relative;
+        z-index: 1;
+        bottom: 0;
+        width: 100%;
+        display: block !important; /* Force l'affichage */
+    }
+    
+    /* Style spécifique pour garantir la visibilité du contenu du footer */
+    .footer .container {
+        display: block !important;
+        opacity: 1 !important;
     }
 }

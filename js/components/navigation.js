@@ -40,8 +40,13 @@ APP.components.Navigation = (function() {
     var navLinks = document.querySelectorAll('.nav-link');
     
     if (menuToggle && navigation) {
+      console.log('Menu mobile initialisé'); // Log de débogage
+      
       // Ouvrir/fermer le menu mobile
-      menuToggle.addEventListener('click', function() {
+      menuToggle.addEventListener('click', function(e) {
+        e.preventDefault(); // Prévenir tout comportement par défaut
+        console.log('Menu toggle clicked'); // Log de débogage
+        
         menuToggle.classList.toggle('active');
         navigation.classList.toggle('active');
         document.body.classList.toggle('no-scroll');
@@ -63,6 +68,11 @@ APP.components.Navigation = (function() {
           navigation.classList.remove('active');
           document.body.classList.remove('no-scroll');
         }
+      });
+    } else {
+      console.error('Éléments du menu mobile non trouvés:', {
+        menuToggle: !!menuToggle,
+        navigation: !!navigation
       });
     }
   }
@@ -108,9 +118,13 @@ APP.components.Navigation = (function() {
    * Initialise la navigation principale et mobile
    */
   function init() {
+    console.log('Initialisation de la navigation');
     initHeaderScroll();
     initMobileMenu();
     initActiveLinks();
+    
+    // Vérifier que l'initialisation est terminée
+    console.log('Navigation initialisée');
   }
   
   // API publique
