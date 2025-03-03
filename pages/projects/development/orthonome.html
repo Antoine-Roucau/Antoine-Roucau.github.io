@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OrthoNome - Programme pour corriger les fautes d'orthographe en français et en anglais. Projet développé par Antoine ROUCAU.">
+    <meta name="description" content="OrthoNome - Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier. Utilise l'API OpenAI.">
     <title>OrthoNome | Antoine ROUCAU</title>
     
     <!-- Polices Google Fonts -->
@@ -26,7 +26,7 @@
                     <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
                     <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
                     <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
-                    <li><a href="../../../index.html#experience" class="nav-link">Expérience</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
                     <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -54,7 +54,7 @@
             <!-- En-tête du projet -->
             <div class="project-header">
                 <h1 class="project-title">OrthoNome</h1>
-                <div class="project-category">Python | Outil</div>
+                <div class="project-category">Python | IA | Outil</div>
                 <div class="project-links">
                     <a href="https://github.com/Antoine-Roucau/OrthoNome" target="_blank" class="github-link">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -67,18 +67,7 @@
             <div class="project-showcase">
                 <div class="project-gallery">
                     <div class="gallery-main">
-                        <img src="../../../assets/images/projects/orthonome-main.jpg" alt="Interface d'OrthoNome">
-                    </div>
-                    <div class="gallery-thumbnails">
-                        <div class="gallery-thumbnail active">
-                            <img src="../../../assets/images/projects/orthonome-thumb-1.jpg" alt="Interface">
-                        </div>
-                        <div class="gallery-thumbnail">
-                            <img src="../../../assets/images/projects/orthonome-thumb-2.jpg" alt="Correction">
-                        </div>
-                        <div class="gallery-thumbnail">
-                            <img src="../../../assets/images/projects/orthonome-thumb-3.jpg" alt="Configuration">
-                        </div>
+                        <img src="../../../assets/icons/orthonome.ico" alt="Icone OrthoNome">
                     </div>
                 </div>
                 
@@ -89,7 +78,7 @@
                     </div>
                     <div class="spec-item">
                         <h3>Bibliothèques</h3>
-                        <p>Tkinter, Pyperclip, LanguageTool</p>
+                        <p>OpenAI API, Pyperclip, Playsound</p>
                     </div>
                     <div class="spec-item">
                         <h3>Année</h3>
@@ -107,36 +96,39 @@
                 <section class="project-section">
                     <h2>À propos du projet</h2>
                     <p>OrthoNome est un programme Python qui permet de corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier. L'idée est venue d'un besoin personnel de corriger rapidement des textes sans avoir à ouvrir constamment des outils en ligne.</p>
-                    <p>Le programme fonctionne en arrière-plan et intercepte le contenu du presse-papier lorsque l'utilisateur appuie sur une combinaison de touches spécifique. Le texte est ensuite corrigé à l'aide de LanguageTool, une bibliothèque de correction grammaticale et orthographique open-source.</p>
+                    <p>Le programme fonctionne en arrière-plan et intercepte le contenu du presse-papier lorsque l'utilisateur appuie sur une combinaison de touches spécifique. Le texte est ensuite corrigé à l'aide de l'API OpenAI (modèle GPT-4o-mini) pour offrir des corrections de haute qualité avec préservation du sens original et du style d'écriture.</p>
                 </section>
                 
                 <section class="project-section">
                     <h2>Fonctionnalités principales</h2>
                     <ul class="feature-list">
-                        <li>Correction orthographique en français et en anglais</li>
-                        <li>Fonctionnement via raccourcis clavier</li>
-                        <li>Interface graphique simple pour les réglages</li>
-                        <li>Détection automatique de la langue</li>
-                        <li>Conservation de la mise en forme du texte</li>
-                        <li>Suggestions multiples pour chaque correction</li>
+                        <li>Correction orthographique en français et en anglais avec détection automatique de la langue</li>
+                        <li>Fonctionnement via raccourcis clavier configurables (ex: Ctrl + Alt + Pavé numérique 1)</li>
+                        <li>Correction instantanée du texte dans le presse-papier</li>
+                        <li>Feedback sonore pour confirmer la correction</li>
+                        <li>Conservation du sens original, de la structure des phrases et du style d'écriture</li>
+                        <li>Correction de l'orthographe, la grammaire, les accords, les conjugaisons et la ponctuation</li>
                     </ul>
                 </section>
                 
                 <section class="project-section">
-                    <h2>Défis techniques</h2>
-                    <p>Le principal défi de ce projet était de créer un outil qui fonctionne de manière transparente sans interrompre le flux de travail de l'utilisateur. Cela impliquait :</p>
+                    <h2>Installation et configuration</h2>
                     <ol class="challenges-list">
                         <li>
-                            <h3>Gestion du presse-papier système</h3>
-                            <p>Il a fallu trouver un moyen fiable d'accéder au presse-papier et de le modifier sans perturber les autres applications.</p>
+                            <h3>Téléchargement du projet</h3>
+                            <p>Cloner ou télécharger le dépôt GitHub vers votre machine locale.</p>
                         </li>
                         <li>
-                            <h3>Capture des raccourcis clavier globaux</h3>
-                            <p>Implémenter des raccourcis qui fonctionnent même lorsque l'application n'est pas au premier plan a nécessité l'utilisation de bibliothèques spécifiques au système d'exploitation.</p>
+                            <h3>Configuration de l'API OpenAI</h3>
+                            <p>Modifier la clé API dans le fichier OrthoNome.py (un compte OpenAI avec des crédits est nécessaire).</p>
                         </li>
                         <li>
-                            <h3>Performance de la correction</h3>
-                            <p>L'analyse linguistique peut être gourmande en ressources. J'ai dû optimiser le processus pour garantir une correction rapide, même sur des textes longs.</p>
+                            <h3>Création d'un raccourci</h3>
+                            <p>Créer un raccourci pour le fichier exec.bat et le placer sur votre bureau pour un accès facile.</p>
+                        </li>
+                        <li>
+                            <h3>Configuration du raccourci clavier</h3>
+                            <p>Accéder aux propriétés du raccourci pour définir une combinaison de touches personnalisée (par exemple, Ctrl + Alt + Pavé numérique 1).</p>
                         </li>
                     </ol>
                 </section>
@@ -144,49 +136,89 @@
                 <section class="project-section">
                     <h2>Code et implémentation</h2>
                     <div class="code-showcase">
-                        <h3>Extrait de code principal</h3>
+                        <h3>Code principal</h3>
                         <pre><code class="language-python">
-def correct_text(text, language='auto'):
-    """
-    Corrige le texte fourni en utilisant LanguageTool.
-    
-    Args:
-        text (str): Le texte à corriger
-        language (str): Code de langue ('fr', 'en', ou 'auto')
-        
-    Returns:
-        str: Texte corrigé
-    """
-    # Détection automatique de la langue si nécessaire
-    if language == 'auto':
-        # Logique de détection de langue
-        detected_lang = detect_language(text)
-        language = detected_lang
-    
-    # Initialisation de LanguageTool avec la langue appropriée
-    tool = language_check.LanguageTool(language)
-    
-    # Détection des erreurs
-    matches = tool.check(text)
-    
-    # Application des corrections
-    corrected_text = language_check.correct(text, matches)
-    
-    return corrected_text
+import openai
+import pyperclip
+from playsound import playsound
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Récupérer le texte du presse-papier
+texteACorriger = pyperclip.paste()
+
+# Configuration de l'API OpenAI
+openai.api_key = "votre-clé-api-ici"
+
+# Appel à l'API OpenAI pour la correction
+response = openai.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[
+        {
+            "role": "system", 
+            "content": """Correcteur orthographique bilingue (français/anglais). Instructions:
+            1. Détecter automatiquement la langue du texte fourni (français ou anglais)
+            2. Corriger: orthographe, grammaire, accords, conjugaisons, ponctuation selon les règles de la langue détectée
+            3. Préserver: sens original, structure des phrases, style, vocabulaire choisi, registre de langue
+            4. Ne pas: ajouter/supprimer des mots, reformuler des phrases, modifier le ton
+            5. Privilégier les corrections minimales nécessaires
+            6. Pour les ambiguïtés, choisir la correction la plus proche du contexte original
+            7. Retourner UNIQUEMENT le texte corrigé sans commentaires ni explications"""
+        },
+        {
+            "role": "user", 
+            "content": "Texte à corriger / Text to correct:\n\n" + texteACorriger
+        }
+    ]
+)
+
+# Récupérer le texte corrigé
+texteCorriger = response.choices[0].message.content
+
+# Copier le texte corrigé dans le presse-papier
+pyperclip.copy(texteCorriger)
+
+# Jouer un son pour indiquer que la correction est terminée
+path_sound = BASE_DIR + "\correct.mp3"
+playsound(path_sound.encode('unicode-escape').decode())
                         </code></pre>
                     </div>
                 </section>
                 
                 <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <p>Le principal défi de ce projet était de créer un outil qui fonctionne de manière transparente sans interrompre le flux de travail de l'utilisateur :</p>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Intégration avec le presse-papier système</h3>
+                            <p>Utilisation de Pyperclip pour accéder et modifier le contenu du presse-papier de manière fiable et transparente.</p>
+                        </li>
+                        <li>
+                            <h3>Configuration des raccourcis clavier globaux</h3>
+                            <p>Mise en place d'un système de raccourcis clavier qui fonctionne même lorsque l'application n'est pas au premier plan.</p>
+                        </li>
+                        <li>
+                            <h3>Optimisation des requêtes API</h3>
+                            <p>Configuration précise des instructions pour l'API OpenAI afin d'obtenir des corrections rapides et pertinentes.</p>
+                        </li>
+                        <li>
+                            <h3>Feedback utilisateur non-intrusif</h3>
+                            <p>Utilisation d'un feedback sonore simple pour informer l'utilisateur que la correction est terminée sans perturber son flux de travail.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
                     <h2>Résultats et apprentissages</h2>
-                    <p>Ce projet m'a permis d'approfondir mes connaissances en développement Python, en particulier :</p>
+                    <p>Ce projet m'a permis d'approfondir mes connaissances en développement Python et en intégration d'API d'intelligence artificielle :</p>
                     <ul>
-                        <li>L'interaction avec les systèmes d'exploitation</li>
-                        <li>La création d'interfaces graphiques avec Tkinter</li>
-                        <li>Le traitement du langage naturel avec LanguageTool</li>
-                        <li>La gestion des processus en arrière-plan</li>
+                        <li>Intégration de l'API OpenAI dans une application utilitaire</li>
+                        <li>Optimisation des instructions pour des modèles de langage dans un contexte spécifique</li>
+                        <li>Interaction avec les ressources système (presse-papier, sons)</li>
+                        <li>Création d'outils avec une expérience utilisateur fluide et non-intrusive</li>
                     </ul>
-                    <p>OrthoNome est devenu un outil que j'utilise quotidiennement, et j'ai reçu des retours positifs d'autres utilisateurs qui apprécient sa simplicité et son efficacité.</p>
+                    <p>OrthoNome est devenu un outil que j'utilise quotidiennement pour corriger rapidement des textes dans différents contextes (emails, documents, messages). La simplicité d'utilisation via un raccourci clavier en fait un compagnon idéal pour maintenir une communication écrite de qualité sans interruption du flux de travail.</p>
                 </section>
             </div>
             
@@ -231,18 +263,25 @@ def correct_text(text, language='auto'):
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="../../../index.html">Antoine.</a>
+                    <a href="../../../index.html">Home</a>
                 </div>
                 <div class="footer-links">
                     <a href="../../../index.html#about">À propos</a>
                     <a href="../../../index.html#projects">Projets</a>
                     <a href="../../../index.html#skills">Compétences</a>
-                    <a href="../../../index.html#experience">Expérience</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
                     <a href="../../../index.html#contact">Contact</a>
                 </div>
             </div>
             
             <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
                 <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -261,16 +300,15 @@ def correct_text(text, language='auto'):
             
             <div class="footer-bottom">
                 <div class="copyright">
-                    &copy; <span id="current-year">2025</span> Antoine ROUCAU. Tous droits réservés.
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
                 </div>
                 <div class="footer-signature">
-                    Conçu et développé à Montpellier, France
+                    Conçu et développé à Paris, France
                 </div>
             </div>
             
             <div class="footer-legal">
                 <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
-                <a href="../../legal/legal-notice.html">Mentions légales</a>
             </div>
         </div>
     </footer>
