@@ -87,7 +87,7 @@
 }
 
 .project-image img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-normal);
@@ -238,7 +238,7 @@
 }
 
 .gallery-main img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
 }
