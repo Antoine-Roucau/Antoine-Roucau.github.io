@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="OrthoNome - Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier. Utilise l'API OpenAI.">
-    <title>OrthoNome | Antoine ROUCAU</title>
+    <link rel="icon" href="assets\icons\website.ico" type="image/icon type">
+    <title>OrthoNome | Antoine Roucau</title>
     
     <!-- Polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +87,7 @@
                     </div>
                     <div class="spec-item">
                         <h3>Statut</h3>
-                        <p>Fonctionnel</p>
+                        <p>Terminé</p>
                     </div>
                 </div>
             </div>
@@ -133,58 +134,6 @@
                     </ol>
                 </section>
                 
-                <section class="project-section">
-                    <h2>Code et implémentation</h2>
-                    <div class="code-showcase">
-                        <h3>Code principal</h3>
-                        <pre><code class="language-python">
-import openai
-import pyperclip
-from playsound import playsound
-import os
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Récupérer le texte du presse-papier
-texteACorriger = pyperclip.paste()
-
-# Configuration de l'API OpenAI
-openai.api_key = "votre-clé-api-ici"
-
-# Appel à l'API OpenAI pour la correction
-response = openai.chat.completions.create(
-    model="gpt-4o-mini",
-    messages=[
-        {
-            "role": "system", 
-            "content": """Correcteur orthographique bilingue (français/anglais). Instructions:
-            1. Détecter automatiquement la langue du texte fourni (français ou anglais)
-            2. Corriger: orthographe, grammaire, accords, conjugaisons, ponctuation selon les règles de la langue détectée
-            3. Préserver: sens original, structure des phrases, style, vocabulaire choisi, registre de langue
-            4. Ne pas: ajouter/supprimer des mots, reformuler des phrases, modifier le ton
-            5. Privilégier les corrections minimales nécessaires
-            6. Pour les ambiguïtés, choisir la correction la plus proche du contexte original
-            7. Retourner UNIQUEMENT le texte corrigé sans commentaires ni explications"""
-        },
-        {
-            "role": "user", 
-            "content": "Texte à corriger / Text to correct:\n\n" + texteACorriger
-        }
-    ]
-)
-
-# Récupérer le texte corrigé
-texteCorriger = response.choices[0].message.content
-
-# Copier le texte corrigé dans le presse-papier
-pyperclip.copy(texteCorriger)
-
-# Jouer un son pour indiquer que la correction est terminée
-path_sound = BASE_DIR + "\correct.mp3"
-playsound(path_sound.encode('unicode-escape').decode())
-                        </code></pre>
-                    </div>
-                </section>
                 
                 <section class="project-section">
                     <h2>Défis techniques</h2>

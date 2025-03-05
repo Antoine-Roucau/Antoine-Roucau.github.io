@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gomoku_IA - Implémentation du jeu Gomoku (Puissance 5) avec une IA adverse utilisant l'algorithme Minimax et l'élagage alpha-bêta.">
-    <title>Gomoku_IA | Antoine ROUCAU</title>
+    <link rel="icon" href="assets\icons\website.ico" type="image/icon type">
+    <title>Gomoku_IA | Antoine Roucau</title>
     
     <!-- Polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,122 +113,6 @@
                     </ul>
                 </section>
                 
-                <section class="project-section">
-                    <h2>Code et implémentation</h2>
-                    <div class="code-showcase">
-                        <h3>Algorithme Minimax avec élagage alpha-bêta</h3>
-                        <pre><code class="language-python">
-def minimax(self, board, depth, alpha, beta, is_maximizing):
-    """
-    Implémentation de l'algorithme minimax avec élagage alpha-bêta
-    
-    Args:
-        board: État actuel du plateau
-        depth: Profondeur de recherche actuelle
-        alpha: Meilleur score pour le joueur maximisant
-        beta: Meilleur score pour le joueur minimisant
-        is_maximizing: True si c'est le tour du joueur maximisant
-    
-    Returns:
-        Le meilleur score trouvé pour le joueur actuel
-    """
-    # Vérifier si la profondeur maximale est atteinte ou si le jeu est terminé
-    if depth == 0 or board.is_game_over():
-        return self.evaluate_board(board)
-    
-    # Liste des coups possibles, triés par proximité aux pions existants
-    possible_moves = self.get_possible_moves(board)
-    
-    if is_maximizing:
-        max_eval = float('-inf')
-        for move in possible_moves:
-            # Simuler le coup
-            board.make_move(move[0], move[1], self.player)
-            
-            # Récursivement évaluer le plateau après ce coup
-            eval = self.minimax(board, depth - 1, alpha, beta, False)
-            
-            # Annuler le coup
-            board.undo_move(move[0], move[1])
-            
-            # Mettre à jour le meilleur score
-            max_eval = max(max_eval, eval)
-            alpha = max(alpha, eval)
-            
-            # Élagage alpha-bêta
-            if beta <= alpha:
-                break
-        
-        return max_eval
-    else:
-        min_eval = float('inf')
-        for move in possible_moves:
-            # Simuler le coup
-            board.make_move(move[0], move[1], self.opponent)
-            
-            # Récursivement évaluer le plateau après ce coup
-            eval = self.minimax(board, depth - 1, alpha, beta, True)
-            
-            # Annuler le coup
-            board.undo_move(move[0], move[1])
-            
-            # Mettre à jour le meilleur score
-            min_eval = min(min_eval, eval)
-            beta = min(beta, eval)
-            
-            # Élagage alpha-bêta
-            if beta <= alpha:
-                break
-        
-        return min_eval
-                        </code></pre>
-                    </div>
-                    
-                    <div class="code-showcase">
-                        <h3>Fonction d'évaluation du plateau</h3>
-                        <pre><code class="language-python">
-def evaluate_board(self, board):
-    """
-    Évalue l'état actuel du plateau du point de vue de l'IA.
-    
-    Args:
-        board: État actuel du plateau
-    
-    Returns:
-        Score numérique représentant la qualité de la position
-    """
-    score = 0
-    
-    # Poids pour différentes configurations
-    weights = {
-        'win': 10000,        # Victoire
-        'open_four': 1000,   # Quatre pions alignés avec deux extrémités ouvertes
-        'half_open_four': 100, # Quatre pions alignés avec une extrémité ouverte
-        'open_three': 50,    # Trois pions alignés avec deux extrémités ouvertes
-        'half_open_three': 10, # Trois pions alignés avec une extrémité ouverte
-        'open_two': 5,       # Deux pions alignés avec deux extrémités ouvertes
-        'half_open_two': 2   # Deux pions alignés avec une extrémité ouverte
-    }
-    
-    # Vérifier les lignes, colonnes et diagonales
-    for i in range(board.size):
-        for j in range(board.size):
-            if board.cells[i][j] != 0:  # Si la cellule n'est pas vide
-                player = board.cells[i][j]
-                multiplier = 1 if player == self.player else -1
-                
-                # Vérifier les 4 directions: horizontal, vertical, et les 2 diagonales
-                directions = [(0, 1), (1, 0), (1, 1), (1, -1)]
-                
-                for dx, dy in directions:
-                    pattern = self.get_pattern(board, i, j, dx, dy, player)
-                    pattern_score = self.score_pattern(pattern, weights)
-                    score += pattern_score * multiplier
-    
-    return score
-                        </code></pre>
-                    </div>
-                </section>
                 
                 <section class="project-section">
                     <h2>Défis techniques</h2>
