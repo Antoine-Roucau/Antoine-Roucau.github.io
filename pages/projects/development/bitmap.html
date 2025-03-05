@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bitmap Image Processing - Bibliothèque C# pour le traitement et la manipulation d'images BMP avec intégration de l'algorithme de compression de Huffman.">
+    <title>Bitmap Image Processing | Antoine ROUCAU</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Bitmap Image Processing</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Bitmap Image Processing</h1>
+                <div class="project-category">C# | Traitement d'image | Compression</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/Bitmap_Image" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets/icons/bitmap.ico" alt="Icone Bitmap Image Processing">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Langage</h3>
+                        <p>C#</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Frameworks</h3>
+                        <p>.NET, Windows Forms</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Terminé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Bitmap Image Processing est une bibliothèque C# avancée pour le traitement et la manipulation d'images au format BMP. Ce projet a été développé pour explorer les principes fondamentaux du traitement d'images numériques et des algorithmes de compression, en travaillant directement avec les données binaires des fichiers BMP sans dépendre de bibliothèques externes de traitement d'images.</p>
+                    <p>La bibliothèque offre non seulement des fonctionnalités de manipulation d'images (filtres, transformations, etc.), mais également une implémentation complète de l'algorithme de compression de Huffman, permettant de réduire significativement la taille des fichiers tout en conservant l'intégralité des données d'image.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Lecture et écriture de fichiers BMP avec prise en charge de différentes profondeurs de couleur</li>
+                        <li>Filtres d'images (noir et blanc, négatif, sépia, etc.)</li>
+                        <li>Opérations de transformation (rotation, redimensionnement, miroir)</li>
+                        <li>Compression d'image utilisant l'algorithme de Huffman avec encodage et décodage</li>
+                        <li>Extraction et manipulation des canaux de couleur (rouge, vert, bleu)</li>
+                        <li>Histogrammes de couleur et analyse d'image</li>
+                        <li>Interface graphique pour prévisualiser et appliquer les transformations</li>
+                        <li>Exportation vers différents formats (BMP original, format compressé personnalisé)</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Code et implémentation</h2>
+                    <div class="code-showcase">
+                        <h3>Structure d'un fichier BMP</h3>
+                        <pre><code class="language-csharp">
+public class BitmapFile
+{
+    // En-tête du fichier BMP (14 bytes)
+    public struct BITMAPFILEHEADER
+    {
+        public ushort bfType;      // Type de fichier ("BM")
+        public uint bfSize;        // Taille du fichier en bytes
+        public ushort bfReserved1; // Réservé, doit être 0
+        public ushort bfReserved2; // Réservé, doit être 0
+        public uint bfOffBits;     // Offset des données de l'image depuis le début du fichier
+    }
+
+    // En-tête d'information BMP (40 bytes pour BITMAPINFOHEADER)
+    public struct BITMAPINFOHEADER
+    {
+        public uint biSize;          // Taille de cette structure en bytes
+        public int biWidth;          // Largeur de l'image en pixels
+        public int biHeight;         // Hauteur de l'image en pixels
+        public ushort biPlanes;      // Nombre de plans, doit être 1
+        public ushort biBitCount;    // Bits par pixel (1, 4, 8, 16, 24, ou 32)
+        public uint biCompression;   // Type de compression (0 = non compressé)
+        public uint biSizeImage;     // Taille des données de l'image en bytes
+        public int biXPelsPerMeter;  // Résolution horizontale en pixels par mètre
+        public int biYPelsPerMeter;  // Résolution verticale en pixels par mètre
+        public uint biClrUsed;       // Nombre de couleurs utilisées dans la palette
+        public uint biClrImportant;  // Nombre de couleurs importantes (0 = toutes)
+    }
+
+    // Table des couleurs (palette) utilisée pour les images avec moins de 24 bits par pixel
+    public struct RGBQUAD
+    {
+        public byte rgbBlue;      // Composante bleue
+        public byte rgbGreen;     // Composante verte
+        public byte rgbRed;       // Composante rouge
+        public byte rgbReserved;  // Réservé, doit être 0
+    }
+
+    public BITMAPFILEHEADER fileHeader;
+    public BITMAPINFOHEADER infoHeader;
+    public RGBQUAD[] colorTable;  // Palette de couleurs si nécessaire
+    public byte[] imageData;      // Données de l'image
+
+    // Méthodes pour manipuler l'image
+    // ...
+}
+                        </code></pre>
+                    </div>
+                    
+                    <div class="code-showcase">
+                        <h3>Implémentation de l'algorithme de compression de Huffman</h3>
+                        <pre><code class="language-csharp">
+public class HuffmanCompression
+{
+    // Nœud de l'arbre de Huffman
+    private class HuffmanNode : IComparable<HuffmanNode>
+    {
+        public byte Value { get; set; }         // Valeur du byte (seulement pour les feuilles)
+        public int Frequency { get; set; }      // Fréquence d'apparition
+        public HuffmanNode Left { get; set; }   // Nœud enfant gauche
+        public HuffmanNode Right { get; set; }  // Nœud enfant droit
+        public bool IsLeaf => Left == null && Right == null;
+
+        // Comparaison basée sur la fréquence pour la priorité dans la file
+        public int CompareTo(HuffmanNode other)
+        {
+            return Frequency.CompareTo(other.Frequency);
+        }
+    }
+
+    // Compresse des données en utilisant l'algorithme de Huffman
+    public byte[] Compress(byte[] data)
+    {
+        if (data == null || data.Length == 0)
+            return new byte[0];
+
+        // 1. Calculer les fréquences de chaque byte
+        Dictionary<byte, int> frequencies = new Dictionary<byte, int>();
+        foreach (byte b in data)
+        {
+            if (frequencies.ContainsKey(b))
+                frequencies[b]++;
+            else
+                frequencies[b] = 1;
+        }
+
+        // 2. Construire l'arbre de Huffman
+        HuffmanNode root = BuildHuffmanTree(frequencies);
+
+        // 3. Générer les codes de Huffman pour chaque byte
+        Dictionary<byte, string> huffmanCodes = new Dictionary<byte, string>();
+        GenerateHuffmanCodes(root, "", huffmanCodes);
+
+        // 4. Encoder les données avec les codes de Huffman
+        StringBuilder encodedData = new StringBuilder();
+        foreach (byte b in data)
+        {
+            encodedData.Append(huffmanCodes[b]);
+        }
+
+        // 5. Convertir la chaîne binaire en tableau de bytes
+        string binaryString = encodedData.ToString();
+        byte[] compressedData = ConvertBinaryStringToByteArray(binaryString);
+
+        // 6. Créer l'en-tête avec les informations nécessaires à la décompression
+        byte[] header = CreateHeader(frequencies, data.Length);
+
+        // 7. Combiner l'en-tête et les données compressées
+        byte[] result = new byte[header.Length + compressedData.Length];
+        Buffer.BlockCopy(header, 0, result, 0, header.Length);
+        Buffer.BlockCopy(compressedData, 0, result, header.Length, compressedData.Length);
+
+        return result;
+    }
+
+    // Décompresse des données compressées avec Huffman
+    public byte[] Decompress(byte[] compressedData)
+    {
+        // Code pour la décompression...
+        return null; // Juste pour l'exemple
+    }
+
+    // Construction de l'arbre de Huffman à partir des fréquences
+    private HuffmanNode BuildHuffmanTree(Dictionary<byte, int> frequencies)
+    {
+        // Utilisation d'une file de priorité (min-heap)
+        PriorityQueue<HuffmanNode> priorityQueue = new PriorityQueue<HuffmanNode>();
+
+        // Ajouter tous les bytes comme feuilles dans la file de priorité
+        foreach (var pair in frequencies)
+        {
+            priorityQueue.Enqueue(new HuffmanNode
+            {
+                Value = pair.Key,
+                Frequency = pair.Value
+            });
+        }
+
+        // Construire l'arbre en combinant les nœuds de plus basse fréquence
+        while (priorityQueue.Count > 1)
+        {
+            HuffmanNode left = priorityQueue.Dequeue();
+            HuffmanNode right = priorityQueue.Dequeue();
+
+            HuffmanNode parent = new HuffmanNode
+            {
+                Frequency = left.Frequency + right.Frequency,
+                Left = left,
+                Right = right
+            };
+
+            priorityQueue.Enqueue(parent);
+        }
+
+        // Le dernier nœud restant est la racine de l'arbre
+        return priorityQueue.Dequeue();
+    }
+
+    // Génération récursive des codes de Huffman
+    private void GenerateHuffmanCodes(HuffmanNode node, string code, Dictionary<byte, string> huffmanCodes)
+    {
+        if (node == null)
+            return;
+
+        // Si c'est une feuille, on a trouvé un code complet
+        if (node.IsLeaf)
+        {
+            huffmanCodes[node.Value] = code.Length > 0 ? code : "0"; // Cas spécial pour un seul byte unique
+            return;
+        }
+
+        // Parcours récursif (gauche = 0, droite = 1)
+        GenerateHuffmanCodes(node.Left, code + "0", huffmanCodes);
+        GenerateHuffmanCodes(node.Right, code + "1", huffmanCodes);
+    }
+
+    // Autre code utilitaire pour la compression et décompression...
+}
+                        </code></pre>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Manipulation de fichiers BMP au niveau binaire</h3>
+                            <p>Le défi principal était de comprendre et manipuler le format BMP au niveau binaire, en tenant compte des spécificités du format comme le padding des lignes et les différentes structures d'en-tête.</p>
+                        </li>
+                        <li>
+                            <h3>Implémentation efficace de l'algorithme de Huffman</h3>
+                            <p>Développer une implémentation efficace de l'algorithme de compression de Huffman, avec la construction de l'arbre, la génération des codes et la gestion des bits individuels.</p>
+                        </li>
+                        <li>
+                            <h3>Gestion de la mémoire pour les grandes images</h3>
+                            <p>Optimiser l'utilisation de la mémoire pour traiter des images de grande taille, en particulier lors des opérations de transformation qui nécessitent des copies temporaires des données.</p>
+                        </li>
+                        <li>
+                            <h3>Conception d'une interface utilisateur intuitive</h3>
+                            <p>Créer une interface utilisateur qui permet de visualiser et manipuler facilement les images tout en présentant des informations techniques pertinentes sur le format et la compression.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet m'a permis d'approfondir mes connaissances en programmation C# et en traitement d'images numériques :</p>
+                    <ul>
+                        <li>Compréhension approfondie du format de fichier BMP et des principes des formats d'image en général</li>
+                        <li>Maîtrise des techniques de manipulation de données binaires en C#</li>
+                        <li>Implémentation et optimisation d'algorithmes de compression sans perte</li>
+                        <li>Développement d'interfaces utilisateur pour la visualisation et l'édition d'images</li>
+                        <li>Gestion efficace de la mémoire pour le traitement de grands volumes de données</li>
+                    </ul>
+                    <p>La bibliothèque peut traiter efficacement des images BMP de différentes profondeurs de couleur et offre des taux de compression significatifs grâce à l'implémentation optimisée de l'algorithme de Huffman. L'interface utilisateur permet d'appliquer facilement les différentes transformations et de visualiser les résultats en temps réel.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Utilisation de la bibliothèque</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Chargement d'une image BMP</h3>
+                            <pre><code class="language-csharp">
+BitmapProcessor processor = new BitmapProcessor();
+BitmapFile bmpFile = processor.LoadBitmapFile("image.bmp");
+                            </code></pre>
+                        </li>
+                        <li>
+                            <h3>Application d'un filtre</h3>
+                            <pre><code class="language-csharp">
+// Conversion en niveaux de gris
+processor.ApplyGrayscaleFilter(bmpFile);
+
+// Application d'un filtre sépia
+processor.ApplySepiaFilter(bmpFile);
+
+// Inversion des couleurs
+processor.ApplyNegativeFilter(bmpFile);
+                            </code></pre>
+                        </li>
+                        <li>
+                            <h3>Transformation d'image</h3>
+                            <pre><code class="language-csharp">
+// Rotation de 90 degrés
+BitmapFile rotatedImage = processor.RotateImage(bmpFile, 90);
+
+// Redimensionnement
+BitmapFile resizedImage = processor.ResizeImage(bmpFile, 800, 600);
+
+// Effet miroir horizontal
+BitmapFile mirroredImage = processor.FlipHorizontal(bmpFile);
+                            </code></pre>
+                        </li>
+                        <li>
+                            <h3>Compression et sauvegarde</h3>
+                            <pre><code class="language-csharp">
+// Compression avec l'algorithme de Huffman
+HuffmanCompression huffman = new HuffmanCompression();
+byte[] compressedData = huffman.Compress(bmpFile.imageData);
+
+// Sauvegarde de l'image compressée
+processor.SaveCompressedImage(bmpFile, compressedData, "image_compressed.hbmp");
+
+// Sauvegarde d'une image BMP modifiée
+processor.SaveBitmapFile(bmpFile, "image_modified.bmp");
+                            </code></pre>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="csharp database">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/velomax.ico" alt="VeloMax">
+                            <div class="project-overlay">
+                                <div class="project-category">C# | Base de données</div>
+                                <h3 class="project-title">VeloMax</h3>
+                                <div class="project-links">
+                                    <a href="velomax.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python cybersec">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/flux.ico" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | Cybersécurité</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <div class="project-links">
+                                    <a href="flux-analysis.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VeloMax - Système complet de gestion pour les magasins de vélos, construit avec C# et MySQL.">
+    <title>VeloMax | Antoine ROUCAU</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>VeloMax</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">VeloMax</h1>
+                <div class="project-category">C# | MySQL | Gestion de Base de Données</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/SQL_Csharp" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets/icons/velomax.ico" alt="Icone VeloMax">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Langages</h3>
+                        <p>C#, SQL</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Frameworks</h3>
+                        <p>.NET, Windows Forms</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Base de données</h3>
+                        <p>MySQL</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>VeloMax est un système complet de gestion pour les magasins de vélos, développé pour répondre aux besoins spécifiques des commerces spécialisés dans la vente de vélos et de pièces détachées. Le projet a été conçu comme une solution intégrée permettant de gérer efficacement l'inventaire, les commandes, les clients et les fournisseurs.</p>
+                    <p>L'application combine une interface utilisateur intuitive développée en C# avec une base de données MySQL robuste, offrant ainsi une solution complète qui centralise toutes les opérations commerciales d'un magasin de vélos. Elle permet non seulement de gérer les stocks et les ventes, mais aussi de générer des rapports analytiques pour aider à la prise de décision.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Gestion complète de l'inventaire (vélos, pièces détachées, assemblages)</li>
+                        <li>Suivi des fournisseurs et des délais d'approvisionnement</li>
+                        <li>Gestion des clients (particuliers et entreprises) avec programmes de fidélité</li>
+                        <li>Traitement des commandes avec facturation automatique</li>
+                        <li>Système d'alerte pour les stocks bas et les réapprovisionnements nécessaires</li>
+                        <li>Tableaux de bord statistiques (ventes, stocks, rentabilité)</li>
+                        <li>Exportation des données vers différents formats (XML, JSON, CSV)</li>
+                        <li>Interface utilisateur intuitive avec gestion des droits d'accès</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Architecture de la base de données</h2>
+                    <div class="code-showcase">
+                        <h3>Schéma relationnel</h3>
+                        <pre><code class="language-sql">
+-- Création des tables principales
+
+CREATE TABLE Fournisseur (
+    siret VARCHAR(14) PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    contact VARCHAR(50),
+    adresse VARCHAR(100) NOT NULL,
+    libelle VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Piece (
+    num_piece VARCHAR(10) PRIMARY KEY,
+    description VARCHAR(100) NOT NULL,
+    date_intro DATE NOT NULL,
+    date_disc DATE,
+    prix_unitaire DECIMAL(10,2) NOT NULL,
+    stock_piece INT NOT NULL DEFAULT 0,
+    siret VARCHAR(14),
+    FOREIGN KEY (siret) REFERENCES Fournisseur(siret)
+);
+
+CREATE TABLE Modele (
+    num_modele VARCHAR(10) PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    grandeur VARCHAR(10) NOT NULL,
+    prix_unitaire DECIMAL(10,2) NOT NULL,
+    ligne_produit VARCHAR(50) NOT NULL,
+    date_intro DATE NOT NULL,
+    date_disc DATE,
+    stock_modele INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE Client_Particulier (
+    id_client_part INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    prenom VARCHAR(50) NOT NULL,
+    adresse VARCHAR(100) NOT NULL,
+    telephone VARCHAR(15),
+    email VARCHAR(50),
+    date_adhesion DATE,
+    programme_fidelite VARCHAR(50)
+);
+
+CREATE TABLE Client_Entreprise (
+    id_client_ent INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(50) NOT NULL,
+    adresse VARCHAR(100) NOT NULL,
+    telephone VARCHAR(15),
+    email VARCHAR(50),
+    nom_contact VARCHAR(50),
+    remise FLOAT DEFAULT 0,
+    volume_achat INT DEFAULT 0
+);
+
+CREATE TABLE Commande (
+    num_commande INT AUTO_INCREMENT PRIMARY KEY,
+    date_commande DATE NOT NULL,
+    adresse_livraison VARCHAR(100) NOT NULL,
+    date_livraison DATE,
+    id_client_part INT,
+    id_client_ent INT,
+    FOREIGN KEY (id_client_part) REFERENCES Client_Particulier(id_client_part),
+    FOREIGN KEY (id_client_ent) REFERENCES Client_Entreprise(id_client_ent),
+    CHECK ((id_client_part IS NULL AND id_client_ent IS NOT NULL) OR 
+           (id_client_part IS NOT NULL AND id_client_ent IS NULL))
+);
+
+CREATE TABLE Velo (
+    num_velo INT AUTO_INCREMENT PRIMARY KEY,
+    num_modele VARCHAR(10) NOT NULL,
+    FOREIGN KEY (num_modele) REFERENCES Modele(num_modele)
+);
+
+CREATE TABLE Composition (
+    num_modele VARCHAR(10),
+    num_piece VARCHAR(10),
+    quantite INT NOT NULL DEFAULT 1,
+    PRIMARY KEY (num_modele, num_piece),
+    FOREIGN KEY (num_modele) REFERENCES Modele(num_modele),
+    FOREIGN KEY (num_piece) REFERENCES Piece(num_piece)
+);
+
+CREATE TABLE Ligne_Commande (
+    num_commande INT,
+    num_velo INT,
+    num_piece VARCHAR(10),
+    quantite INT NOT NULL DEFAULT 1,
+    prix_unitaire DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (num_commande, num_velo, num_piece),
+    FOREIGN KEY (num_commande) REFERENCES Commande(num_commande),
+    FOREIGN KEY (num_velo) REFERENCES Velo(num_velo),
+    FOREIGN KEY (num_piece) REFERENCES Piece(num_piece),
+    CHECK ((num_velo IS NULL AND num_piece IS NOT NULL) OR 
+           (num_velo IS NOT NULL AND num_piece IS NULL))
+);
+                        </code></pre>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Interface utilisateur</h2>
+                    <div class="code-showcase">
+                        <h3>Interface principale de l'application</h3>
+                        <pre><code class="language-csharp">
+using System;
+using System.Windows.Forms;
+using System.Drawing;
+using MySql.Data.MySqlClient;
+
+namespace VeloMax
+{
+    public partial class MainForm : Form
+    {
+        private MySqlConnection connection;
+        private string connectionString;
+        
+        public MainForm()
+        {
+            InitializeComponent();
+            
+            // Configuration de la connexion à la base de données
+            connectionString = "Server=localhost;Database=velomax;Uid=root;Pwd=password;";
+            connection = new MySqlConnection(connectionString);
+            
+            // Initialisation des événements
+            this.Load += MainForm_Load;
+        }
+        
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Tester la connexion à la base de données
+                connection.Open();
+                lblStatus.Text = "Connecté à la base de données";
+                lblStatus.ForeColor = Color.Green;
+                connection.Close();
+                
+                // Charger les données initiales
+                LoadDashboardData();
+            }
+            catch (Exception ex)
+            {
+                lblStatus.Text = "Erreur de connexion: " + ex.Message;
+                lblStatus.ForeColor = Color.Red;
+                MessageBox.Show("Impossible de se connecter à la base de données. Veuillez vérifier vos paramètres de connexion.",
+                                "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+        private void LoadDashboardData()
+        {
+            // Charger les statistiques pour le tableau de bord
+            LoadInventoryStats();
+            LoadSalesStats();
+            LoadCustomerStats();
+            
+            // Afficher les alertes de stock bas
+            CheckLowStockAlerts();
+        }
+        
+        private void LoadInventoryStats()
+        {
+            try
+            {
+                connection.Open();
+                
+                // Récupérer le nombre total de vélos en stock
+                string queryBikes = "SELECT SUM(stock_modele) FROM Modele";
+                MySqlCommand cmdBikes = new MySqlCommand(queryBikes, connection);
+                object resultBikes = cmdBikes.ExecuteScalar();
+                lblTotalBikes.Text = (resultBikes != DBNull.Value) ? resultBikes.ToString() : "0";
+                
+                // Récupérer le nombre total de pièces en stock
+                string queryParts = "SELECT SUM(stock_piece) FROM Piece";
+                MySqlCommand cmdParts = new MySqlCommand(queryParts, connection);
+                object resultParts = cmdParts.ExecuteScalar();
+                lblTotalParts.Text = (resultParts != DBNull.Value) ? resultParts.ToString() : "0";
+                
+                // Récupérer la valeur totale de l'inventaire
+                string queryValue = @"
+                    SELECT 
+                        SUM(m.prix_unitaire * m.stock_modele) +
+                        SUM(p.prix_unitaire * p.stock_piece) AS total_value
+                    FROM 
+                        Modele m, Piece p";
+                MySqlCommand cmdValue = new MySqlCommand(queryValue, connection);
+                object resultValue = cmdValue.ExecuteScalar();
+                lblInventoryValue.Text = (resultValue != DBNull.Value) 
+                    ? string.Format("{0:C}", resultValue) : "0.00 €";
+                
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors du chargement des statistiques d'inventaire: " + ex.Message,
+                                "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+            }
+        }
+        
+        private void LoadSalesStats()
+        {
+            // Code similaire pour charger les statistiques de vente
+        }
+        
+        private void LoadCustomerStats()
+        {
+            // Code pour charger les statistiques clients
+        }
+        
+        private void CheckLowStockAlerts()
+        {
+            try
+            {
+                connection.Open();
+                
+                // Trouver les produits avec stock bas (moins de 5 unités)
+                string query = @"
+                    SELECT 'Vélo' AS type, num_modele AS reference, nom AS description, stock_modele AS stock
+                    FROM Modele
+                    WHERE stock_modele < 5
+                    UNION
+                    SELECT 'Pièce' AS type, num_piece AS reference, description, stock_piece AS stock
+                    FROM Piece
+                    WHERE stock_piece < 5";
+                
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                System.Data.DataTable dt = new System.Data.DataTable();
+                adapter.Fill(dt);
+                
+                // Afficher les alertes dans la grille
+                dgvAlerts.DataSource = dt;
+                
+                // Mettre à jour le compteur d'alertes
+                lblAlertCount.Text = dt.Rows.Count.ToString();
+                
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de la vérification des alertes de stock: " + ex.Message,
+                                "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                connection.Close();
+            }
+        }
+        
+        // Événements des boutons du menu
+        
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            // Ouvrir le formulaire de gestion d'inventaire
+            InventoryForm inventoryForm = new InventoryForm(connection);
+            inventoryForm.ShowDialog();
+            
+            // Rafraîchir les données après fermeture
+            LoadInventoryStats();
+            CheckLowStockAlerts();
+        }
+        
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            // Ouvrir le formulaire de gestion des clients
+            CustomerForm customerForm = new CustomerForm(connection);
+            customerForm.ShowDialog();
+            
+            // Rafraîchir les données
+            LoadCustomerStats();
+        }
+        
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            // Ouvrir le formulaire de gestion des commandes
+            OrderForm orderForm = new OrderForm(connection);
+            orderForm.ShowDialog();
+            
+            // Rafraîchir les données
+            LoadSalesStats();
+            LoadInventoryStats();
+        }
+        
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            // Ouvrir le formulaire de rapports
+            ReportForm reportForm = new ReportForm(connection);
+            reportForm.ShowDialog();
+        }
+        
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            // Ouvrir le formulaire de paramètres
+            SettingsForm settingsForm = new SettingsForm(connectionString);
+            if (settingsForm.ShowDialog() == DialogResult.OK)
+            {
+                // Mettre à jour la chaîne de connexion si elle a été modifiée
+                connectionString = settingsForm.ConnectionString;
+                connection = new MySqlConnection(connectionString);
+                
+                // Tester la nouvelle connexion
+                try
+                {
+                    connection.Open();
+                    lblStatus.Text = "Connecté à la base de données";
+                    lblStatus.ForeColor = Color.Green;
+                    connection.Close();
+                    
+                    // Recharger les données
+                    LoadDashboardData();
+                }
+                catch (Exception ex)
+                {
+                    lblStatus.Text = "Erreur de connexion: " + ex.Message;
+                    lblStatus.ForeColor = Color.Red;
+                    MessageBox.Show("Impossible de se connecter avec les nouveaux paramètres: " + ex.Message,
+                                    "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+    }
+}
+                        </code></pre>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Conception de la base de données</h3>
+                            <p>Créer une structure de base de données qui représente fidèlement les relations complexes entre les différentes entités (vélos, pièces, clients, commandes) tout en garantissant l'intégrité des données et la performance des requêtes.</p>
+                        </li>
+                        <li>
+                            <h3>Gestion des stocks et assemblages</h3>
+                            <p>Développer un système capable de gérer à la fois les stocks de produits finis (vélos) et de composants (pièces détachées), en tenant compte des relations d'assemblage et en maintenant la cohérence des données lors des opérations de vente et d'approvisionnement.</p>
+                        </li>
+                        <li>
+                            <h3>Requêtes et rapports complexes</h3>
+                            <p>Implémenter des requêtes SQL avancées pour générer des rapports analytiques pertinents, comme l'analyse des ventes par période, les prévisions de stock, ou l'identification des produits les plus rentables.</p>
+                        </li>
+                        <li>
+                            <h3>Interface utilisateur intuitive</h3>
+                            <p>Concevoir une interface utilisateur moderne et intuitive qui permette un accès rapide à toutes les fonctionnalités du système, tout en s'adaptant aux différents profils d'utilisateurs (vendeurs, gestionnaires de stock, administrateurs).</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Le développement de VeloMax m'a permis d'approfondir mes compétences dans plusieurs domaines clés :</p>
+                    <ul>
+                        <li>Conception et optimisation de bases de données relationnelles avec MySQL</li>
+                        <li>Développement d'applications Windows Forms en C# avec une architecture en couches</li>
+                        <li>Mise en œuvre de requêtes SQL complexes et de procédures stockées</li>
+                        <li>Conception d'interfaces utilisateur intuitives et réactives</li>
+                        <li>Implémentation de rapports et de visualisations de données</li>
+                        <li>Gestion des transactions et de l'intégrité des données</li>
+                        <li>Sécurisation des accès à la base de données et gestion des droits utilisateurs</li>
+                    </ul>
+                    <p>Ce projet m'a également permis de mieux comprendre les enjeux spécifiques de la gestion d'inventaire et de clientèle dans le commerce de détail spécialisé, avec ses contraintes propres liées aux assemblages de produits et à la gestion des pièces détachées.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités avancées</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Analyse prédictive des stocks</h3>
+                            <p>Le système intègre des algorithmes qui analysent l'historique des ventes pour prédire les besoins futurs en stock et générer automatiquement des suggestions de réapprovisionnement, en tenant compte des délais de livraison des fournisseurs.</p>
+                        </li>
+                        <li>
+                            <h3>Gestion des programmes de fidélité</h3>
+                            <p>VeloMax propose une gestion avancée des programmes de fidélité pour les clients particuliers, avec un système de points et d'avantages personnalisés, ainsi qu'un suivi des volumes d'achat pour les entreprises avec application automatique de remises dégressives.</p>
+                        </li>
+                        <li>
+                            <h3>Exportation multi-formats</h3>
+                            <p>L'application permet d'exporter les données (inventaire, commandes, clients) vers différents formats (XML, JSON, CSV) pour faciliter l'intégration avec d'autres systèmes ou l'analyse des données dans des outils externes.</p>
+                        </li>
+                        <li>
+                            <h3>Tableaux de bord dynamiques</h3>
+                            <p>Des tableaux de bord interactifs offrent une vue d'ensemble des performances du magasin (ventes, stocks, rentabilité) avec la possibilité de filtrer les données selon différents critères (période, catégorie de produits, type de client).</p>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="csharp image">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/bitmap.ico" alt="Bitmap Image">
+                            <div class="project-overlay">
+                                <div class="project-category">C# | Traitement d'image</div>
+                                <h3 class="project-title">Bitmap Image Processing</h3>
+                                <div class="project-links">
+                                    <a href="bitmap.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python cybersec">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/flux.ico" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | Cybersécurité</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <div class="project-links">
+                                    <a href="flux-analysis.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

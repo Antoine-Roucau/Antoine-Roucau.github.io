@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gomoku_IA - Implémentation du jeu Gomoku (Puissance 5) avec une IA adverse utilisant l'algorithme Minimax et l'élagage alpha-bêta.">
+    <title>Gomoku_IA | Antoine ROUCAU</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Gomoku_IA</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Gomoku_IA</h1>
+                <div class="project-category">Python | Intelligence Artificielle | Jeu</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/Gomoku_IA" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets/icons/gomoku.ico" alt="Icone Gomoku IA">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Langage</h3>
+                        <p>Python</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Bibliothèques</h3>
+                        <p>Pygame, NumPy</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Terminé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Gomoku_IA est une implémentation du jeu Gomoku (également connu sous le nom de Puissance 5), avec une intelligence artificielle adversaire. Dans ce jeu traditionnel d'origine japonaise, deux joueurs placent alternativement des pions sur une grille. Le premier joueur à aligner cinq pions de sa couleur, horizontalement, verticalement ou en diagonale, gagne la partie.</p>
+                    <p>Ce projet a été développé pour explorer les algorithmes d'intelligence artificielle dans les jeux de plateau, notamment l'algorithme Minimax avec élagage alpha-bêta, une technique fondamentale utilisée dans les jeux à somme nulle comme les échecs, les dames, ou ici, le Gomoku.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Interface graphique pour jouer au Gomoku contre l'IA ou un autre joueur</li>
+                        <li>Intelligence artificielle basée sur l'algorithme Minimax avec élagage alpha-bêta</li>
+                        <li>Différents niveaux de difficulté ajustant la profondeur de recherche de l'IA</li>
+                        <li>Fonctions d'évaluation optimisées pour analyser efficacement l'état du jeu</li>
+                        <li>Système de notation des configurations (menaces ouvertes, menaces fermées, etc.)</li>
+                        <li>Historique des coups joués avec possibilité d'annuler un coup</li>
+                        <li>Détection automatique de la victoire et fin de partie</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Code et implémentation</h2>
+                    <div class="code-showcase">
+                        <h3>Algorithme Minimax avec élagage alpha-bêta</h3>
+                        <pre><code class="language-python">
+def minimax(self, board, depth, alpha, beta, is_maximizing):
+    """
+    Implémentation de l'algorithme minimax avec élagage alpha-bêta
+    
+    Args:
+        board: État actuel du plateau
+        depth: Profondeur de recherche actuelle
+        alpha: Meilleur score pour le joueur maximisant
+        beta: Meilleur score pour le joueur minimisant
+        is_maximizing: True si c'est le tour du joueur maximisant
+    
+    Returns:
+        Le meilleur score trouvé pour le joueur actuel
+    """
+    # Vérifier si la profondeur maximale est atteinte ou si le jeu est terminé
+    if depth == 0 or board.is_game_over():
+        return self.evaluate_board(board)
+    
+    # Liste des coups possibles, triés par proximité aux pions existants
+    possible_moves = self.get_possible_moves(board)
+    
+    if is_maximizing:
+        max_eval = float('-inf')
+        for move in possible_moves:
+            # Simuler le coup
+            board.make_move(move[0], move[1], self.player)
+            
+            # Récursivement évaluer le plateau après ce coup
+            eval = self.minimax(board, depth - 1, alpha, beta, False)
+            
+            # Annuler le coup
+            board.undo_move(move[0], move[1])
+            
+            # Mettre à jour le meilleur score
+            max_eval = max(max_eval, eval)
+            alpha = max(alpha, eval)
+            
+            # Élagage alpha-bêta
+            if beta <= alpha:
+                break
+        
+        return max_eval
+    else:
+        min_eval = float('inf')
+        for move in possible_moves:
+            # Simuler le coup
+            board.make_move(move[0], move[1], self.opponent)
+            
+            # Récursivement évaluer le plateau après ce coup
+            eval = self.minimax(board, depth - 1, alpha, beta, True)
+            
+            # Annuler le coup
+            board.undo_move(move[0], move[1])
+            
+            # Mettre à jour le meilleur score
+            min_eval = min(min_eval, eval)
+            beta = min(beta, eval)
+            
+            # Élagage alpha-bêta
+            if beta <= alpha:
+                break
+        
+        return min_eval
+                        </code></pre>
+                    </div>
+                    
+                    <div class="code-showcase">
+                        <h3>Fonction d'évaluation du plateau</h3>
+                        <pre><code class="language-python">
+def evaluate_board(self, board):
+    """
+    Évalue l'état actuel du plateau du point de vue de l'IA.
+    
+    Args:
+        board: État actuel du plateau
+    
+    Returns:
+        Score numérique représentant la qualité de la position
+    """
+    score = 0
+    
+    # Poids pour différentes configurations
+    weights = {
+        'win': 10000,        # Victoire
+        'open_four': 1000,   # Quatre pions alignés avec deux extrémités ouvertes
+        'half_open_four': 100, # Quatre pions alignés avec une extrémité ouverte
+        'open_three': 50,    # Trois pions alignés avec deux extrémités ouvertes
+        'half_open_three': 10, # Trois pions alignés avec une extrémité ouverte
+        'open_two': 5,       # Deux pions alignés avec deux extrémités ouvertes
+        'half_open_two': 2   # Deux pions alignés avec une extrémité ouverte
+    }
+    
+    # Vérifier les lignes, colonnes et diagonales
+    for i in range(board.size):
+        for j in range(board.size):
+            if board.cells[i][j] != 0:  # Si la cellule n'est pas vide
+                player = board.cells[i][j]
+                multiplier = 1 if player == self.player else -1
+                
+                # Vérifier les 4 directions: horizontal, vertical, et les 2 diagonales
+                directions = [(0, 1), (1, 0), (1, 1), (1, -1)]
+                
+                for dx, dy in directions:
+                    pattern = self.get_pattern(board, i, j, dx, dy, player)
+                    pattern_score = self.score_pattern(pattern, weights)
+                    score += pattern_score * multiplier
+    
+    return score
+                        </code></pre>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Optimisation de l'algorithme Minimax</h3>
+                            <p>Le défi principal était d'optimiser l'algorithme Minimax pour qu'il puisse explorer un espace de recherche suffisant dans un temps raisonnable, étant donné la taille du plateau de Gomoku (19×19) et le grand nombre de coups possibles.</p>
+                        </li>
+                        <li>
+                            <h3>Fonction d'évaluation efficace</h3>
+                            <p>Développer une fonction d'évaluation précise qui puisse correctement estimer la valeur d'une position donnée, en tenant compte des différentes menaces et opportunités sur le plateau.</p>
+                        </li>
+                        <li>
+                            <h3>Réduction de l'espace de recherche</h3>
+                            <p>Mise en place de techniques pour ne considérer que les coups pertinents lors de la recherche, comme ne prendre en compte que les cases proches des pions déjà placés.</p>
+                        </li>
+                        <li>
+                            <h3>Équilibre entre temps de calcul et efficacité</h3>
+                            <p>Trouver le bon équilibre entre la profondeur de recherche de l'algorithme et le temps de réponse de l'IA pour garantir une expérience utilisateur fluide.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet m'a permis d'approfondir mes connaissances en intelligence artificielle et en développement d'algorithmes :</p>
+                    <ul>
+                        <li>Maîtrise de l'algorithme Minimax et techniques d'élagage pour les jeux à somme nulle</li>
+                        <li>Conception et optimisation de fonctions d'évaluation pour les jeux de plateau</li>
+                        <li>Implémentation d'interfaces graphiques avec Pygame pour les jeux</li>
+                        <li>Analyse de la complexité algorithmique et techniques d'optimisation</li>
+                        <li>Manipulation efficace des structures de données pour représenter et traiter les états du jeu</li>
+                    </ul>
+                    <p>L'IA développée est capable de jouer à un niveau intermédiaire contre des joueurs humains, avec des temps de réponse raisonnables. Elle utilise des stratégies avancées comme la défense contre les menaces et la création d'opportunités d'alignement.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Comment jouer</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Installation</h3>
+                            <p>Cloner le dépôt et installer les dépendances requises (Pygame et NumPy) :</p>
+                            <pre><code class="language-python">
+pip install pygame numpy
+                            </code></pre>
+                        </li>
+                        <li>
+                            <h3>Lancement du jeu</h3>
+                            <p>Exécuter le fichier principal :</p>
+                            <pre><code class="language-python">
+python main.py
+                            </code></pre>
+                        </li>
+                        <li>
+                            <h3>Comment jouer</h3>
+                            <p>Utilisez la souris pour placer vos pions sur la grille. L'IA jouera automatiquement après votre coup. Le premier joueur à aligner 5 pions gagne la partie.</p>
+                        </li>
+                        <li>
+                            <h3>Options</h3>
+                            <p>Vous pouvez ajuster la difficulté de l'IA en modifiant la profondeur de recherche dans les paramètres du jeu.</p>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="python ai">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/orthonome.ico" alt="OrthoNome">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | IA</div>
+                                <h3 class="project-title">OrthoNome</h3>
+                                <div class="project-links">
+                                    <a href="orthonome.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python cybersec">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/flux.ico" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Python | Cybersécurité</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <div class="project-links">
+                                    <a href="flux-analysis.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
