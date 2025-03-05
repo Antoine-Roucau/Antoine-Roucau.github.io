@@ -163,9 +163,10 @@
                         <div class="filter-buttons">
                             <button class="filter-btn active" data-filter="all">Tous</button>
                             <button class="filter-btn" data-filter="development">Développement</button>
-                            <button class="filter-btn" data-filter="game">Jeux Vidéo</button>
+                            <button class="filter-btn" data-filter="game">Jeux</button>
+                            <button class="filter-btn" data-filter="ingenieur">Ingénierie</button>
                             <button class="filter-btn" data-filter="3d">Modélisation 3D</button>
-                            <button class="filter-btn" data-filter="jewelry">Orfèvrerie</button>
+                            <button class="filter-btn" data-filter="artistique">Artistique</button>
                         </div>
                     </div>
                     
@@ -176,9 +177,14 @@
                             <button class="filter-btn active" data-filter="all">Toutes</button>
                             <button class="filter-btn" data-filter="python">Python</button>
                             <button class="filter-btn" data-filter="csharp">C#</button>
+                            <button class="filter-btn" data-filter="html">HTML/CSS</button>
+                            <button class="filter-btn" data-filter="javascript">JavaScript</button>
                             <button class="filter-btn" data-filter="unity">Unity</button>
                             <button class="filter-btn" data-filter="blender">Blender</button>
-                            <button class="filter-btn" data-filter="cybersec">Cybersécurité</button>
+                            <button class="filter-btn" data-filter="fusion_360">Fusion 360</button>
+                            <button class="filter-btn" data-filter="animation">Animation</button>
+                            <button class="filter-btn" data-filter="arduino">Arduino</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -186,11 +192,11 @@
                 <!-- Grille de projets -->
                 <div class="projects-grid">
                     <!-- Projet 1: OrthoNome (Développement) -->
-                    <div class="project-card" data-type="development" data-categories="python tool">
+                    <div class="project-card" data-type="development" data-categories="python">
                         <div class="project-image">
                             <img src="assets\icons\orthonome.ico" alt="OrthoNome">
                             <div class="project-overlay">
-                                <div class="project-category">Outil | Python</div>
+                                <div class="project-category">Python</div>
                                 <h3 class="project-title">OrthoNome</h3>
                                 <p class="project-excerpt">Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier.</p>
                                 <div class="project-links">
@@ -205,11 +211,11 @@
                     </div>
                     
                     <!-- Projet 2: Gomoku_IA (Développement) -->
-                    <div class="project-card" data-type="development" data-categories="python ai">
+                    <div class="project-card" data-type="game" data-categories="python">
                         <div class="project-image">
                             <img src="assets\icons\gomoku.ico" alt="Gomoku IA">
                             <div class="project-overlay">
-                                <div class="project-category">Intelligence Artificielle | Python</div>
+                                <div class="project-category">Python</div>
                                 <h3 class="project-title">Gomoku IA</h3>
                                 <p class="project-excerpt">Implémentation du jeu Gomoku (Puissance 5) avec une IA adverse utilisant l'algorithme Minimax et l'élagage alpha-bêta.</p>
                                 <div class="project-links">
@@ -228,7 +234,7 @@
                         <div class="project-image">
                             <img src="assets\icons\bitmap.ico" alt="Bitmap Image Processing">
                             <div class="project-overlay">
-                                <div class="project-category">Traitement d'Image | C#</div>
+                                <div class="project-category">C#</div>
                                 <h3 class="project-title">Bitmap Image Processing</h3>
                                 <p class="project-excerpt">Bibliothèque C# pour le traitement et la manipulation d'images BMP avec intégration de l'algorithme de compression de Huffman.</p>
                                 <div class="project-links">
@@ -243,11 +249,11 @@
                     </div>
                     
                     <!-- Projet 4: Flux_Analysis (Développement) -->
-                    <div class="project-card" data-type="development" data-categories="python cybersec">
+                    <div class="project-card" data-type="development" data-categories="python">
                         <div class="project-image">
                             <img src="assets\icons\flux.ico" alt="Flux Analysis">
                             <div class="project-overlay">
-                                <div class="project-category">Cybersécurité | Python</div>
+                                <div class="project-category">Python</div>
                                 <h3 class="project-title">Flux Analysis</h3>
                                 <p class="project-excerpt">Outil complet de surveillance et d'analyse des vulnérabilités de cybersécurité qui suit les bulletins de sécurité de l'ANSSI et fournit des visualisations analytiques.</p>
                                 <div class="project-links">
@@ -262,16 +268,16 @@
                     </div>
                     
                     <!-- Projet 5: VeloMax (Développement) -->
-                    <div class="project-card" data-type="development" data-categories="csharp database">
+                    <div class="project-card" data-type="development" data-categories="csharp">
                         <div class="project-image">
                             <img src="assets\icons\velomax.ico" alt="VeloMax">
                             <div class="project-overlay">
-                                <div class="project-category">Base de données | C#</div>
+                                <div class="project-category">C# | SQL </div>
                                 <h3 class="project-title">VeloMax</h3>
                                 <p class="project-excerpt">Système complet de gestion pour les magasins de vélos, construit avec C# et MySQL.</p>
                                 <div class="project-links">
                                     <a href="pages/projects/development/velomax.html" class="project-link">Voir le projet</a>
-                                    <a href="https://github.com/Antoine-Roucau/SQL_Csharp" target="_blank" class="project-link project-github">
+                                    <a href="https://github.com/Antoine-Roucau/VeloMax" target="_blank" class="project-link project-github">
                                         <span>GitHub</span>
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                     </a>
@@ -280,17 +286,16 @@
                         </div>
                     </div>
                     
-                    <!-- Exemple de projet Unity (Jeu) -->
-                    <div class="project-card" data-type="game" data-categories="unity csharp">
+                    <div class="project-card" data-type="development" data-categories="python">
                         <div class="project-image">
-                            <img src="assets/images/projects/unity-game.jpg" alt="FPS Prototype">
+                            <img src="assets\icons\scrapping.ico" alt="Scrapping">
                             <div class="project-overlay">
-                                <div class="project-category">Unity | C#</div>
-                                <h3 class="project-title">FPS Prototype</h3>
-                                <p class="project-excerpt">Prototype de jeu FPS avec système de mouvement fluide, mécaniques de tir et intelligence artificielle pour les ennemis.</p>
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">Web Scrapping</h3>
+                                <p class="project-excerpt">Collection d'outils de Python web scraping.</p>
                                 <div class="project-links">
-                                    <a href="pages/projects/game/fps-prototype.html" class="project-link">Voir le projet</a>
-                                    <a href="https://github.com/Antoine-Roucau/fps-prototype" target="_blank" class="project-link project-github">
+                                    <a href="pages/projects/development/scraping.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Web_Scrapping" target="_blank" class="project-link project-github">
                                         <span>GitHub</span>
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                                     </a>
@@ -300,44 +305,99 @@
                     </div>
                     
                     <!-- Exemple de projet 3D (Modélisation) -->
-                    <div class="project-card" data-type="3d" data-categories="blender character-design">
+                    <div class="project-card" data-type="3d" data-categories="blender">
                         <div class="project-image">
-                            <img src="assets/images/projects/sci-fi-character.jpg" alt="Personnage Sci-Fi">
+                            <img src="assets\icons\barrel.ico" alt="Barile icon">
                             <div class="project-overlay">
-                                <div class="project-category">Blender | Character Design</div>
-                                <h3 class="project-title">Personnage Sci-Fi</h3>
-                                <p class="project-excerpt">Modèle 3D d'un personnage futuriste créé avec Blender et texturé avec Substance Painter.</p>
+                                <div class="project-category">Blender</div>
+                                <h3 class="project-title">Barile 3D</h3>
+                                <p class="project-excerpt">Modèle 3D d'un barile créé et texturé avec Blender.</p>
                                 <div class="project-links">
-                                    <a href="pages/projects/3d/sci-fi-character.html" class="project-link">Voir le projet</a>
+                                    <a href="pages/projects/3d/barile.html" class="project-link">Voir le projet</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Exemple de projet d'orfèvrerie -->
-                    <div class="project-card" data-type="jewelry" data-categories="silversmithing design">
+                    <div class="project-card" data-type="3d" data-categories="fusion_360 blender animation">
                         <div class="project-image">
-                            <img src="assets/images/projects/silver-pendant.jpg" alt="Pendentif en Argent">
+                            <img src="assets\icons\drakkar.ico" alt="Drakkar">
                             <div class="project-overlay">
-                                <div class="project-category">Orfèvrerie | Argent</div>
-                                <h3 class="project-title">Pendentif en Argent</h3>
-                                <p class="project-excerpt">Pendentif en argent inspiré de motifs naturels avec inclusion d'opale.</p>
+                                <div class="project-category">Fusion 360 | Blender</div>
+                                <h3 class="project-title">Drakkar</h3>
+                                <p class="project-excerpt">Modèle 3D d'un drakkar créé sur Fusion 360, texturé et animé sur Blender.</p>
                                 <div class="project-links">
-                                    <a href="pages/projects/jewelry/silver-pendant.html" class="project-link">Voir le projet</a>
+                                    <a href="pages/projects/3d/drakkar.html" class="project-link">Voir le projet</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card" data-type="development" data-categories="website">
+                    <div class="project-card" data-type="game" data-categories="csharp unity">
+                        <div class="project-image">
+                            <img src="assets\icons\aeria.ico" alt="Logo Aeria">
+                            <div class="project-overlay">
+                                <div class="project-category">Unity | C#</div>
+                                <h3 class="project-title">Aeria</h3>
+                                <p class="project-excerpt">Scène reproduisant les mécaniques d'Overcooked en vue FPS.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/game/aeria.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-type="3d" data-categories="blender animation">
+                        <div class="project-image">
+                            <img src="assets\icons\smaug.ico" alt="Logo Smaug">
+                            <div class="project-overlay">
+                                <div class="project-category">Blender</div>
+                                <h3 class="project-title">Smaug</h3>
+                                <p class="project-excerpt">Courte animation de Smaug.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/3d/smaug.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-type="ingenieur" data-categories="arduino">
+                        <div class="project-image">
+                            <img src="assets\icons\cochon.ico" alt="Logo Pix 1">
+                            <div class="project-overlay">
+                                <div class="project-category">Projet d'ingénierie</div>
+                                <h3 class="project-title">Pix 1</h3>
+                                <p class="project-excerpt">Ornitoptère qui ne vole pas mais roule grâce à ses ailes.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/inge/pix_1.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-type="game" data-categories="csharp unity">
+                        <div class="project-image">
+                            <img src="assets\icons\template_menu.ico" alt="Logo Menu">
+                            <div class="project-overlay">
+                                <div class="project-category">Unity | C#</div>
+                                <h3 class="project-title">Template Menu</h3>
+                                <p class="project-excerpt">Template de menu pour les Game Jams.</p>
+                                <div class="project-links">
+                                    <a href="pages/projects/game/template_menu.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-type="development" data-categories="html javascript">
                         <div class="project-image">
                             <img src="assets\icons\website.ico" alt="Logo Website">
                             <div class="project-overlay">
-                                <div class="project-category">Website | HTML/CSS and JavaScript</div>
+                                <div class="project-category">HTML/CSS | JavaScript</div>
                                 <h3 class="project-title">Porfolio Website</h3>
                                 <p class="project-excerpt">The beauty that you're surfing on for presenting myself.</p>
                                 <div class="project-links">
-                                    <a href="pages/projects/jewelry/silver-pendant.html" class="project-link">Voir le projet</a>
+                                    <a href="pages/projects/development/website.html" class="project-link">Voir le projet</a>
                                 </div>
                             </div>
                         </div>
