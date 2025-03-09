@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pix 1 - Un projet d'ingénierie innovant : un ornitoptère qui roule grâce à ses ailes">
+    <title>Pix 1 | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Pix 1</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Pix 1</h1>
+                <div class="project-category">Projet d'ingénierie | Arduino</div>
+            </div>
+            
+            <!-- Showcase du projet avec vidéo principale -->
+            <div class="project-showcase">
+                <div class="project-gallery expanded-gallery">
+                    <!-- Logo du projet -->
+                    <div class="project-logo">
+                        <img src="../../../assets/icons/cochon.ico" alt="Logo Pix 1">
+                    </div>
+                    
+                    <!-- Vidéo principale -->
+                    <div class="gallery-main video-container">
+                        <video controls autoplay loop poster="../../../assets/images/projects/pix1-poster.jpg">
+                            <source src="../../../assets\video\showPix.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas les vidéos HTML5.
+                        </video>
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Type</h3>
+                        <p>Ornitoptère roulant</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Technologies</h3>
+                        <p>Arduino, Impression 3D, Motorisation</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Terminé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Pix 1 est un projet d'ingénierie innovant qui réinvente le concept d'ornitoptère. Contrairement aux ornitoptères classiques conçus pour voler en imitant le battement des ailes d'oiseaux, Pix 1 utilise ses ailes pour se déplacer au sol, créant ainsi un mode de locomotion unique et original.</p>
+                    
+                    <p>Ce projet allie mécanique, électronique et programmation pour créer un robot capable de se déplacer efficacement grâce à un système de battement d'ailes coordonné, transformant le mouvement vertical des ailes en propulsion horizontale.</p>
+                </section>
+                
+                <!-- Galerie d'images supplémentaires -->
+                <section class="project-section">
+                    <h2>Galerie</h2>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <img src="../../../assets\images\projects\Pix_1.jpg" alt="Premier prototype de Pix 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../assets\images\projects\Pix_2.jpg" alt="Assemblage de Pix 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../assets\images\projects\Pix_3.jpg" alt="Composants électroniques de Pix 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../../../assets\images\projects\Pix_4.jpg" alt="Tests de Pix 1">
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Vidéo secondaire -->
+                <section class="project-section">
+                    <h2>Démonstration en action</h2>
+                    <div class="video-container" style="margin-bottom: var(--space-md);">
+                        <video controls poster="../../../assets/images/projects/pix1-demo-poster.jpg">
+                            <source src="../../../assets\video\effectPix.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas les vidéos HTML5.
+                        </video>
+                    </div>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Conception et développement</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Étude mécanique</h3>
+                            <p>La première phase du projet a consisté à étudier les mécanismes de battement d'ailes des oiseaux et des insectes pour comprendre comment adapter ces principes à un mode de déplacement au sol. Des croquis et des simulations mécaniques ont permis d'établir la géométrie optimale du système de liaison entre les ailes et le châssis.</p>
+                        </li>
+                        <li>
+                            <h3>Conception du prototype</h3>
+                            <p>Le design de Pix 1 a été modélisé en 3D, en accordant une attention particulière à l'aérodynamique des ailes et à la stabilité de l'ensemble. Plusieurs itérations ont été nécessaires pour trouver l'équilibre entre légèreté, robustesse et efficacité énergétique.</p>
+                        </li>
+                        <li>
+                            <h3>Fabrication et assemblage</h3>
+                            <p>Les pièces structurelles ont été fabriquées par impression 3D avec un filament PLA renforcé pour optimiser le rapport résistance/poids. Les ailes ont été conçues avec un matériau flexible permettant à la fois rigidité lors de la poussée et déformation lors du retour pour minimiser la résistance à l'air.</p>
+                        </li>
+                        <li>
+                            <h3>Système électronique</h3>
+                            <p>Le cœur du système est basé sur un Arduino Nano contrôlant des servomoteurs de précision qui actionnent les ailes. Des capteurs de mouvement et d'orientation permettent d'ajuster en temps réel le battement des ailes pour maintenir la trajectoire souhaitée.</p>
+                        </li>
+                        <li>
+                            <h3>Programmation et optimisation</h3>
+                            <p>Un algorithme spécifique a été développé pour synchroniser le battement des ailes et optimiser l'efficacité énergétique. Différents modes de déplacement ont été programmés, permettant à Pix 1 de se déplacer en ligne droite, de tourner et même de pivoter sur place.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Transformation du mouvement</h3>
+                            <p>Le principal défi a été de transformer efficacement le mouvement vertical des ailes en propulsion horizontale, tout en minimisant les pertes d'énergie. Plusieurs mécanismes ont été testés avant de trouver la configuration optimale.</p>
+                        </li>
+                        <li>
+                            <h3>Stabilité et équilibre</h3>
+                            <p>La coordination des ailes pour maintenir l'équilibre du robot pendant le déplacement a nécessité un travail minutieux sur le centre de gravité et la synchronisation des battements.</p>
+                        </li>
+                        <li>
+                            <h3>Consommation énergétique</h3>
+                            <p>L'optimisation de la consommation d'énergie a été cruciale pour permettre une autonomie satisfaisante. Des stratégies de récupération d'énergie lors des phases de roulement ont été mises en œuvre.</p>
+                        </li>
+                        <li>
+                            <h3>Durabilité des mécanismes</h3>
+                            <p>Les mouvements répétitifs des ailes mettent à rude épreuve les articulations et les matériaux. Des solutions ont été développées pour réduire l'usure et augmenter la durée de vie des composants mobiles.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Caractéristiques techniques</h2>
+                    <ul class="feature-list">
+                        <li>Dimensions : 25 cm de longueur, 30 cm d'envergure</li>
+                        <li>Poids : 320 grammes</li>
+                        <li>Moteur : 2 servomoteurs de haute précision (couple de 2.5kg·cm)</li>
+                        <li>Microcontrôleur : Arduino Nano</li>
+                        <li>Capteurs : Accéléromètre 3 axes, gyroscope, détecteurs de proximité</li>
+                        <li>Alimentation : Batterie LiPo 7.4V 1000mAh</li>
+                        <li>Autonomie : 45 minutes en utilisation continue</li>
+                        <li>Vitesse maximale : 15 cm/s</li>
+                        <li>Matériaux : Châssis en PLA renforcé, ailes en TPU flexible</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet a permis d'explorer l'intersection entre la biomimétisme, la robotique et la mécanique. Plusieurs enseignements importants ont été tirés :</p>
+                    <ul>
+                        <li>L'importance d'une approche itérative dans la conception de systèmes mécaniques complexes</li>
+                        <li>L'efficacité des solutions inspirées de la nature pour résoudre des problèmes d'ingénierie</li>
+                        <li>La valeur de l'optimisation énergétique dans les systèmes robotiques autonomes</li>
+                        <li>Les défis et opportunités liés à la transformation de mouvements entre différents plans</li>
+                        <li>L'intégration efficace de systèmes électroniques dans des mécanismes à contraintes spatiales</li>
+                    </ul>
+                    <p>Pix 1 constitue une base solide pour de futures explorations dans le domaine de la robotique bio-inspirée et des moyens de locomotion alternatifs. Des développements futurs pourraient inclure l'ajout de capacités d'intelligence artificielle pour l'adaptation autonome à différents environnements.</p>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="csharp unity">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/aeria.ico" alt="Logo Aeria">
+                            <div class="project-overlay">
+                                <div class="project-category">Unity | C#</div>
+                                <h3 class="project-title">Aeria</h3>
+                                <p class="project-excerpt">Scène reproduisant les mécaniques d'Overcooked en vue FPS.</p>
+                                <div class="project-links">
+                                    <a href="../game/aeria.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="fusion_360 blender animation">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/drakkar.ico" alt="Drakkar">
+                            <div class="project-overlay">
+                                <div class="project-category">Fusion 360 | Blender</div>
+                                <h3 class="project-title">Drakkar</h3>
+                                <p class="project-excerpt">Modèle 3D d'un drakkar créé sur Fusion 360, texturé et animé sur Blender.</p>
+                                <div class="project-links">
+                                    <a href="../3d/drakkar.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

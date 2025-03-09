@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Drakkar - Modèle 3D d'un drakkar viking créé sur Fusion 360, texturé et animé sur Blender.">
-    <title>Drakkar | Antoine Roucau</title>
+    <meta name="description" content="Smaug - Animation 3D d'une tête de dragon parlant réalisée avec Blender">
+    <title>Smaug | Antoine Roucau</title>
     
     <!-- Polices Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,43 +48,41 @@
             <div class="breadcrumbs">
                 <a href="../../../index.html">Accueil</a> / 
                 <a href="../../../index.html#projects">Projets</a> / 
-                <span>Drakkar</span>
+                <span>Smaug</span>
             </div>
             
             <!-- En-tête du projet -->
             <div class="project-header">
-                <h1 class="project-title">Drakkar</h1>
-                <div class="project-category">Fusion 360 | Blender</div>
+                <h1 class="project-title">Smaug</h1>
+                <div class="project-category">Blender | Animation</div>
             </div>
             
-            <!-- Intégration de l'animation -->
+            <!-- Showcase du projet -->
             <div class="project-showcase">
-                <div class="project-gallery">
+                <div class="project-gallery expanded-gallery">
+                    <!-- Logo du projet -->
+                    <div class="project-logo">
+                        <img src="../../../assets/icons/smaug.ico" alt="Logo Smaug">
+                    </div>
+                    
+                    <!-- Vidéo principale -->
                     <div class="gallery-main video-container">
                         <video controls loop muted>
-                            <source src="../../../assets\video\videoDrakkar.mp4" type="video/mp4">
+                            <source src="../../../assets\video\smaug.mp4" type="video/mp4">
                             Votre navigateur ne supporte pas les vidéos HTML5.
                         </video>
                     </div>
-
-                    <div class="gallery-thumbnails">
-                        <div class="gallery-thumbnail">
-                            <img src="../../../assets\icons\drakkar.ico" alt="Logo du projet Drakkar">
-                        </div>
-                        <div class="gallery-thumbnail">
-                            <img src="../../../assets\images\projects\drakkar.png" alt="Wireframe du modèle Drakkar">
-                        </div>
-                    </div>
+                    
                 </div>
                 
                 <div class="project-specs">
                     <div class="spec-item">
-                        <h3>Logiciels</h3>
-                        <p>Fusion 360, Blender</p>
+                        <h3>Logiciel</h3>
+                        <p>Blender</p>
                     </div>
                     <div class="spec-item">
                         <h3>Techniques</h3>
-                        <p>Modélisation 3D, Texturing, Animation</p>
+                        <p>Modélisation 3D, Rigging, Animation, Audio</p>
                     </div>
                     <div class="spec-item">
                         <h3>Année</h3>
@@ -101,29 +99,33 @@
             <div class="project-content">
                 <section class="project-section">
                     <h2>À propos du projet</h2>
-                    <p>Ce projet présente la modélisation, le texturing et l'animation d'un drakkar viking. Le modèle 3D a été conçu initialement sur Fusion 360 pour obtenir des proportions et une structure précises, puis importé dans Blender pour le texturing, le rigging et l'animation.</p>
+                    <p>Ce projet est une courte animation 3D d'une tête de dragon inspirée du personnage de Smaug, le célèbre dragon du Hobbit. L'animation montre la tête du dragon prononçant la phrase "Je s'appelle Smaug" avec une synchronisation labiale et des expressions faciales.</p>
                     
-                    <p>L'objectif était de créer un drakkar réaliste tout en gardant une touche stylisée, capable de s'animer dans un environnement maritime. L'animation de 21 secondes montre le navire viking naviguant sur des eaux calmes, avec un mouvement de balancement naturel et des interactions avec l'environnement.</p>
+                    <p>Ce micro-projet avait pour objectif de mettre en pratique les techniques de modélisation de personnages, de rigging facial et de synchronisation labiale dans Blender, tout en explorant la création d'expressions faciales expressives pour un personnage fantastique.</p>
                 </section>
                 
                 <section class="project-section">
                     <h2>Processus de création</h2>
                     <ol class="challenges-list">
                         <li>
-                            <h3>Modélisation sur Fusion 360</h3>
-                            <p>La création du drakkar a débuté sur Fusion 360 pour profiter des outils de conception paramétrique. La coque a été modélisée avec précision en suivant les proportions historiques des navires vikings, avec une attention particulière aux détails comme les boucliers latéraux, la proue sculptée et la voile rayée caractéristique.</p>
+                            <h3>Modélisation du dragon</h3>
+                            <p>Le modèle 3D de la tête du dragon a été créé dans Blender en utilisant des techniques de sculpting digital pour obtenir les détails organiques des écailles et des traits du visage. Une attention particulière a été portée à la structure de la bouche et des mâchoires pour permettre des animations faciales convaincantes.</p>
                         </li>
                         <li>
-                            <h3>Transfert et texturing sur Blender</h3>
-                            <p>Le modèle a ensuite été importé dans Blender pour le texturing. Des textures réalistes ont été appliquées pour le bois usé de la coque, les détails métalliques et la voile textile. Les UV ont été soigneusement dépliés pour assurer une application précise des textures sur les différentes parties du navire.</p>
+                            <h3>Texturing et matériaux</h3>
+                            <p>Des matériaux procéduraux ont été utilisés pour créer les différentes textures d'écailles, de peau et de dents du dragon. Un travail précis a été réalisé sur les réflexions et la subsurface scattering pour donner une apparence réaliste aux tissus organiques.</p>
                         </li>
                         <li>
-                            <h3>Rigging et animation</h3>
-                            <p>Un système de rigging a été mis en place pour animer le drakkar de manière réaliste. Des os ont été placés stratégiquement pour permettre le mouvement ondulant de la coque sur l'eau, ainsi que le battement de la voile sous l'effet du vent. Des contraintes ont été ajoutées pour maintenir l'intégrité de la structure pendant l'animation.</p>
+                            <h3>Rigging facial</h3>
+                            <p>Un système de rigging facial avancé a été mis en place avec des shape keys pour les expressions clés et un système d'os pour le contrôle des mouvements de la mâchoire. Ce rig permet un contrôle précis des lèvres, des yeux et des narines pour créer des expressions faciales expressives.</p>
                         </li>
                         <li>
-                            <h3>Création de l'environnement et rendu</h3>
-                            <p>L'environnement aquatique a été créé avec le système de simulation de fluides de Blender pour obtenir un rendu réaliste de l'eau. L'éclairage a été configuré pour créer une ambiance nordique avec des reflets sur l'eau et des ombres douces. Le rendu final a été réalisé avec le moteur Cycles pour obtenir un résultat photoréaliste avec des réflexions et réfractions précises.</p>
+                            <h3>Animation et synchronisation labiale</h3>
+                            <p>L'enregistrement audio a d'abord été analysé pour identifier les phonèmes, puis les mouvements de la bouche ont été animés image par image pour correspondre aux sons. Des expressions faciales complémentaires ont été ajoutées pour renforcer le caractère du personnage.</p>
+                        </li>
+                        <li>
+                            <h3>Éclairage et rendu</h3>
+                            <p>Un setup d'éclairage dramatique a été créé pour mettre en valeur la géométrie du visage du dragon et renforcer l'ambiance. Le rendu final a été réalisé avec le moteur Cycles de Blender pour obtenir des ombres et des réflexions réalistes.</p>
                         </li>
                     </ol>
                 </section>
@@ -131,13 +133,13 @@
                 <section class="project-section">
                     <h2>Aspects techniques</h2>
                     <ul class="feature-list">
-                        <li>Modélisation polygonale détaillée avec environ 15,000 polygones</li>
-                        <li>Textures PBR (Physically Based Rendering) avec maps de diffusion, normal, roughness et specular</li>
-                        <li>Système de rigging avec 30+ os pour l'animation de la coque et de la voile</li>
-                        <li>Simulation de fluides pour l'eau avec interaction réaliste avec le navire</li>
-                        <li>Animation de 21 secondes à 30 images par seconde (630 frames total)</li>
-                        <li>Rendu avec Cycles utilisant le ray-tracing pour des réflexions et réfractions réalistes</li>
-                        <li>Post-traitement pour améliorer les couleurs, le contraste et ajouter des effets atmosphériques</li>
+                        <li>Modélisation haute résolution avec plus de 100,000 polygones pour les détails du visage</li>
+                        <li>Utilisation de displacement maps pour les détails fins des écailles</li>
+                        <li>Système de rigging facial avec plus de 30 shape keys pour les expressions</li>
+                        <li>Animation à 30 images par seconde pour des mouvements fluides</li>
+                        <li>Synchronisation labiale manuelle frame par frame</li>
+                        <li>Système de particules pour les détails comme la fumée des narines</li>
+                        <li>Éclairage à trois points avec éclairage d'ambiance pour mettre en valeur la forme</li>
                     </ul>
                 </section>
                 
@@ -145,35 +147,31 @@
                     <h2>Défis techniques</h2>
                     <ol class="challenges-list">
                         <li>
-                            <h3>Modélisation précise de la coque courbée</h3>
-                            <p>La forme caractéristique des drakkars, avec leur coque élancée et leurs extrémités relevées, a représenté un défi de modélisation important. Il a fallu trouver le bon équilibre entre précision historique et contraintes techniques pour créer un modèle à la fois réaliste et optimisé pour l'animation.</p>
+                            <h3>Modélisation organique complexe</h3>
+                            <p>La création d'une tête de dragon convaincante avec des écailles, des cornes et des traits expressifs a représenté un défi technique important, notamment pour maintenir l'équilibre entre le réalisme et les contraintes de l'animation.</p>
                         </li>
                         <li>
-                            <h3>Animation réaliste de l'eau</h3>
-                            <p>La simulation de l'eau et son interaction avec le navire était l'un des défis majeurs de ce projet. Il a fallu ajuster de nombreux paramètres physiques pour obtenir un comportement réaliste des vagues autour de la coque, tout en maintenant des temps de calcul raisonnables.</p>
+                            <h3>Animation faciale pour une anatomie non-humaine</h3>
+                            <p>Adapter les principes de synchronisation labiale humaine à l'anatomie d'un dragon a nécessité des adaptations créatives et techniques. La structure différente de la mâchoire et des lèvres a demandé des solutions personnalisées pour obtenir des mouvements naturels.</p>
                         </li>
                         <li>
-                            <h3>Animation de la voile</h3>
-                            <p>L'animation de la voile textile, qui devait réagir naturellement au vent tout en conservant sa forme tendue, a nécessité une combinaison de simulation de tissu et d'animation manuelle pour obtenir le résultat souhaité sans artefacts visuels.</p>
-                        </li>
-                        <li>
-                            <h3>Optimisation des temps de rendu</h3>
-                            <p>Avec la complexité du modèle, les simulations de fluides et d'éclairage, les temps de rendu représentaient un défi important. Des techniques d'optimisation comme l'adaptation du sampling, l'utilisation stratégique des bounces de lumière et la simplification de certaines géométries hors champ ont permis de maintenir des temps de rendu raisonnables.</p>
+                            <h3>Optimisation du temps de rendu</h3>
+                            <p>Malgré la courte durée de l'animation, la complexité du modèle et des matériaux nécessitait des temps de rendu élevés. Des techniques d'optimisation comme l'ajustement stratégique du sampling et l'utilisation de denoising ont été implémentées.</p>
                         </li>
                     </ol>
                 </section>
                 
                 <section class="project-section">
                     <h2>Résultats et apprentissages</h2>
-                    <p>Ce projet m'a permis d'approfondir mes compétences en modélisation 3D, texturing et animation, particulièrement dans le contexte de véhicules historiques et de simulations d'eau. Les principaux apprentissages incluent:</p>
+                    <p>Ce projet, bien que court, a été très instructif pour développer mes compétences en animation de personnages et en rigging facial :</p>
                     <ul>
-                        <li>Maîtrise du workflow entre Fusion 360 et Blender pour combiner précision technique et capacités artistiques</li>
-                        <li>Approfondissement des techniques de rigging pour des objets non-organiques comme des navires</li>
-                        <li>Perfectionnement dans la simulation de fluides et leur interaction avec des objets solides</li>
-                        <li>Optimisation des workflows de rendu pour des animations complexes</li>
-                        <li>Application de principes physiques réels pour obtenir des mouvements naturels dans l'animation</li>
+                        <li>Approfondissement des techniques de modélisation organique pour les créatures fantastiques</li>
+                        <li>Maîtrise du workflow de synchronisation labiale dans Blender</li>
+                        <li>Compréhension approfondie des principes d'animation faciale et d'expressions</li>
+                        <li>Perfectionnement des techniques d'éclairage pour mettre en valeur le volume et la texture</li>
+                        <li>Optimisation des processus de rendu pour des projets complexes</li>
                     </ul>
-                    <p>L'animation finale représente fidèlement l'élégance et la robustesse des drakkars vikings qui ont marqué l'histoire maritime, tout en démontrant les possibilités techniques des outils de modélisation et d'animation 3D modernes.</p>
+                    <p>Cette courte animation constitue une base solide pour des projets d'animation de personnages plus ambitieux à l'avenir, et démontre la possibilité de créer des animations expressives même avec des contraintes de temps et de ressources limitées.</p>
                 </section>
             </div>
             
@@ -197,15 +195,15 @@
                     </div>
                     
                     <!-- Projet connexe 2 -->
-                    <div class="project-card" data-type="3d" data-categories="blender animation">
+                    <div class="project-card" data-type="3d" data-categories="fusion_360 blender animation">
                         <div class="project-image">
-                            <img src="../../../assets/icons/smaug.ico" alt="Smaug">
+                            <img src="../../../assets/icons/drakkar.ico" alt="Drakkar">
                             <div class="project-overlay">
-                                <div class="project-category">Blender</div>
-                                <h3 class="project-title">Smaug</h3>
-                                <p class="project-excerpt">Courte animation de Smaug.</p>
+                                <div class="project-category">Fusion 360 | Blender</div>
+                                <h3 class="project-title">Drakkar</h3>
+                                <p class="project-excerpt">Modèle 3D d'un drakkar créé sur Fusion 360, texturé et animé sur Blender.</p>
                                 <div class="project-links">
-                                    <a href="smaug.html" class="project-link">Voir le projet</a>
+                                    <a href="drakkar.html" class="project-link">Voir le projet</a>
                                 </div>
                             </div>
                         </div>

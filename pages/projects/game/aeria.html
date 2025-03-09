@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aeria - Un jeu Unity reproduisant les mécaniques d'Overcooked en vue FPS, avec une approche immersive et interactive.">
+    <title>Aeria | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Aeria</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Aeria</h1>
+                <div class="project-category">Unity | C#</div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery expanded-gallery">
+                    <!-- Logo du projet -->
+                    <div class="project-logo">
+                        <img src="../../../assets/icons/aeria.ico" alt="Logo Aeria">
+                    </div>
+                    
+                    <!-- Vidéo principale -->
+                    <div class="gallery-main video-container">
+                        <video controls loop muted>
+                            <source src="../../../assets\video\aeria.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas les vidéos HTML5.
+                        </video>
+                    </div>
+                    
+                    <!-- Image secondaire -->
+                    <div class="gallery-secondary">
+                        <img src="../../../assets\images\projects\aeria.png" alt="Capture d'écran du gameplay d'Aeria">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Moteur</h3>
+                        <p>Unity</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Langage</h3>
+                        <p>C#</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Terminé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Aeria est un projet développé sous Unity qui réinterprète les mécaniques populaires du jeu Overcooked en les transposant dans une perspective à la première personne (FPS). Ce changement de point de vue transforme radicalement l'expérience en la rendant plus immersive et en apportant de nouveaux défis d'interaction.</p>
+                    
+                    <p>Dans Aeria, les joueurs doivent préparer des plats en suivant des recettes, tout en interagissant directement avec les ingrédients, les ustensiles et les appareils de cuisine à travers une perspective à la première personne. Cela ajoute une dimension de dextérité et de conscience spatiale qui diffère de l'expérience vue du dessus d'Overcooked.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Interface FPS intuitive pour manipuler les objets de cuisine</li>
+                        <li>Système de préparation de recettes inspiré d'Overcooked</li>
+                        <li>Interactions physiques réalistes avec les objets (découpe, cuisson, mélange)</li>
+                        <li>Système de progression avec niveaux et objectifs à atteindre</li>
+                        <li>Gestion du temps et mécaniques de score</li>
+                        <li>Environnements interactifs avec obstacles et éléments mobiles</li>
+                        <li>Effets visuels pour le feedback (cuisson, progression des plats)</li>
+                        <li>Effets sonores pour une immersion accrue</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Développement technique</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Système d'interaction en FPS</h3>
+                            <p>Un des défis majeurs a été de développer un système d'interaction fluide et intuitif qui permette au joueur de saisir, déplacer et utiliser des objets tout en restant en vue FPS. J'ai implémenté un système de raycast avancé pour détecter les objets interactifs et un mécanisme de manipulation d'objets en temps réel basé sur la physique d'Unity.</p>
+                        </li>
+                        <li>
+                            <h3>Architecture des états des ingrédients</h3>
+                            <p>J'ai conçu une architecture modulaire pour gérer les différents états des ingrédients (cru, coupé, cuit, brûlé) à travers un système de machines à états finis. Chaque ingrédient est une entité qui peut évoluer en fonction des actions du joueur et des interactions avec l'environnement.</p>
+                        </li>
+                        <li>
+                            <h3>Fluidité des mouvements et précision</h3>
+                            <p>Pour garantir une expérience de jeu agréable, j'ai optimisé les contrôles pour trouver le bon équilibre entre précision et facilité d'utilisation. Cela a impliqué un travail approfondi sur les paramètres de la caméra, l'accélération des mouvements et la gestion de la précision des interactions.</p>
+                        </li>
+                        <li>
+                            <h3>Adaptation des mécaniques d'Overcooked</h3>
+                            <p>Transposer les mécaniques d'Overcooked (conçues pour une vue du dessus) dans un environnement FPS a nécessité une réflexion approfondie sur la conception des niveaux et l'équilibrage du gameplay. Des ajustements ont été nécessaires pour adapter le rythme et la difficulté à cette nouvelle perspective.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Technologies utilisées</h2>
+                    <ul>
+                        <li><strong>Unity Engine:</strong> Moteur principal pour le développement du jeu, version 2021.3 LTS</li>
+                        <li><strong>C#:</strong> Langage de programmation pour tous les scripts et systèmes</li>
+                        <li><strong>Unity Physics:</strong> Pour les interactions réalistes avec les objets</li>
+                        <li><strong>Visual Scripting:</strong> Pour certains comportements et événements de gameplay</li>
+                        <li><strong>ProBuilder:</strong> Pour la conception rapide des niveaux et prototypage</li>
+                        <li><strong>Post-processing Stack:</strong> Pour améliorer le rendu visuel du jeu</li>
+                        <li><strong>Cinemachine:</strong> Pour gérer les mouvements de caméra fluides</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet m'a permis d'approfondir ma compréhension des mécaniques de gameplay et de l'importance de l'expérience utilisateur dans les jeux à la première personne. Les principaux apprentissages incluent:</p>
+                    <ul>
+                        <li>Implémentation d'un système d'interaction FPS intuitif et réactif</li>
+                        <li>Conception d'environnements adaptés à un gameplay en perspective première personne</li>
+                        <li>Adaptation de mécaniques de jeu existantes dans un nouveau contexte</li>
+                        <li>Gestion des collisions et de la physique dans un environnement interactif dense</li>
+                        <li>Équilibrage du gameplay pour maintenir le challenge sans créer de frustration</li>
+                        <li>Création de feedbacks visuels et sonores cohérents avec l'action en cours</li>
+                    </ul>
+                    <p>La version actuelle d'Aeria constitue une preuve de concept fonctionnelle qui démontre la viabilité de cette adaptation des mécaniques d'Overcooked en vue FPS. Le projet pourrait être étendu avec davantage de niveaux, d'ingrédients et de mécaniques spécifiques à l'avenir.</p>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="csharp unity">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/template_menu.ico" alt="Template Menu">
+                            <div class="project-overlay">
+                                <div class="project-category">Unity | C#</div>
+                                <h3 class="project-title">Template Menu</h3>
+                                <p class="project-excerpt">Template de menu pour les Game Jams.</p>
+                                <div class="project-links">
+                                    <a href="template_menu.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/gomoku.ico" alt="Gomoku IA">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">Gomoku IA</h3>
+                                <p class="project-excerpt">Implémentation du jeu Gomoku (Puissance 5) avec une IA adverse utilisant l'algorithme Minimax et l'élagage alpha-bêta.</p>
+                                <div class="project-links">
+                                    <a href="../development/gomoku.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Gomoku_IA" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
