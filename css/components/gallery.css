@@ -188,8 +188,32 @@
 
 .video-container video {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover; /* Assure que la vidéo remplit tout le conteneur */
+}
+
+/* Style spécial pour les vidéos qu'on veut afficher en entier sans recadrage */
+.video-container.contain video {
+    object-fit: contain;
+    background-color: black; /* Pour les barres noires */
+}
+
+/* Lorsque la vidéo est dans gallery-main, appliquer les mêmes styles que pour les images */
+.gallery-main.video-container {
+    aspect-ratio: 16/9;
+}
+
+.gallery-main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+/* Ajouter un effet de zoom au survol, similaire aux images */
+.gallery-main:hover video {
+    transform: scale(1.05);
 }
 
 /* Galerie étendue avec logo et image secondaire */
@@ -249,6 +273,19 @@
 @media (min-width: 992px) {
     .video-container {
         aspect-ratio: 16/9;
+    }
+    
+    /* Options supplémentaires pour différents rapports d'aspect */
+    .video-container.widescreen {
+        aspect-ratio: 21/9;
+    }
+    
+    .video-container.square {
+        aspect-ratio: 1/1;
+    }
+    
+    .video-container.vertical {
+        aspect-ratio: 9/16;
     }
     
     .expanded-gallery {
