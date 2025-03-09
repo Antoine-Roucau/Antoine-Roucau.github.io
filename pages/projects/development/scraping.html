@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Scraping Tools - Collection d'outils de web scraping développés en Python pour l'extraction et l'analyse de données en ligne.">
+    <title>Web Scraping Tools | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Web Scraping Tools</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Web Scraping Tools</h1>
+                <div class="project-category">Python</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/Web-Scraping-Tools" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets\icons\scrapping.ico" alt="Illustration Web Scraping Tools">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Langage</h3>
+                        <p>Python</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Bibliothèques</h3>
+                        <p>BeautifulSoup, Selenium, Pandas, Requests</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>Terminé</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Web Scraping Tools est une collection d'outils d'extraction de données web développés pour automatiser la collecte et l'organisation d'informations provenant de différentes sources en ligne. Ce projet comprend actuellement deux outils principaux :</p>
+                    
+                    <ul>
+                        <li><strong>CTF Write-ups Crawler</strong> : Un crawler spécialisé qui collecte et organise les write-ups de compétitions Capture The Flag (CTF) à partir de sites spécifiques</li>
+                        <li><strong>Synty Store Scraper</strong> : Un outil d'extraction de données pour récupérer les informations sur les produits du site Synty Store, spécialisé dans les assets 3D</li>
+                    </ul>
+                    
+                    <p>Ces outils ont été développés pour simplifier la recherche et l'organisation d'informations dispersées sur le web, en automatisant des tâches qui seraient autrement fastidieuses à réaliser manuellement. Les données extraites sont structurées dans des formats facilement exploitables (Excel, fichiers texte) pour une utilisation ultérieure.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Exploration récursive de sites web avec gestion des URLs déjà visitées</li>
+                        <li>Extraction des métadonnées à partir des URLs et du contenu des pages</li>
+                        <li>Automatisation de la navigation avec Selenium pour les sites à contenu dynamique</li>
+                        <li>Parsing HTML optimisé avec BeautifulSoup pour l'extraction de données spécifiques</li>
+                        <li>Génération de rapports structurés (Excel, fichiers texte) avec les données collectées</li>
+                        <li>Filtrage intelligent des contenus pertinents grâce à des expressions régulières</li>
+                        <li>Mode headless pour l'exécution en arrière-plan sans interface graphique</li>
+                        <li>Analyse statistique des données collectées</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>CTF Write-ups Crawler</h2>
+                    <p>Le CTF Write-ups Crawler est spécifiquement conçu pour collecter et organiser les write-ups de compétitions Capture The Flag. Ces compétitions de cybersécurité génèrent de nombreux articles techniques (write-ups) expliquant comment résoudre les différentes épreuves, mais ces ressources sont souvent dispersées sur différents sites et blogs.</p>
+                    
+                    <p>Cet outil permet d'explorer systématiquement un site hébergeant ces write-ups, d'identifier les articles pertinents, d'extraire des métadonnées importantes (année, nom de la compétition, catégorie, titre) et de compiler le tout dans un fichier Excel organisé et facilement consultable.</p>
+                    
+                    
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Gestion des sites dynamiques</h3>
+                            <p>L'un des principaux défis était d'extraire des données de sites web dont le contenu est chargé dynamiquement via JavaScript. Pour résoudre ce problème, j'ai intégré Selenium qui permet d'interagir avec les pages comme le ferait un utilisateur réel, en attendant le chargement complet du contenu avant de l'extraire.</p>
+                        </li>
+                        <li>
+                            <h3>Identification des patterns d'URLs</h3>
+                            <p>Pour identifier efficacement les pages pertinentes à explorer, il a fallu développer des expressions régulières précises qui correspondent aux patterns d'URLs des contenus recherchés, tout en évitant d'explorer des branches non pertinentes du site.</p>
+                        </li>
+                        <li>
+                            <h3>Optimisation des performances</h3>
+                            <p>Les opérations de web scraping peuvent être gourmandes en ressources et en temps. J'ai dû optimiser les performances en utilisant une gestion intelligente des sessions HTTP, en implémentant un suivi des URLs déjà visitées pour éviter les redondances, et en configurant Selenium pour fonctionner en mode headless (sans interface graphique).</p>
+                        </li>
+                        <li>
+                            <h3>Extraction de métadonnées cohérentes</h3>
+                            <p>La structure des URLs et du contenu peut varier considérablement selon les pages, même au sein d'un même site. Il a fallu développer des algorithmes d'analyse robustes capables de s'adapter à ces variations pour extraire des métadonnées cohérentes et structurées.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Le développement de ces outils de web scraping m'a permis d'approfondir mes connaissances dans plusieurs domaines clés :</p>
+                    <ul>
+                        <li>Maîtrise des techniques d'extraction de données web avec BeautifulSoup et Selenium</li>
+                        <li>Compréhension approfondie du fonctionnement des sites web dynamiques et de leur structure</li>
+                        <li>Optimisation des algorithmes d'exploration pour maximiser l'efficacité tout en respectant les limitations des serveurs</li>
+                        <li>Manipulation et traitement de données structurées avec Pandas</li>
+                        <li>Conception de patterns d'expressions régulières pour le filtrage de contenus</li>
+                        <li>Gestion des sessions HTTP et des cookies pour une navigation automatisée</li>
+                    </ul>
+                    <p>Ces outils ont permis d'automatiser des tâches de collecte de données qui auraient pris des dizaines d'heures à réaliser manuellement. Le CTF Write-ups Crawler a notamment permis de constituer une base de connaissances organisée de plus d'une centaine de write-ups de compétitions de cybersécurité, facilitant ainsi l'apprentissage et la recherche d'informations spécifiques.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Applications et perspectives</h2>
+                    <p>Les outils de web scraping développés dans ce projet ont de nombreuses applications potentielles :</p>
+                    <ul>
+                        <li>Collecte automatisée de ressources éducatives pour des domaines spécifiques</li>
+                        <li>Veille concurrentielle pour suivre les produits et les prix sur différents sites e-commerce</li>
+                        <li>Aggregation de données pour des projets de recherche ou d'analyse</li>
+                        <li>Création de bases de données spécialisées à partir de contenus web dispersés</li>
+                    </ul>
+                    <p>À l'avenir, je prévois d'étendre ce projet avec de nouveaux outils spécialisés, notamment :</p>
+                    <ul>
+                        <li>Un scraper de sites d'offres d'emploi pour analyser les tendances du marché du travail dans le domaine tech</li>
+                        <li>Un outil d'extraction de données de publications scientifiques pour faciliter la recherche bibliographique</li>
+                        <li>Une interface utilisateur permettant de configurer et de lancer facilement des opérations de scraping sans connaissances techniques</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="python">
+                        <div class="project-image">
+                            <img src="../../../assets\icons\flux.ico" alt="Flux Analysis">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">Flux Analysis</h3>
+                                <p class="project-excerpt">Outil complet de surveillance et d'analyse des vulnérabilités de cybersécurité qui suit les bulletins de sécurité de l'ANSSI et fournit des visualisations analytiques.</p>
+                                <div class="project-links">
+                                    <a href="flux-analysis.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Flux_Analysis" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/orthonome.ico" alt="OrthoNome">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">OrthoNome</h3>
+                                <p class="project-excerpt">Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier.</p>
+                                <div class="project-links">
+                                    <a href="orthonome.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/OrthoNome" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

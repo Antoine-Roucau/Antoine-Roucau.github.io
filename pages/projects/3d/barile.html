@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barile - Modèle 3D de tonneau créé avec Blender, avec texturing et lighting réalistes.">
+    <title>Barile | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Barile</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Barile</h1>
+                <div class="project-category">Blender</div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets\images\projects\Barrel.png" alt="Modèle 3D de tonneau 'Roll & Beer'">
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Logiciel</h3>
+                        <p>Blender</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Techniques</h3>
+                        <p>Modélisation, UV Mapping, Texturing</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Polygones</h3>
+                        <p>~520</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Barile est un projet de modélisation 3D réalisé avec Blender. Ce modèle représente un tonneau en bois stylisé avec le texte "Roll & Beer" gravé sur sa surface, combinant ainsi un design classique avec une touche moderne et humoristique.</p>
+                    
+                    <p>L'objectif de ce projet était de créer un modèle 3D mais stylisé, en mettant l'accent sur la géométrie précise du tonneau, les détails des planches de bois et des cercles métalliques, ainsi que sur un texturing de qualité pour donner vie au matériau bois. Le modèle a été conçu pour être à la fois visuellement attrayant et optimisé en termes de nombre de polygones, le rendant utilisable dans divers contextes, des rendus statiques aux environnements de jeux vidéo.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Processus de création</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Modélisation</h3>
+                            <p>La création du tonneau a débuté par la modélisation d'une planche de bois de base, qui a ensuite été dupliquée et disposée en cercle pour former la structure cylindrique. Les extrémités du tonneau ont été légèrement bombées vers l'extérieur pour créer la forme caractéristique. Les cercles métalliques ont été ajoutés comme éléments distincts pour plus de réalisme et pour faciliter le texturing.</p>
+                        </li>
+                        <li>
+                            <h3>UV Mapping</h3>
+                            <p>Le dépliage UV a été une étape cruciale pour permettre l'application précise des textures. Chaque planche a été soigneusement mappée pour que les textures de bois s'alignent correctement, tout en maximisant l'espace UV pour une résolution de texture optimale. Les cercles métalliques ont été mappés séparément pour permettre des matériaux distincts.</p>
+                        </li>
+                        <li>
+                            <h3>Texturing</h3>
+                            <p>Les textures ont été créées en combinant des textures de base de bois avec des touches personnalisées pour donner au tonneau un aspect à la fois usé et chaleureux. Le texte "Roll & Beer" a été intégré directement dans la texture diffuse et la normal map pour créer l'effet de gravure. Les cercles métalliques ont reçu une texture cuivrée avec un contrôle précis de la réflectivité et de la rugosité.</p>
+                        </li>
+                        <li>
+                            <h3>Lighting et Rendu</h3>
+                            <p>L'éclairage a été configuré pour mettre en valeur les détails du modèle, avec une lumière principale et des lumières de remplissage pour réduire les ombres trop dures. Le rendu final a été réalisé avec Cycles pour bénéficier du ray-tracing et obtenir des ombres et réflexions réalistes qui accentuent la texture du bois et les détails métalliques.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Aspects techniques</h2>
+                    <ul class="feature-list">
+                        <li>Modélisation polygonale avec environ 2,500 polygones pour un bon équilibre entre détail et performance</li>
+                        <li>Mapping UV optimisé pour maximiser la résolution des textures tout en minimisant les déformations</li>
+                        <li>Textures PBR (Physically Based Rendering) avec maps de diffusion, normal, roughness et metallic</li>
+                        <li>Utilisation des nodes de matériaux de Blender pour un contrôle précis des propriétés des surfaces</li>
+                        <li>Éclairage à trois points avec ajustements précis pour mettre en valeur la forme et les textures</li>
+                        <li>Exportation en formats multiples (.blend, .fbx, .obj) pour une compatibilité maximale</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Géométrie précise du tonneau</h3>
+                            <p>L'un des principaux défis était de créer la forme caractéristique du tonneau avec ses extrémités bombées et ses planches parfaitement alignées. Cela a nécessité une approche mathématique pour calculer les angles et les courbures appropriés, ainsi qu'une attention particulière aux jonctions entre les planches.</p>
+                        </li>
+                        <li>
+                            <h3>Optimisation de la topologie</h3>
+                            <p>La création d'un modèle avec un nombre de polygones raisonnable tout en préservant les détails essentiels a demandé une réflexion approfondie sur la topologie. J'ai dû décider quels détails modéliser en géométrie réelle et lesquels simuler via les textures et normal maps.</p>
+                        </li>
+                        <li>
+                            <h3>Texte gravé réaliste</h3>
+                            <p>L'intégration du texte "Roll & Beer" de manière à ce qu'il paraisse authentiquement gravé dans le bois a nécessité un travail minutieux sur les normal maps et les textures de diffusion. Il fallait que le texte s'intègre harmonieusement dans le grain du bois tout en restant parfaitement lisible.</p>
+                        </li>
+                        <li>
+                            <h3>Équilibre des matériaux</h3>
+                            <p>Trouver le bon équilibre pour les propriétés des matériaux (réflectivité, rugosité, etc.) afin que le bois et le métal aient un aspect réaliste sans paraître artificiels ou exagérés a demandé de nombreux tests et ajustements fins.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Ce projet m'a permis d'approfondir mes compétences en modélisation 3D et en création de matériaux réalistes avec Blender :</p>
+                    <ul>
+                        <li>Maîtrise des techniques de modélisation pour créer des objets cylindriques avec des détails précis</li>
+                        <li>Approfondissement des connaissances en UV unwrapping pour des objets comportant des éléments répétitifs</li>
+                        <li>Perfectionnement dans la création de matériaux PBR combinant plusieurs maps pour un réalisme optimal</li>
+                        <li>Amélioration des techniques d'éclairage pour mettre en valeur les formes et textures</li>
+                        <li>Expérimentation avec différentes approches de rendu pour trouver le meilleur équilibre entre qualité et temps de calcul</li>
+                    </ul>
+                    <p>Le modèle final est à la fois esthétiquement plaisant et techniquement optimisé, prêt à être intégré dans diverses applications comme des rendus architecturaux, des environnements de jeux vidéo, ou des présentations de produits virtuels.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Applications et utilisations</h2>
+                    <p>Ce modèle 3D de tonneau a été conçu pour être polyvalent et peut être utilisé dans divers contextes :</p>
+                    <ul>
+                        <li>Environnements de jeux vidéo (tavernes, caves, entrepôts)</li>
+                        <li>Visualisations architecturales (pour des bars, restaurants à thème)</li>
+                        <li>Rendus pour le marketing de produits liés à la bière ou aux spiritueux</li>
+                        <li>Animations et courts-métrages</li>
+                        <li>Supports pédagogiques pour l'enseignement des techniques de modélisation 3D</li>
+                    </ul>
+                    <p>Le modèle est disponible en plusieurs formats et avec différents niveaux de détail pour s'adapter aux besoins spécifiques de chaque projet.</p>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 (modélisation 3D) -->
+                    <div class="project-card" data-categories="fusion_360 blender animation">
+                        <div class="project-image">
+                            <img src="../../../assets\icons\drakkar.ico" alt="Drakkar Image">
+                            <div class="project-overlay">
+                                <div class="project-category">Fusion 360 | Blender</div>
+                                <h3 class="project-title">Drakkar</h3>
+                                <p class="project-excerpt">Modèle 3D d'un drakkar créé sur Fusion 360, texturé et animé sur Blender.</p>
+                                <div class="project-links">
+                                    <a href="../3d/sci-fi-character.html" class="project-link">Voir le projet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 (traitement d'image) -->
+                    <div class="project-card" data-categories="csharp ">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/bitmap.ico" alt="Bitmap Image">
+                            <div class="project-overlay">
+                                <div class="project-category">C#</div>
+                                <h3 class="project-title">Bitmap Image Processing</h3>
+                                <p class="project-excerpt">Bibliothèque C# pour le traitement et la manipulation d'images BMP avec intégration de l'algorithme de compression de Huffman.</p>
+                                <div class="project-links">
+                                    <a href="../development/bitmap.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Bitmap_Image" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
