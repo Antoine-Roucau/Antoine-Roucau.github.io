@@ -45,7 +45,8 @@ APP.loadScripts = (function() {
         'js/components/typeWriter.js',
         'js/components/gallery.js',
         'js/components/contactForm.js',
-        'js/components/formValidation.js'
+        'js/components/formValidation.js',
+        'js/components/galleryPage.js'
     ];
     
     var scriptsLoaded = 0;
@@ -157,6 +158,9 @@ APP.init = function() {
                     break;
                 case 'project':
                     if (APP.components.Gallery) APP.components.Gallery.init();
+                    break;
+                case 'gallery':
+                    if (APP.components.GalleryPage) APP.components.GalleryPage.init();
                     break;
             }
         }

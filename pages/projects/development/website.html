@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Website - Site web personnel développé avec HTML, CSS et JavaScript pour présenter mes projets et compétences de manière interactive et immersive.">
+    <link rel="icon" href="../../../assets/icons/website.ico" type="image/icon type">
+    <title>Portfolio Website | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="project">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Portfolio Website</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Portfolio Website</h1>
+                <div class="project-category">HTML/CSS | JavaScript</div>
+                <div class="project-links">
+                    <a href="https://github.com/Antoine-Roucau/portfolio-website" target="_blank" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Showcase du projet -->
+            <div class="project-showcase">
+                <div class="project-gallery">
+                    <div class="gallery-main">
+                        <img src="../../../assets/icons/website.ico" alt="Icône Portfolio Website">
+                    </div>
+                    
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail">
+                            <img src="../../../assets/images/projects/website-light.png" alt="Vue du site en mode clair">
+                        </div>
+                        <div class="gallery-thumbnail">
+                            <img src="../../../assets\images\projects\page_acceuil.png" alt="Vue du site en mode sombre">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-specs">
+                    <div class="spec-item">
+                        <h3>Technologies</h3>
+                        <p>HTML5, CSS3, JavaScript</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Caractéristiques</h3>
+                        <p>Design responsive, Thème clair/sombre, Animations</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Année</h3>
+                        <p>2023-2025</p>
+                    </div>
+                    <div class="spec-item">
+                        <h3>Statut</h3>
+                        <p>En évolution continue</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenu du projet -->
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>À propos du projet</h2>
+                    <p>Ce portfolio web est bien plus qu'une simple vitrine en ligne de mes projets. Il s'agit d'une plateforme évolutive conçue pour refléter ma double identité d'ingénieur et de créatif, tout en servant de terrain d'expérimentation pour mes compétences en développement web.</p>
+                    
+                    <p>L'objectif principal était de créer un site qui présente efficacement mes projets variés - du développement logiciel à la modélisation 3D en passant par les jeux vidéo et les projets d'ingénierie - tout en offrant une expérience utilisateur fluide, intuitive et visuellement cohérente. Le design devait être à la fois professionnel et créatif, reflétant ma personnalité "poly-créative" tout en restant accessible et performant.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Fonctionnalités principales</h2>
+                    <ul class="feature-list">
+                        <li>Design entièrement responsive s'adaptant à tous les appareils</li>
+                        <li>Système de navigation fluide avec défilement doux et menu mobile optimisé</li>
+                        <li>Thème clair/sombre persistant avec transitions fluides</li>
+                        <li>Système de filtrage dynamique des projets par type et technologie</li>
+                        <li>Animations subtiles améliorant l'expérience utilisateur sans compromettre la performance</li>
+                        <li>Galeries d'images et lecteurs vidéo optimisés pour le chargement progressif</li>
+                        <li>Formulaire de contact intégré avec validation côté client</li>
+                        <li>Pages de projets détaillées avec structure cohérente facilitant la navigation</li>
+                        <li>Intégration des politiques de confidentialité pour conformité RGPD</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Processus de développement</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Conception et architecture</h3>
+                            <p>La première étape a été de concevoir l'architecture du site en définissant ses objectifs, sa structure et son identité visuelle. J'ai créé des wireframes et des maquettes pour chaque type de page, en portant une attention particulière à la cohérence visuelle et à l'expérience utilisateur. J'ai opté pour une approche "mobile-first" pour garantir que le site soit parfaitement fonctionnel sur tous les appareils.</p>
+                        </li>
+                        <li>
+                            <h3>Développement frontend</h3>
+                            <p>J'ai construit le site avec des technologies web standards (HTML5, CSS3, JavaScript) pour garantir une compatibilité maximale et des performances optimales. Pour la structure CSS, j'ai adopté une méthodologie modulaire inspirée de BEM (Block Element Modifier) pour faciliter la maintenance et l'évolution du site. Les animations ont été soigneusement conçues pour améliorer l'expérience utilisateur sans alourdir le chargement.</p>
+                        </li>
+                        <li>
+                            <h3>Système de gestion de contenu</h3>
+                            <p>Bien que le site soit essentiellement statique, j'ai structuré le code de manière à faciliter l'ajout de nouveaux projets et contenus. Des templates HTML réutilisables ont été créés pour les différents types de pages projets (développement, 3D, jeux, ingénierie), permettant une extension cohérente du site au fil du temps.</p>
+                        </li>
+                        <li>
+                            <h3>Optimisation et tests</h3>
+                            <p>Une phase importante du développement a été dédiée à l'optimisation des performances et à l'accessibilité. J'ai effectué des tests approfondis sur différents navigateurs et appareils, optimisé les ressources multimédia, et implémenté des techniques comme le lazy loading pour garantir des temps de chargement rapides, même pour les pages riches en contenu.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Défis techniques</h2>
+                    <ol class="challenges-list">
+                        <li>
+                            <h3>Système de thème clair/sombre</h3>
+                            <p>L'implémentation d'un système de thème fluide qui préserve les préférences de l'utilisateur entre les sessions a nécessité une gestion soignée du stockage local et des transitions CSS. J'ai créé un système basé sur des variables CSS et un mécanisme de détection des préférences système pour offrir une expérience optimale.</p>
+                            
+                        </li>
+                        <li>
+                            <h3>Système de filtrage de projets</h3>
+                            <p>La mise en place d'un système de filtrage multi-critères pour les projets a posé un défi intéressant. Il fallait permettre de filtrer simultanément par type de projet et par technologie, tout en proposant des transitions fluides et en gérant correctement les cas où aucun projet ne correspond aux critères sélectionnés.</p>
+                            
+                        </li>
+                        <li>
+                            <h3>Animation de chargement</h3>
+                            <p>La création d'une animation de chargement fluide qui améliore l'expérience de première visite a nécessité une gestion minutieuse des événements de chargement et un équilibre entre esthétique et performance. L'objectif était de créer une transition élégante sans rallonger artificiellement le temps de chargement.</p>
+                        </li>
+                        <li>
+                            <h3>Optimisation des médias</h3>
+                            <p>La gestion efficace des nombreuses images et vidéos du portfolio tout en maintenant des performances optimales a représenté un défi significatif. J'ai mis en œuvre des stratégies d'optimisation comme le redimensionnement approprié des images, la compression, le lazy loading, et l'utilisation de formats modernes lorsque possible.</p>
+                        </li>
+                    </ol>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Architecture technique</h2>
+                    <p>Le site est construit selon une architecture modulaire qui facilite la maintenance et l'évolution:</p>
+                    
+                    <h3>Structure des fichiers</h3>
+                    <pre><code>
+portfolio-website/
+├── index.html                 # Page d'accueil
+├── css/
+│   └── main.css               # Styles principaux
+├── js/
+│   └── main.js                # Scripts principaux
+├── assets/
+│   ├── icons/                 # Icônes du site
+│   ├── images/                # Images des projets
+│   │   ├── profile/           # Images de profil
+│   │   └── projects/          # Images de projets
+│   ├── video/                 # Vidéos des projets
+│   └── documents/             # Documents (CV, etc.)
+└── pages/
+    ├── legal/                 # Pages légales
+    └── projects/              # Pages détaillées des projets
+        ├── 3d/                # Projets 3D
+        ├── development/       # Projets de développement
+        ├── game/              # Projets de jeux
+        └── inge/              # Projets d'ingénierie
+                    </code></pre>
+                    
+                    <h3>Technologies utilisées</h3>
+                    <ul>
+                        <li><strong>HTML5</strong> : Structure sémantique pour une meilleure accessibilité et SEO</li>
+                        <li><strong>CSS3</strong> : Avec utilisation avancée de Flexbox, Grid, variables CSS et animations</li>
+                        <li><strong>JavaScript</strong> : Vanilla JS pour les interactions et animations</li>
+                        <li><strong>Formspree</strong> : Intégration pour le formulaire de contact</li>
+                        <li><strong>Google Fonts</strong> : Pour la typographie (Space Grotesk)</li>
+                    </ul>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Résultats et apprentissages</h2>
+                    <p>Le développement de ce portfolio a été une expérience enrichissante qui m'a permis d'approfondir mes compétences en développement web frontend:</p>
+                    <ul>
+                        <li>Maîtrise des techniques de design responsive avancées pour garantir une expérience optimale sur tous les appareils</li>
+                        <li>Approfondissement des connaissances en CSS moderne, notamment l'utilisation des variables CSS, des animations et des transitions</li>
+                        <li>Amélioration des compétences en JavaScript pour créer des interactions fluides et gérer efficacement le DOM</li>
+                        <li>Sensibilisation accrue aux enjeux d'accessibilité et d'optimisation de performance</li>
+                        <li>Développement d'une approche structurée de l'architecture frontend pour faciliter la maintenance</li>
+                    </ul>
+                    <p>Le site continue d'évoluer régulièrement, servant à la fois de vitrine professionnelle et de terrain d'expérimentation pour de nouvelles techniques et approches de développement web.</p>
+                </section>
+                
+                <section class="project-section">
+                    <h2>Évolutions futures</h2>
+                    <p>Plusieurs améliorations sont envisagées pour les versions futures du portfolio:</p>
+                    <ul>
+                        <li>Migration vers une architecture JAMstack avec Next.js ou Gatsby pour améliorer les performances et faciliter la gestion du contenu</li>
+                        <li>Intégration d'une section blog pour partager des articles techniques et réflexions</li>
+                        <li>Implémentation de visualiseurs 3D interactifs pour les projets de modélisation</li>
+                        <li>Intégration de démos interactives pour les projets de développement et de jeux</li>
+                        <li>Amélioration des animations avec GSAP pour des transitions plus fluides</li>
+                        <li>Implémentation d'une API GitHub pour afficher automatiquement les contributions récentes</li>
+                    </ul>
+                </section>
+            </div>
+            
+            <!-- Autres projets connexes -->
+            <div class="related-projects">
+                <h2>Autres projets similaires</h2>
+                <div class="related-projects-grid">
+                    <!-- Projet connexe 1 -->
+                    <div class="project-card" data-categories="python">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/orthonome.ico" alt="OrthoNome">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">OrthoNome</h3>
+                                <p class="project-excerpt">Programme pour corriger les fautes d'orthographe en français et en anglais directement depuis le presse-papier avec des raccourcis clavier.</p>
+                                <div class="project-links">
+                                    <a href="orthonome.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/OrthoNome" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Projet connexe 2 -->
+                    <div class="project-card" data-categories="python">
+                        <div class="project-image">
+                            <img src="../../../assets/icons/scrapping.ico" alt="Web Scraping Tools">
+                            <div class="project-overlay">
+                                <div class="project-category">Python</div>
+                                <h3 class="project-title">Web Scraping Tools</h3>
+                                <p class="project-excerpt">Collection d'outils de Python web scraping.</p>
+                                <div class="project-links">
+                                    <a href="scraping.html" class="project-link">Voir le projet</a>
+                                    <a href="https://github.com/Antoine-Roucau/Web_Scrapping" target="_blank" class="project-link project-github">
+                                        <span>GitHub</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

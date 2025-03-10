@@ -50,7 +50,7 @@
  * Styles spécifiques à certaines pages
 --------------------------------------*/
 @import 'pages/legal.css';            /* Pages légales */
-@import 'pages/project.css';          /* Pages de détail de projet */
+@import 'pages/gallery-page.css';    /* Pages de galerie */
 
 /*--------------------------------------
  * 6. THEMES

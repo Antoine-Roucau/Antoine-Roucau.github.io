@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie de projets créatifs d'Antoine Roucau - Une collection de travaux artistiques et créatifs divers.">
+    <title>Galerie | Antoine Roucau</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="../../../css/main.css">
+</head>
+<body data-page-type="gallery">
+    <!-- En-tête avec Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../../index.html">Home</a>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="../../../index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="../../../index.html#projects" class="nav-link">Projets</a></li>
+                    <li><a href="../../../index.html#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="../../../index.html#experience" class="nav-link">Expériences & Formation</a></li>
+                    <li><a href="../../../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Changer de thème">
+                    <span class="toggle-icon"></span>
+                </button>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="project-detail">
+        <div class="container">
+            <!-- Fil d'Ariane -->
+            <div class="breadcrumbs">
+                <a href="../../../index.html">Accueil</a> / 
+                <a href="../../../index.html#projects">Projets</a> / 
+                <span>Galerie</span>
+            </div>
+            
+            <!-- En-tête du projet -->
+            <div class="project-header">
+                <h1 class="project-title">Galerie de Projets Créatifs</h1>
+                <div class="project-category">Projets Artistiques & Divers</div>
+            </div>
+            
+            <!-- Introduction -->
+            <section class="project-section">
+                <p>Cette galerie regroupe une collection de projets créatifs et artistiques qui reflètent ma démarche poly-créative et ma curiosité pour divers médiums et techniques. Chaque œuvre représente une exploration, une expérimentation ou un exercice créatif qui n'est pas assez vaste pour constituer un projet complet, mais qui mérite néanmoins d'être partagé.</p>
+                
+                <p>De la peinture numérique aux croquis traditionnels, en passant par des expérimentations 3D et des travaux d'orfèvrerie, cette galerie témoigne de la diversité de mes intérêts créatifs et de mon approche exploratoire de l'art et du design.</p>
+            </section>
+            
+            <!-- Filtres -->
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">Tous</button>
+                <button class="gallery-filter" data-filter="dessin">Dessin</button>
+                <button class="gallery-filter" data-filter="peinture">Peinture</button>
+                <button class="gallery-filter" data-filter="3d">3D</button>
+                <button class="gallery-filter" data-filter="photo">Photographie</button>
+                <button class="gallery-filter" data-filter="orfevrerie">Orfèvrerie</button>
+                <button class="gallery-filter" data-filter="autre">Autres</button>
+            </div>
+            
+            <!-- Grille de la galerie -->
+            <div class="gallery-grid">
+                <!-- Projet 1 -->
+                <div class="gallery-item" data-category="dessin">
+                    <img src="../../../assets/images/gallery/dessin-1.jpg" alt="Croquis urbain" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Dessin</div>
+                        <h3 class="gallery-item-title">Croquis urbain</h3>
+                        <p class="gallery-item-description">Étude au crayon de la perspective d'une rue parisienne réalisée lors d'une session de dessin en plein air.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="gallery-item" data-category="peinture">
+                    <img src="../../../assets/images/gallery/peinture-1.jpg" alt="Abstraction bleue" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Peinture</div>
+                        <h3 class="gallery-item-title">Abstraction bleue</h3>
+                        <p class="gallery-item-description">Exploration abstraite utilisant différentes nuances de bleu, inspiration marine et textures dynamiques.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="gallery-item" data-category="3d">
+                    <img src="../../../assets/images/gallery/3d-1.jpg" alt="Étude de matériaux" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">3D</div>
+                        <h3 class="gallery-item-title">Étude de matériaux</h3>
+                        <p class="gallery-item-description">Expérimentation de rendu de matériaux métalliques et réflectifs dans Blender.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="gallery-item" data-category="photo">
+                    <img src="../../../assets/images/gallery/photo-1.jpg" alt="Lumière urbaine" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Photographie</div>
+                        <h3 class="gallery-item-title">Lumière urbaine</h3>
+                        <p class="gallery-item-description">Étude photographique des jeux de lumière et d'ombre dans l'architecture moderne.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 5 -->
+                <div class="gallery-item" data-category="orfevrerie">
+                    <img src="../../../assets/images/gallery/orfevrerie-1.jpg" alt="Pendentif argenté" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Orfèvrerie</div>
+                        <h3 class="gallery-item-title">Pendentif argenté</h3>
+                        <p class="gallery-item-description">Création d'un pendentif en argent avec inclusion de pierre semi-précieuse, inspiré de motifs géométriques.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 6 -->
+                <div class="gallery-item" data-category="dessin">
+                    <img src="../../../assets/images/gallery/dessin-2.jpg" alt="Étude anatomique" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Dessin</div>
+                        <h3 class="gallery-item-title">Étude anatomique</h3>
+                        <p class="gallery-item-description">Série de croquis d'études anatomiques réalisés d'après modèle vivant.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 7 -->
+                <div class="gallery-item" data-category="3d">
+                    <img src="../../../assets/images/gallery/3d-2.jpg" alt="Environnement fantasy" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">3D</div>
+                        <h3 class="gallery-item-title">Environnement fantasy</h3>
+                        <p class="gallery-item-description">Concept d'environnement fantasy pour un jeu vidéo, réalisé avec Blender et Substance Painter.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 8 -->
+                <div class="gallery-item" data-category="peinture">
+                    <img src="../../../assets/images/gallery/peinture-2.jpg" alt="Nature morte" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Peinture</div>
+                        <h3 class="gallery-item-title">Nature morte</h3>
+                        <p class="gallery-item-description">Étude de nature morte à l'acrylique, travail sur les textures et la lumière.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 9 -->
+                <div class="gallery-item" data-category="photo">
+                    <img src="../../../assets/images/gallery/photo-2.jpg" alt="Portrait en noir et blanc" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Photographie</div>
+                        <h3 class="gallery-item-title">Portrait en noir et blanc</h3>
+                        <p class="gallery-item-description">Série de portraits en noir et blanc explorant les expressions et émotions humaines.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 10 -->
+                <div class="gallery-item" data-category="autre">
+                    <img src="../../../assets/images/gallery/autre-1.jpg" alt="Installation interactive" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Art numérique</div>
+                        <h3 class="gallery-item-title">Installation interactive</h3>
+                        <p class="gallery-item-description">Prototype d'installation artistique interactive utilisant des capteurs Arduino et Processing pour créer une expérience immersive.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 11 -->
+                <div class="gallery-item" data-category="orfevrerie">
+                    <img src="../../../assets/images/gallery/orfevrerie-2.jpg" alt="Bague minimaliste" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Orfèvrerie</div>
+                        <h3 class="gallery-item-title">Bague minimaliste</h3>
+                        <p class="gallery-item-description">Bague en argent au design minimaliste et contemporain, explorant les formes géométriques simples.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 12 -->
+                <div class="gallery-item" data-category="autre">
+                    <img src="../../../assets/images/gallery/autre-2.jpg" alt="Typographie expérimentale" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Typographie</div>
+                        <h3 class="gallery-item-title">Typographie expérimentale</h3>
+                        <p class="gallery-item-description">Recherches typographiques expérimentales pour un projet d'identité visuelle.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 13 -->
+                <div class="gallery-item" data-category="3d">
+                    <img src="../../../assets/images/gallery/3d-3.jpg" alt="Character concept" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">3D</div>
+                        <h3 class="gallery-item-title">Character concept</h3>
+                        <p class="gallery-item-description">Concept de personnage stylisé pour un projet de jeu vidéo indépendant.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 14 -->
+                <div class="gallery-item" data-category="dessin">
+                    <img src="../../../assets/images/gallery/dessin-3.jpg" alt="Illustration fantasy" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Dessin</div>
+                        <h3 class="gallery-item-title">Illustration fantasy</h3>
+                        <p class="gallery-item-description">Illustration de créature fantasy réalisée à l'encre et aux marqueurs.</p>
+                    </div>
+                </div>
+                
+                <!-- Projet 15 -->
+                <div class="gallery-item" data-category="peinture">
+                    <img src="../../../assets/images/gallery/peinture-3.jpg" alt="Paysage nocturne" loading="lazy">
+                    <div class="gallery-item-info">
+                        <div class="gallery-item-category">Peinture numérique</div>
+                        <h3 class="gallery-item-title">Paysage nocturne</h3>
+                        <p class="gallery-item-description">Peinture numérique d'un paysage nocturne, étude de lumières et d'atmosphère.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal pour afficher les images en grand -->
+            <div class="gallery-modal">
+                <div class="gallery-modal-content">
+                    <button class="gallery-modal-close">&times;</button>
+                    <img src="" alt="Image en grand format">
+                    <div class="gallery-modal-info">
+                        <div class="gallery-modal-category"></div>
+                        <h3 class="gallery-modal-title"></h3>
+                        <p class="gallery-modal-description"></p>
+                    </div>
+                    <button class="gallery-modal-prev">&lt;</button>
+                    <button class="gallery-modal-next">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="../../../index.html">Home</a>
+                </div>
+                <div class="footer-links">
+                    <a href="../../../index.html#about">À propos</a>
+                    <a href="../../../index.html#projects">Projets</a>
+                    <a href="../../../index.html#skills">Compétences</a>
+                    <a href="../../../index.html#experience">Expériences & Formation</a>
+                    <a href="../../../index.html#contact">Contact</a>
+                </div>
+            </div>
+            
+            <div class="social-profiles">
+                <!-- Email -->
+                <a href="mailto:abg.antoine.roucau@gmail.com" class="social-profile" title="Email me">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="https://github.com/Antoine-Roucau" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/antoine-roucau-682b1b157/" target="_blank" class="social-profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; <span id="current-year">2025</span> Antoine Roucau. Tous droits réservés.
+                </div>
+                <div class="footer-signature">
+                    Conçu et développé à Paris, France
+                </div>
+            </div>
+            
+            <div class="footer-legal">
+                <a href="../../legal/privacy-policy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/components/galleryPage.js"></script>
+</body>
+</html>
