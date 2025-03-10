@@ -79,10 +79,10 @@
             <div class="gallery-grid">
                 <!-- Projet 1 -->
                 <div class="gallery-item" data-category="dessin">
-                    <img src="../../../assets/images/gallery/dessin-1.jpg" alt="Croquis urbain" loading="lazy">
+                    <img src="../../../assets\images\projects\drakkar.png" alt="Croquis urbain" loading="lazy">
                     <div class="gallery-item-info">
                         <div class="gallery-item-category">Dessin</div>
-                        <h3 class="gallery-item-title">Croquis urbain</h3>
+                        <h3 class="gallery-item-title">TEST</h3>
                         <p class="gallery-item-description">Étude au crayon de la perspective d'une rue parisienne réalisée lors d'une session de dessin en plein air.</p>
                     </div>
                 </div>
@@ -308,5 +308,13 @@
     <!-- Scripts -->
     <script src="../../../js/main.js"></script>
     <script src="../../../js/components/galleryPage.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (typeof APP !== 'undefined' && APP.components && APP.components.GalleryPage) {
+            console.log('Initialisation manuelle de GalleryPage');
+            APP.components.GalleryPage.init();
+          }
+        });
+      </script>
 </body>
 </html>
