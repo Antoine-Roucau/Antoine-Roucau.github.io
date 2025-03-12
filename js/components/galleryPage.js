@@ -26,20 +26,12 @@ APP.components.GalleryPage = (function() {
      * @param {Number} index - L'index de l'élément dans la liste des éléments visibles
      */
     function openModal(item, index) {
-        console.log('Tentative d\'ouverture du modal pour l\'élément :', item);
-        console.log('Index :', index);
+        console.log('Ouverture du modal pour l\'élément à l\'index:', index);
         
         const img = item.querySelector('img');
         const title = item.querySelector('.gallery-item-title');
         const category = item.querySelector('.gallery-item-category');
         const description = item.querySelector('.gallery-item-description');
-        
-        console.log('Éléments trouvés :', {
-            img: img !== null,
-            title: title !== null,
-            category: category !== null,
-            description: description !== null
-        });
         
         if (!img || !title || !category || !description) {
             console.error('Éléments requis introuvables dans l\'élément de galerie', item);
@@ -53,40 +45,8 @@ APP.components.GalleryPage = (function() {
         modalDescription.textContent = description.textContent;
         
         currentItemIndex = index;
-        
-        // Ajouter une classe spécifique pour vérifier si le style est appliqué
         modal.classList.add('active');
-        console.log('Modal devrait être visible maintenant, classes :', modal.className);
         document.body.style.overflow = 'hidden'; // Empêcher le défilement du body
-    }
-    
-    // Modification de l'initialisation pour s'assurer que tout est bien trouvé
-    init: function() {
-        console.log('Initialisation du composant GalleryPage');
-        
-        // Vérifier si nous sommes sur la page galerie
-        const pageType = document.body.getAttribute('data-page-type');
-        console.log('Type de page :', pageType);
-        
-        if (pageType !== 'gallery') {
-            console.log('Pas sur la page galerie (type de page: ' + pageType + '), initialisation annulée');
-            return;
-        }
-        
-        // Récupérer les éléments DOM nécessaires
-        galleryItems = document.querySelectorAll('.gallery-item');
-        modal = document.querySelector('.gallery-modal');
-        
-        console.log('Éléments trouvés :', {
-            galleryItems: galleryItems.length,
-            modal: modal !== null
-        });
-        
-        // Vérifier si ces éléments existent
-        if (!galleryItems.length || !modal) {
-            console.error('Éléments de galerie non trouvés, initialisation interrompue');
-            return;
-        }
     }
     
     /**
