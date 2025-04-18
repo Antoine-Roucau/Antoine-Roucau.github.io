@@ -309,12 +309,11 @@
     <script src="../../../js/main.js"></script>
     <script src="../../../js/components/galleryPage.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          if (typeof APP !== 'undefined' && APP.components && APP.components.GalleryPage) {
-            console.log('Initialisation manuelle de GalleryPage');
-            APP.components.GalleryPage.init();
-          }
-        });
+        // Ajouter ceci juste avant l'appel à APP.components.GalleryPage.init() dans le script en bas de galerie.html
+        console.log('Éléments de galerie :', document.querySelectorAll('.gallery-item').length);
+        console.log('Modal :', document.querySelector('.gallery-modal'));
+        console.log('APP disponible :', typeof APP !== 'undefined');
+        console.log('GalleryPage disponible :', APP && APP.components && typeof APP.components.GalleryPage !== 'undefined');
       </script>
 </body>
 </html>
